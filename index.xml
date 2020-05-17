@@ -31,19 +31,19 @@
       <guid>https://rubinera1n.github.io/post/leetcode/template/binary_search/</guid>
       
         <description>&lt;h1 id=&#34;思路左闭右开-l-r-根据题目去判断有很多变化题型&#34;&gt;思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型&lt;/h1&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;def binary_search&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;nums, target&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;:
-    l, r &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; 0, len&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;nums&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; l &amp;lt; r:
-        m &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; l + &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;r - l&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; // &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# python不会溢出，c++会&lt;/span&gt;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; nums&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;m&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &amp;lt; target:
-            l &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; m + &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;
-        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
-            r &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; m
-    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; l
+&lt;p&gt;code:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;def binary_search(nums, target):
+    l, r = 0, len(nums)
+    while l &amp;lt; r:
+        m = l + (r - l) // 2  # python不会溢出，c++会
+        if nums[m] &amp;lt; target:
+            l = m + 1
+        else:
+            r = m
+    return l
 
-
-print&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;binary_search&lt;span style=&#34;color:#f92672&#34;&gt;([&lt;/span&gt;1, 3, 5, 6, 9&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;, 5&lt;span style=&#34;color:#f92672&#34;&gt;))&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;参考题目：&lt;/p&gt;
+print(binary_search([1, 3, 5, 6, 9], 5))
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;参考题目：&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;LeetCode 69. Sqrt(x)&lt;/li&gt;
 &lt;/ul&gt;

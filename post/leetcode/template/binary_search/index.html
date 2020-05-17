@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="rubinera1n" />
-  <meta name="description" content="思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 def binary_search(nums, target): l, r = 0, len(nums) while l &amp;lt; r: m = l &#43; (r - l) // 2 # python不会溢出，c&#43;&#43;会 if nums[m] &amp;lt; target: l = m &#43;" />
+  <meta name="description" content="思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 code: def binary_search(nums, target): l, r = 0, len(nums) while l &amp;lt; r: m = l &#43; (r - l) // 2 # python不会溢出，c&#43;&#43;会 if nums[m] &amp;lt; target: l = m" />
 
   <meta name="keywords" content="Hugo, blog, rubinera1n" />
 
@@ -60,22 +60,22 @@
 
 
 <meta property="og:title" content="binary search" />
-<meta property="og:description" content="思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 def binary_search(nums, target): l, r = 0, len(nums) while l &lt; r: m = l &#43; (r - l) // 2 # python不会溢出，c&#43;&#43;会 if nums[m] &lt; target: l = m &#43;" />
+<meta property="og:description" content="思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 code: def binary_search(nums, target): l, r = 0, len(nums) while l &lt; r: m = l &#43; (r - l) // 2 # python不会溢出，c&#43;&#43;会 if nums[m] &lt; target: l = m" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://rubinera1n.github.io/post/leetcode/template/binary_search/" />
 <meta property="article:published_time" content="2020-05-18T01:00:00+08:00" />
 <meta property="article:modified_time" content="2020-05-18T01:00:00+08:00" />
 <meta itemprop="name" content="binary search">
-<meta itemprop="description" content="思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 def binary_search(nums, target): l, r = 0, len(nums) while l &lt; r: m = l &#43; (r - l) // 2 # python不会溢出，c&#43;&#43;会 if nums[m] &lt; target: l = m &#43;">
+<meta itemprop="description" content="思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 code: def binary_search(nums, target): l, r = 0, len(nums) while l &lt; r: m = l &#43; (r - l) // 2 # python不会溢出，c&#43;&#43;会 if nums[m] &lt; target: l = m">
 <meta itemprop="datePublished" content="2020-05-18T01:00:00&#43;08:00" />
 <meta itemprop="dateModified" content="2020-05-18T01:00:00&#43;08:00" />
-<meta itemprop="wordCount" content="91">
+<meta itemprop="wordCount" content="92">
 
 
 
 <meta itemprop="keywords" content="leetcode," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="binary search"/>
-<meta name="twitter:description" content="思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 def binary_search(nums, target): l, r = 0, len(nums) while l &lt; r: m = l &#43; (r - l) // 2 # python不会溢出，c&#43;&#43;会 if nums[m] &lt; target: l = m &#43;"/>
+<meta name="twitter:description" content="思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 code: def binary_search(nums, target): l, r = 0, len(nums) while l &lt; r: m = l &#43; (r - l) // 2 # python不会溢出，c&#43;&#43;会 if nums[m] &lt; target: l = m"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -305,7 +305,7 @@
             <a href="https://rubinera1n.github.io/categories/leetcode-template/"> leetcode-template </a>
             
           </div>
-        <span class="more-meta"> 91 words </span>
+        <span class="more-meta"> 92 words </span>
           <span class="more-meta"> 1 min read </span>
 
         
@@ -328,19 +328,19 @@
     
     <div class="post-content">
       <h1 id="思路左闭右开-l-r-根据题目去判断有很多变化题型">思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型</h1>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">def binary_search<span style="color:#f92672">(</span>nums, target<span style="color:#f92672">)</span>:
-    l, r <span style="color:#f92672">=</span> 0, len<span style="color:#f92672">(</span>nums<span style="color:#f92672">)</span>
-    <span style="color:#66d9ef">while</span> l &lt; r:
-        m <span style="color:#f92672">=</span> l + <span style="color:#f92672">(</span>r - l<span style="color:#f92672">)</span> // <span style="color:#ae81ff">2</span>  <span style="color:#75715e"># python不会溢出，c++会</span>
-        <span style="color:#66d9ef">if</span> nums<span style="color:#f92672">[</span>m<span style="color:#f92672">]</span> &lt; target:
-            l <span style="color:#f92672">=</span> m + <span style="color:#ae81ff">1</span>
-        <span style="color:#66d9ef">else</span>:
-            r <span style="color:#f92672">=</span> m
-    <span style="color:#66d9ef">return</span> l
+<p>code:</p>
+<pre><code>def binary_search(nums, target):
+    l, r = 0, len(nums)
+    while l &lt; r:
+        m = l + (r - l) // 2  # python不会溢出，c++会
+        if nums[m] &lt; target:
+            l = m + 1
+        else:
+            r = m
+    return l
 
-
-print<span style="color:#f92672">(</span>binary_search<span style="color:#f92672">([</span>1, 3, 5, 6, 9<span style="color:#f92672">]</span>, 5<span style="color:#f92672">))</span>
-</code></pre></div><p>参考题目：</p>
+print(binary_search([1, 3, 5, 6, 9], 5))
+</code></pre><p>参考题目：</p>
 <ul>
 <li>LeetCode 69. Sqrt(x)</li>
 </ul>
@@ -390,7 +390,7 @@ print<span style="color:#f92672">(</span>binary_search<span style="color:#f92672
         id: 'binary_search.md',
         title: 'binary search',
         link: decodeURI(location.href),
-        desc: '思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 def binary_search(nums, target): l, r = 0, len(nums) while l \x26lt; r: m = l \x2b (r - l) \/\/ 2 # python不会溢出，c\x2b\x2b会 if nums[m] \x26lt; target: l = m \x2b',
+        desc: '思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 code: def binary_search(nums, target): l, r = 0, len(nums) while l \x26lt; r: m = l \x2b (r - l) \/\/ 2 # python不会溢出，c\x2b\x2b会 if nums[m] \x26lt; target: l = m',
         owner: 'rubinera1n',
         repo: 'gitment',
         oauth: {
