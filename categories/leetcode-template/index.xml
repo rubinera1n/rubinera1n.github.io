@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>leetcode-template on Rubinera1n&#39;s Blog</title>
+    <link>https://rubinera1n.github.io/categories/leetcode-template/</link>
+    <description>Recent content in leetcode-template on Rubinera1n&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 18 May 2020 01:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://rubinera1n.github.io/categories/leetcode-template/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>binary search</title>
+      <link>https://rubinera1n.github.io/post/leetcode/template/binary_search/</link>
+      <pubDate>Mon, 18 May 2020 01:00:00 +0800</pubDate>
+      
+      <guid>https://rubinera1n.github.io/post/leetcode/template/binary_search/</guid>
+      <description>思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 def binary_search(nums, target): l, r = 0, len(nums) while l &amp;lt; r: m = l + (r - l) // 2 # python不会溢出，c++会 if nums[m] &amp;lt; target: l = m +</description>
+    </item>
+    
+  </channel>
+</rss>
