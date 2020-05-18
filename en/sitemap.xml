@@ -9,42 +9,63 @@
   </url>
   
   <url>
-    <loc>https://rubinera1n.github.io/post/leetcode/template/binary_search/</loc>
-    <lastmod>2020-05-18T21:37:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://rubinera1n.github.io/categories/</loc>
-    <lastmod>2020-05-18T21:37:10+08:00</lastmod>
+    <lastmod>2020-05-19T01:53:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://rubinera1n.github.io/tags/leetcode/</loc>
-    <lastmod>2020-05-18T21:37:10+08:00</lastmod>
+    <lastmod>2020-05-19T01:53:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://rubinera1n.github.io/categories/leetcode-template/</loc>
-    <lastmod>2020-05-18T21:37:10+08:00</lastmod>
+    <lastmod>2020-05-19T01:53:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://rubinera1n.github.io/post/</loc>
-    <lastmod>2020-05-18T21:37:10+08:00</lastmod>
+    <lastmod>2020-05-19T01:53:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rubinera1n.github.io/post/leetcode/template/reverse_linked_list/</loc>
+    <lastmod>2020-05-19T01:53:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://rubinera1n.github.io/tags/</loc>
+    <lastmod>2020-05-19T01:53:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rubinera1n.github.io/post/leetcode/template/hash_table/</loc>
+    <lastmod>2020-05-19T01:48:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rubinera1n.github.io/post/leetcode/template/tree_traversal/</loc>
+    <lastmod>2020-05-19T01:20:06+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://rubinera1n.github.io/post/leetcode/template/binary_search/</loc>
     <lastmod>2020-05-18T21:37:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
