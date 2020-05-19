@@ -295,50 +295,12 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/template/bfs/">BFS</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-17" class="post-time">
-        2020-05-17
-      </time>
-      <div class="post-category">
-          <a href="https://rubinera1n.github.io/categories/leetcode-template/"> leetcode-template </a>
-          
-        </div>
-      <span class="more-meta"> 84 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Find the shortest path from |start| to |target| in a unweighted graph G.
-neighbor(x) returns the neighbors of x in G.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  q = deque([start]) seen = set([start]) steps = 0 while q: size = len(q) for _ in range(size): n = q.popleft() if n == target: return steps for t in neighbor(n): if t in seen: continue q.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/bfs/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
       <a class="post-link" href="/post/leetcode/template/sliding_window/">Sliding Window</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-05-17" class="post-time">
-        2020-05-17
+      <time datetime="2020-05-18" class="post-time">
+        2020-05-18
       </time>
       <div class="post-category">
           <a href="https://rubinera1n.github.io/categories/leetcode-template/"> leetcode-template </a>
@@ -373,8 +335,8 @@ neighbor(x) returns the neighbors of x in G.
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-05-17" class="post-time">
-        2020-05-17
+      <time datetime="2020-05-18" class="post-time">
+        2020-05-18
       </time>
       <div class="post-category">
           <a href="https://rubinera1n.github.io/categories/leetcode-template/"> leetcode-template </a>
@@ -409,8 +371,8 @@ neighbor(x) returns the neighbors of x in G.
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-05-17" class="post-time">
-        2020-05-17
+      <time datetime="2020-05-18" class="post-time">
+        2020-05-18
       </time>
       <div class="post-category">
           <a href="https://rubinera1n.github.io/categories/leetcode-template/"> leetcode-template </a>
@@ -431,6 +393,42 @@ neighbor(x) returns the neighbors of x in G.
     </div>
     <div class="read-more">
       <a href="/post/leetcode/template/permutations/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/template/binary_search/">Binary Search</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-05-18" class="post-time">
+        2020-05-18
+      </time>
+      <div class="post-category">
+          <a href="https://rubinera1n.github.io/categories/leetcode-template/"> leetcode-template </a>
+          
+        </div>
+      <span class="more-meta"> 251 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 1 2 3 4 5 6 7 8 9 10 11 12 def binary_search(nums, target): l, r = 0, len(nums) while l &lt; r: m = l + (r - l) // 2 # python不会溢出，
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/template/binary_search/" class="read-more-link">Read more</a>
     </div>
     
   </div>
