@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rubinera1n&#39;s Blog</title>
-    <link>https://rubinera1n.github.io/</link>
+    <link>https://rubinera1n.netlify.app/</link>
     <description>Recent content on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 17 May 2020 22:00:00 +0800</lastBuildDate>
     
-        <atom:link href="https://rubinera1n.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://rubinera1n.netlify.app/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://rubinera1n.github.io/about/</link>
+      <link>https://rubinera1n.netlify.app/about/</link>
       <pubDate>Sun, 17 May 2020 22:00:00 +0800</pubDate>
       
-      <guid>https://rubinera1n.github.io/about/</guid>
+      <guid>https://rubinera1n.netlify.app/about/</guid>
       
         <description>&lt;p&gt;Experienced Software Backend Engineer with a demonstrated history of working in the information technology and services industry. Skilled in Python, Golang. Hand in experience on RDBMS, Redis and RabbitMQ.&lt;/p&gt;
 </description>
@@ -24,11 +24,22 @@
     </item>
     
     <item>
+      <title>重拾博客</title>
+      <link>https://rubinera1n.netlify.app/post/write/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Fri, 22 May 2020 00:34:01 +0800</pubDate>
+      
+      <guid>https://rubinera1n.netlify.app/post/write/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</guid>
+      
+        <description></description>
+      
+    </item>
+    
+    <item>
       <title>Reverse Linked List</title>
-      <link>https://rubinera1n.github.io/post/leetcode/template/reverse_linked_list/</link>
+      <link>https://rubinera1n.netlify.app/post/leetcode/template/reverse_linked_list/</link>
       <pubDate>Tue, 19 May 2020 01:53:36 +0800</pubDate>
       
-      <guid>https://rubinera1n.github.io/post/leetcode/template/reverse_linked_list/</guid>
+      <guid>https://rubinera1n.netlify.app/post/leetcode/template/reverse_linked_list/</guid>
       
         <description>&lt;p&gt;code&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -113,10 +124,10 @@
     
     <item>
       <title>HashMap</title>
-      <link>https://rubinera1n.github.io/post/leetcode/template/hash_table/</link>
+      <link>https://rubinera1n.netlify.app/post/leetcode/template/hash_table/</link>
       <pubDate>Tue, 19 May 2020 01:48:20 +0800</pubDate>
       
-      <guid>https://rubinera1n.github.io/post/leetcode/template/hash_table/</guid>
+      <guid>https://rubinera1n.netlify.app/post/leetcode/template/hash_table/</guid>
       
         <description>&lt;p&gt;code&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -267,10 +278,10 @@
     
     <item>
       <title>Tree Traversal</title>
-      <link>https://rubinera1n.github.io/post/leetcode/template/tree_traversal/</link>
+      <link>https://rubinera1n.netlify.app/post/leetcode/template/tree_traversal/</link>
       <pubDate>Tue, 19 May 2020 01:20:06 +0800</pubDate>
       
-      <guid>https://rubinera1n.github.io/post/leetcode/template/tree_traversal/</guid>
+      <guid>https://rubinera1n.netlify.app/post/leetcode/template/tree_traversal/</guid>
       
         <description>&lt;ul&gt;
 &lt;li&gt;preorder&lt;/li&gt;
@@ -392,10 +403,10 @@
     
     <item>
       <title>DFS</title>
-      <link>https://rubinera1n.github.io/post/leetcode/template/dfs/</link>
+      <link>https://rubinera1n.netlify.app/post/leetcode/template/dfs/</link>
       <pubDate>Mon, 18 May 2020 22:41:51 +0800</pubDate>
       
-      <guid>https://rubinera1n.github.io/post/leetcode/template/dfs/</guid>
+      <guid>https://rubinera1n.netlify.app/post/leetcode/template/dfs/</guid>
       
         <description>&lt;p&gt;Check whether there is a path from |start| to |target| in graph G.&lt;/p&gt;
 &lt;p&gt;neighbor(x) returns the neighbors of x in G.&lt;/p&gt;
@@ -441,10 +452,10 @@
     
     <item>
       <title>BFS</title>
-      <link>https://rubinera1n.github.io/post/leetcode/template/bfs/</link>
+      <link>https://rubinera1n.netlify.app/post/leetcode/template/bfs/</link>
       <pubDate>Mon, 18 May 2020 22:39:32 +0800</pubDate>
       
-      <guid>https://rubinera1n.github.io/post/leetcode/template/bfs/</guid>
+      <guid>https://rubinera1n.netlify.app/post/leetcode/template/bfs/</guid>
       
         <description>&lt;p&gt;Find the shortest path from |start| to |target| in a unweighted graph G.&lt;/p&gt;
 &lt;p&gt;neighbor(x) returns the neighbors of x in G.&lt;/p&gt;
@@ -494,10 +505,10 @@
     
     <item>
       <title>Sliding Window</title>
-      <link>https://rubinera1n.github.io/post/leetcode/template/sliding_window/</link>
+      <link>https://rubinera1n.netlify.app/post/leetcode/template/sliding_window/</link>
       <pubDate>Mon, 18 May 2020 21:59:16 +0800</pubDate>
       
-      <guid>https://rubinera1n.github.io/post/leetcode/template/sliding_window/</guid>
+      <guid>https://rubinera1n.netlify.app/post/leetcode/template/sliding_window/</guid>
       
         <description>&lt;p&gt;面试常见题型。无意间发现国内版力扣，有人归类滑动窗口，写的不错。&lt;a href=&#34;https://leetcode-cn.com/problems/minimum-window-substring/solution/hua-dong-chuang-kou-by-powcai-2/&#34;&gt;链结&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;题目参考：LeetCode 3. Combinations&lt;/p&gt;
@@ -681,10 +692,10 @@ Note:
     
     <item>
       <title>Combinations</title>
-      <link>https://rubinera1n.github.io/post/leetcode/template/combinations/</link>
+      <link>https://rubinera1n.netlify.app/post/leetcode/template/combinations/</link>
       <pubDate>Mon, 18 May 2020 21:51:50 +0800</pubDate>
       
-      <guid>https://rubinera1n.github.io/post/leetcode/template/combinations/</guid>
+      <guid>https://rubinera1n.netlify.app/post/leetcode/template/combinations/</guid>
       
         <description>&lt;p&gt;思路：使用一个常量记录位置，避免重复&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -821,10 +832,10 @@ Output:
     
     <item>
       <title>Permutations</title>
-      <link>https://rubinera1n.github.io/post/leetcode/template/permutations/</link>
+      <link>https://rubinera1n.netlify.app/post/leetcode/template/permutations/</link>
       <pubDate>Mon, 18 May 2020 21:40:49 +0800</pubDate>
       
-      <guid>https://rubinera1n.github.io/post/leetcode/template/permutations/</guid>
+      <guid>https://rubinera1n.netlify.app/post/leetcode/template/permutations/</guid>
       
         <description>&lt;p&gt;思路：使用数组记住使用过数字&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -975,10 +986,10 @@ Output:
     
     <item>
       <title>Binary Search</title>
-      <link>https://rubinera1n.github.io/post/leetcode/template/binary_search/</link>
+      <link>https://rubinera1n.netlify.app/post/leetcode/template/binary_search/</link>
       <pubDate>Mon, 18 May 2020 21:37:10 +0800</pubDate>
       
-      <guid>https://rubinera1n.github.io/post/leetcode/template/binary_search/</guid>
+      <guid>https://rubinera1n.netlify.app/post/leetcode/template/binary_search/</guid>
       
         <description>&lt;p&gt;思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

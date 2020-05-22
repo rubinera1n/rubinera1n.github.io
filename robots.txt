@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://rubinera1n.github.io/sitemap.xml
+Sitemap: https://rubinera1n.netlify.app/sitemap.xml
