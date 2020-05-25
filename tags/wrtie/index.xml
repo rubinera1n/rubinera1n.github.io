@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wrtie on Rubinera1n&#39;s Blog</title>
+    <link>https://blog.xiufuguo.com/tags/wrtie/</link>
+    <description>Recent content in wrtie on Rubinera1n&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 25 May 2020 06:40:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.xiufuguo.com/tags/wrtie/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Set Goal</title>
+      <link>https://blog.xiufuguo.com/post/write/set_goal/</link>
+      <pubDate>Mon, 25 May 2020 06:40:00 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/write/set_goal/</guid>
+      <description>2020年上半年快结束了，突然想写 Blog 记录下自己的生活与技术学习， 自己习惯用Scrivener做笔记，真的没有习惯写博客，写一些生活记录比较容</description>
+    </item>
+    
+  </channel>
+</rss>

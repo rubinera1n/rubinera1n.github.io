@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rubinera1n&#39;s Blog</title>
-    <link>https://rubinera1n.netlify.app/</link>
+    <link>https://blog.xiufuguo.com/</link>
     <description>Recent content on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Sun, 17 May 2020 22:00:00 +0800</lastBuildDate>
     
-        <atom:link href="https://rubinera1n.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://blog.xiufuguo.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>About</title>
-      <link>https://rubinera1n.netlify.app/about/</link>
+      <link>https://blog.xiufuguo.com/about/</link>
       <pubDate>Sun, 17 May 2020 22:00:00 +0800</pubDate>
       
-      <guid>https://rubinera1n.netlify.app/about/</guid>
+      <guid>https://blog.xiufuguo.com/about/</guid>
       
         <description>&lt;p&gt;Experienced Software Backend Engineer with a demonstrated history of working in the information technology and services industry. Skilled in Python, Golang. Hand in experience on RDBMS, Redis and RabbitMQ.&lt;/p&gt;
 </description>
@@ -24,22 +24,54 @@
     </item>
     
     <item>
-      <title>重拾博客</title>
-      <link>https://rubinera1n.netlify.app/post/write/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</link>
-      <pubDate>Fri, 22 May 2020 00:34:01 +0800</pubDate>
+      <title>Set Goal</title>
+      <link>https://blog.xiufuguo.com/post/write/set_goal/</link>
+      <pubDate>Mon, 25 May 2020 06:40:00 +0800</pubDate>
       
-      <guid>https://rubinera1n.netlify.app/post/write/%E9%87%8D%E6%8B%BE%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>https://blog.xiufuguo.com/post/write/set_goal/</guid>
       
-        <description></description>
+        <description>&lt;p&gt;2020年上半年快结束了，突然想写 Blog 记录下自己的生活与技术学习，&lt;/p&gt;
+&lt;p&gt;自己习惯用&lt;code&gt;Scrivener&lt;/code&gt;做笔记，真的没有习惯写博客，写一些生活记录比较容易保持哈。&lt;/p&gt;
+&lt;p&gt;使用 Python 工作已经有五年了，Python 是个很棒的语言，但最近发现大部分的公司招聘只要是 Python 的，都会与 Golang 绑在一起。&lt;/p&gt;
+&lt;p&gt;新加坡的 ByteDance、Shopee，新项目都使用 Golang ，Python 旧项目 maintain 而已。&lt;/p&gt;
+&lt;p&gt;看来 Golang 这地鼠要好好了解阿！&lt;/p&gt;
+&lt;p&gt;最近公司在推动技术分享，老大主动找我：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;老大：Eason，帮你报名技术分享哈，你分享 C++ 相关的（老大腾讯出来的）&lt;/p&gt;
+&lt;p&gt;我：What ！？老大，我出社会后，C++ 语法我都快忘光了（虽然偶尔用 C++ 刷 leetcode，但不能跟你说我在刷题阿XD）&lt;/p&gt;
+&lt;p&gt;老大：不管，你也要分享，逃不了的，分享不准 Demo 级别。&lt;/p&gt;
+&lt;p&gt;我：那。。我讲 Golang 协程吧？刚好可以熟悉 Golang，后面新项目也可以使用，团队也慢慢统一语言。&lt;/p&gt;
+&lt;p&gt;老大：嗯好，就这么决定。&lt;/p&gt;
+&lt;p&gt;过了一会。。。&lt;/p&gt;
+&lt;p&gt;老大：6/29 深入浅出 Golang 协程 Eason。&lt;/p&gt;
+&lt;p&gt;我：Fuxk。。。这效率真快。。。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;想说既然要学新语言，那就定个目标吧，不要每天浑浑噩噩的，人生就这么几年，要活得精采。&lt;/p&gt;
+&lt;p&gt;2020年下半年目标：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;牛津3700单字&lt;/li&gt;
+&lt;li&gt;使用 Golang 写个项目&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;列个书单，相信半年时间读不完，但这些书对职业生涯有很大的帮助，啃下去就对了！&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Linux 内核设计与实现&lt;/li&gt;
+&lt;li&gt;UNIX 环境高级编程&lt;/li&gt;
+&lt;li&gt;UNIX 网络编程卷1：套接字联网 API&lt;/li&gt;
+&lt;li&gt;深入理解计算机系统&lt;/li&gt;
+&lt;li&gt;设计模式(可复用面向对象软件基础)&lt;/li&gt;
+&lt;li&gt;高性能 MySQL&lt;/li&gt;
+&lt;li&gt;Redis 设计与实现&lt;/li&gt;
+&lt;/ul&gt;
+</description>
       
     </item>
     
     <item>
       <title>Reverse Linked List</title>
-      <link>https://rubinera1n.netlify.app/post/leetcode/template/reverse_linked_list/</link>
+      <link>https://blog.xiufuguo.com/post/leetcode/template/reverse_linked_list/</link>
       <pubDate>Tue, 19 May 2020 01:53:36 +0800</pubDate>
       
-      <guid>https://rubinera1n.netlify.app/post/leetcode/template/reverse_linked_list/</guid>
+      <guid>https://blog.xiufuguo.com/post/leetcode/template/reverse_linked_list/</guid>
       
         <description>&lt;p&gt;code&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -124,10 +156,10 @@
     
     <item>
       <title>HashMap</title>
-      <link>https://rubinera1n.netlify.app/post/leetcode/template/hash_table/</link>
+      <link>https://blog.xiufuguo.com/post/leetcode/template/hash_table/</link>
       <pubDate>Tue, 19 May 2020 01:48:20 +0800</pubDate>
       
-      <guid>https://rubinera1n.netlify.app/post/leetcode/template/hash_table/</guid>
+      <guid>https://blog.xiufuguo.com/post/leetcode/template/hash_table/</guid>
       
         <description>&lt;p&gt;code&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -278,10 +310,10 @@
     
     <item>
       <title>Tree Traversal</title>
-      <link>https://rubinera1n.netlify.app/post/leetcode/template/tree_traversal/</link>
+      <link>https://blog.xiufuguo.com/post/leetcode/template/tree_traversal/</link>
       <pubDate>Tue, 19 May 2020 01:20:06 +0800</pubDate>
       
-      <guid>https://rubinera1n.netlify.app/post/leetcode/template/tree_traversal/</guid>
+      <guid>https://blog.xiufuguo.com/post/leetcode/template/tree_traversal/</guid>
       
         <description>&lt;ul&gt;
 &lt;li&gt;preorder&lt;/li&gt;
@@ -403,10 +435,10 @@
     
     <item>
       <title>DFS</title>
-      <link>https://rubinera1n.netlify.app/post/leetcode/template/dfs/</link>
+      <link>https://blog.xiufuguo.com/post/leetcode/template/dfs/</link>
       <pubDate>Mon, 18 May 2020 22:41:51 +0800</pubDate>
       
-      <guid>https://rubinera1n.netlify.app/post/leetcode/template/dfs/</guid>
+      <guid>https://blog.xiufuguo.com/post/leetcode/template/dfs/</guid>
       
         <description>&lt;p&gt;Check whether there is a path from |start| to |target| in graph G.&lt;/p&gt;
 &lt;p&gt;neighbor(x) returns the neighbors of x in G.&lt;/p&gt;
@@ -452,10 +484,10 @@
     
     <item>
       <title>BFS</title>
-      <link>https://rubinera1n.netlify.app/post/leetcode/template/bfs/</link>
+      <link>https://blog.xiufuguo.com/post/leetcode/template/bfs/</link>
       <pubDate>Mon, 18 May 2020 22:39:32 +0800</pubDate>
       
-      <guid>https://rubinera1n.netlify.app/post/leetcode/template/bfs/</guid>
+      <guid>https://blog.xiufuguo.com/post/leetcode/template/bfs/</guid>
       
         <description>&lt;p&gt;Find the shortest path from |start| to |target| in a unweighted graph G.&lt;/p&gt;
 &lt;p&gt;neighbor(x) returns the neighbors of x in G.&lt;/p&gt;
@@ -505,10 +537,10 @@
     
     <item>
       <title>Sliding Window</title>
-      <link>https://rubinera1n.netlify.app/post/leetcode/template/sliding_window/</link>
+      <link>https://blog.xiufuguo.com/post/leetcode/template/sliding_window/</link>
       <pubDate>Mon, 18 May 2020 21:59:16 +0800</pubDate>
       
-      <guid>https://rubinera1n.netlify.app/post/leetcode/template/sliding_window/</guid>
+      <guid>https://blog.xiufuguo.com/post/leetcode/template/sliding_window/</guid>
       
         <description>&lt;p&gt;面试常见题型。无意间发现国内版力扣，有人归类滑动窗口，写的不错。&lt;a href=&#34;https://leetcode-cn.com/problems/minimum-window-substring/solution/hua-dong-chuang-kou-by-powcai-2/&#34;&gt;链结&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;题目参考：LeetCode 3. Combinations&lt;/p&gt;
@@ -692,10 +724,10 @@ Note:
     
     <item>
       <title>Combinations</title>
-      <link>https://rubinera1n.netlify.app/post/leetcode/template/combinations/</link>
+      <link>https://blog.xiufuguo.com/post/leetcode/template/combinations/</link>
       <pubDate>Mon, 18 May 2020 21:51:50 +0800</pubDate>
       
-      <guid>https://rubinera1n.netlify.app/post/leetcode/template/combinations/</guid>
+      <guid>https://blog.xiufuguo.com/post/leetcode/template/combinations/</guid>
       
         <description>&lt;p&gt;思路：使用一个常量记录位置，避免重复&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -832,10 +864,10 @@ Output:
     
     <item>
       <title>Permutations</title>
-      <link>https://rubinera1n.netlify.app/post/leetcode/template/permutations/</link>
+      <link>https://blog.xiufuguo.com/post/leetcode/template/permutations/</link>
       <pubDate>Mon, 18 May 2020 21:40:49 +0800</pubDate>
       
-      <guid>https://rubinera1n.netlify.app/post/leetcode/template/permutations/</guid>
+      <guid>https://blog.xiufuguo.com/post/leetcode/template/permutations/</guid>
       
         <description>&lt;p&gt;思路：使用数组记住使用过数字&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
@@ -986,10 +1018,10 @@ Output:
     
     <item>
       <title>Binary Search</title>
-      <link>https://rubinera1n.netlify.app/post/leetcode/template/binary_search/</link>
+      <link>https://blog.xiufuguo.com/post/leetcode/template/binary_search/</link>
       <pubDate>Mon, 18 May 2020 21:37:10 +0800</pubDate>
       
-      <guid>https://rubinera1n.netlify.app/post/leetcode/template/binary_search/</guid>
+      <guid>https://blog.xiufuguo.com/post/leetcode/template/binary_search/</guid>
       
         <description>&lt;p&gt;思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;

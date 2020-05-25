@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://rubinera1n.netlify.app/sitemap.xml
+Sitemap: https://blog.xiufuguo.com/sitemap.xml
