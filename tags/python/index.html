@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Rubinera1n&#39;s Blog</title>
+  <title>python · Rubinera1n&#39;s Blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -34,8 +34,8 @@
 <meta name="generator" content="Hugo 0.70.0" />
 
 
-<link rel="canonical" href="https://blog.xiufuguo.com/" />
-<link href="/index.xml" rel="alternate" type="application/rss+xml" title="Rubinera1n&#39;s Blog" />
+<link rel="canonical" href="https://blog.xiufuguo.com/tags/python/" />
+<link href="/tags/python/index.xml" rel="alternate" type="application/rss+xml" title="Rubinera1n&#39;s Blog" />
 
 
 
@@ -58,14 +58,14 @@
 
 
 
-<meta property="og:title" content="Rubinera1n&#39;s Blog" />
+<meta property="og:title" content="python" />
 <meta property="og:description" content="Rubinera1n&#39;s Blog" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-05-17T22:00:00+08:00" />
-<meta itemprop="name" content="Rubinera1n&#39;s Blog">
+<meta property="og:url" content="https://blog.xiufuguo.com/tags/python/" />
+<meta property="og:updated_time" content="2020-06-01T18:46:37+08:00" />
+<meta itemprop="name" content="python">
 <meta itemprop="description" content="Rubinera1n&#39;s Blog"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Rubinera1n&#39;s Blog"/>
+<meta name="twitter:title" content="python"/>
 <meta name="twitter:description" content="Rubinera1n&#39;s Blog"/>
 
 <!--[if lte IE 9]>
@@ -214,7 +214,7 @@
   <ul id="menu" class="menu">
     
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -284,196 +284,27 @@
       <div class="content-wrapper">
         <div id="content" class="content container">
           
-<section id="posts" class="posts">
-  
+
+<section id="archive" class="archive">
   
     
-  
-  
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/dfs/">DFS</a>
-    </h1>
+      <div class="archive-title tag">
+        <h2 class="archive-name">Tag: python</h2>
+      </div>
     
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
-          
-        </div>
-      <span class="more-meta"> 68 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
   
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Check whether there is a path from |start| to |target| in graph G.
-neighbor(x) returns the neighbors of x in G.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  seen = set([start]) def dfs(n): if n == target: return True for t in neighbor(n): if t in seen: continue seen.add(t) if dfs(t): return True seen.remove(t) # back-tracking return False return dfs(start)   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/dfs/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
 
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/bfs/">BFS</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
+    <div class="archive-post">
+      <time datetime="2020-06-01" class="archive-post-time">
+        2020-06-01
       </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
-          
-        </div>
-      <span class="more-meta"> 84 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
+      <span class="archive-post-title">
+        <a href="/post/programmer_code_interview_guide/ch01_stack_and_queue/%E8%AE%BE%E8%AE%A1getmin%E5%8A%9F%E8%83%BD%E7%9A%84%E6%A0%88/" class="archive-post-link">
+          1. 设计 getMin 功能的栈
+        </a>
+      </span>
     </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Find the shortest path from |start| to |target| in a unweighted graph G.
-neighbor(x) returns the neighbors of x in G.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  q = deque([start]) seen = set([start]) steps = 0 while q: size = len(q) for _ in range(size): n = q.popleft() if n == target: return steps for t in neighbor(n): if t in seen: continue q.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/bfs/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/sliding_window/">Sliding Window</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
-          
-        </div>
-      <span class="more-meta"> 632 words </span>
-      <span class="more-meta"> 2 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      面试常见题型。无意间发现国内版力扣，有人归类滑动窗口，写的不错。链结 题目参考：LeetCode 3. Combinations 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Given a string, find the
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/sliding_window/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/combinations/">Combinations</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
-          
-        </div>
-      <span class="more-meta"> 232 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      思路：使用一个常量记录位置，避免重复 1 2 3 4 5 6 7 8 9 10 11 def C(n, m, idx, cur): if len(cur) == m: print(cur) return for i in range(idx, n): cur.append(i + 1) C(n, m, i + 1, cur) cur.pop() n, m = 5, 3 C(n, m, 0, []) 参考题目： LeetCode
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/combinations/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/permutations/">Permutations</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
-          
-        </div>
-      <span class="more-meta"> 235 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      思路：使用数组记住使用过数字 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 def P(n, m, cur, used): if len(cur) == m: print(cur) return for i in range(n): if used[i]: continue used[i] = True cur.append(i + 1) P(n, m, cur, used) cur.pop() used[i] = False n, m = 5, 3 P(n, m, [], [False]
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/permutations/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
   
 </section>
 
@@ -494,26 +325,6 @@ neighbor(x) returns the neighbors of x in G.
 
   
   
-
-  
-  
-  <nav class="pagination">
-    <ul>
-      
-      <li >
-        <a href="/">1</a>
-      </li>
-      
-      <li  class="active" >
-        <a href="/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/page/3/">3</a>
-      </li>
-      
-    </ul>
-  </nav>
 
   
   
