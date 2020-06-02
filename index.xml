@@ -24,50 +24,39 @@
     </item>
     
     <item>
+      <title>2. 由两个栈组成的队列</title>
+      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/%E7%94%B1%E4%B8%A4%E4%B8%AA%E6%A0%88%E7%BB%84%E6%88%90%E7%9A%84%E9%98%9F%E5%88%97/</link>
+      <pubDate>Tue, 02 Jun 2020 12:58:33 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/%E7%94%B1%E4%B8%A4%E4%B8%AA%E6%A0%88%E7%BB%84%E6%88%90%E7%9A%84%E9%98%9F%E5%88%97/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://www.nowcoder.com/practice/6bc058b32ee54a5fa18c62f29bae9863?tpId=101&amp;amp;tqId=33074&amp;amp;tPage=1&amp;amp;rp=1&amp;amp;ru=/ta/programmer-code-interview-guide&amp;amp;qru=/ta/programmer-code-interview-guide/question-ranking&#34;&gt;牛客网评测系统&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;python code&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;go code&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+      
+    </item>
+    
+    <item>
       <title>1. 设计 getMin 功能的栈</title>
       <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/%E8%AE%BE%E8%AE%A1getmin%E5%8A%9F%E8%83%BD%E7%9A%84%E6%A0%88/</link>
       <pubDate>Mon, 01 Jun 2020 18:46:37 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/%E8%AE%BE%E8%AE%A1getmin%E5%8A%9F%E8%83%BD%E7%9A%84%E6%A0%88/</guid>
       
-        <description>&lt;p&gt;题目描述:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;实现一个特殊功能的栈，在实现栈的基本功能的基础上，再实现返回栈中最小元素的操作。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;输入描述:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;第一行输入一个整数N，表示对栈进行的操作总数。&lt;/p&gt;
-&lt;p&gt;下面N行每行输入一个字符串S，表示操作的种类。&lt;/p&gt;
-&lt;p&gt;如果S为&amp;quot;push&amp;rdquo;，则后面还有一个整数X表示向栈里压入整数X。&lt;/p&gt;
-&lt;p&gt;如果S为&amp;quot;pop&amp;rdquo;，则表示弹出栈顶操作。&lt;/p&gt;
-&lt;p&gt;如果S为&amp;quot;getMin&amp;rdquo;，则表示询问当前栈中的最小元素是多少。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;输出描述:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;对于每个getMin操作，输出一行表示当前栈中的最小元素是多少。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;示例1
-输入&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;6&lt;/p&gt;
-&lt;p&gt;push 3&lt;/p&gt;
-&lt;p&gt;push 2&lt;/p&gt;
-&lt;p&gt;push 1&lt;/p&gt;
-&lt;p&gt;getMin&lt;/p&gt;
-&lt;p&gt;pop&lt;/p&gt;
-&lt;p&gt;getMin&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;输出&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1&lt;/p&gt;
-&lt;p&gt;2&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;备注:&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;1&amp;lt;=N&amp;lt;=1000000&lt;/p&gt;
-&lt;p&gt;-1000000&amp;lt;=X&amp;lt;=1000000&lt;/p&gt;
-&lt;p&gt;数据保证没有不合法的操作&lt;/p&gt;
-&lt;/blockquote&gt;
+        <description>&lt;p&gt;&lt;a href=&#34;https://www.nowcoder.com/practice/05e57ce2cd8e4a1eae8c3b0a7e9886be?tpId=101&amp;amp;tqId=33073&amp;amp;rp=1&amp;amp;ru=/ta/programmer-code-interview-guide&amp;amp;qru=/ta/programmer-code-interview-guide/question-ranking&#34;&gt;牛客网评测系统&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;python code&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
