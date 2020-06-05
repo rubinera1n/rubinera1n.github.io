@@ -442,6 +442,34 @@
     </item>
     
     <item>
+      <title>MOOC</title>
+      <link>https://blog.xiufuguo.com/post/write/coder_sense/</link>
+      <pubDate>Sun, 31 May 2020 15:36:12 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/write/coder_sense/</guid>
+      
+        <description>&lt;p&gt;最近发现 Coursera 六月课程要开始了，以前念书时就知道 MOOC，工作求职开始用 Linkedin，突然发现证书可以发布到 Linkedin，这样可以增加面试机会，毕竟看 CV 看不出能力，但证书是至少有个基本能力保证。&lt;/p&gt;
+&lt;p&gt;看到最热门证书课程：&lt;a href=&#34;https://www.coursera.org/specializations/algorithms?ranMID=40328&amp;amp;ranEAID=9IqCvd3EEQc&amp;amp;ranSiteID=9IqCvd3EEQc-1bKh7Pq42BxtXiIvkyqMKw&amp;amp;siteID=9IqCvd3EEQc-1bKh7Pq42BxtXiIvkyqMKw&amp;amp;utm_content=10&amp;amp;utm_medium=partners&amp;amp;utm_source=linkshare&amp;amp;utm_campaign=9IqCvd3EEQc#about&#34;&gt;Algorithms Specialization&lt;/a&gt;，课程内容比较进阶，可以深度学习下。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Divide and Conquer, Sorting and Searching, and Randomized Algorithms&lt;/li&gt;
+&lt;li&gt;Graph Search, Shortest Paths, and Data Structures&lt;/li&gt;
+&lt;li&gt;Greedy Algorithms, Minimum Spanning Trees, and Dynamic Programming&lt;/li&gt;
+&lt;li&gt;Shortest Paths Revisited, NP-Complete Problems and What To Do About Them&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;去年买了三本算法书籍，打算回国内面试准备看&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://qbdu2qzd0.bkt.clouddn.com/algorithm_books.jpg?imageView/2/w/619/q/90&#34; alt=&#34;books&#34;&gt;&lt;/p&gt;
+&lt;p&gt;网上满多人推剑指Offer，阅读后发现这本书有点罗嗦，题解也没很精美。还不如刷 LeetCode 看评论区好。&lt;/p&gt;
+&lt;p&gt;去年刷了 200 多道，学会一些解题思路、整理模版。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://qbdu2qzd0.bkt.clouddn.com/leetcode.jpg?imageView/2/w/619/q/90&#34; alt=&#34;Leetcode&#34;&gt;&lt;/p&gt;
+&lt;p&gt;已经注册 &lt;a href=&#34;https://www.coursera.org/specializations/algorithms?ranMID=40328&amp;amp;ranEAID=9IqCvd3EEQc&amp;amp;ranSiteID=9IqCvd3EEQc-1bKh7Pq42BxtXiIvkyqMKw&amp;amp;siteID=9IqCvd3EEQc-1bKh7Pq42BxtXiIvkyqMKw&amp;amp;utm_content=10&amp;amp;utm_medium=partners&amp;amp;utm_source=linkshare&amp;amp;utm_campaign=9IqCvd3EEQc#about&#34;&gt;Algorithms Specialization&lt;/a&gt; 课程，配合&lt;a href=&#34;https://book.douban.com/subject/30422021/&#34;&gt;程序员面试指南&lt;/a&gt;与&lt;a href=&#34;https://book.douban.com/subject/3004255/&#34;&gt;编程之美&lt;/a&gt;一起服用，让自己下半年充实点。&lt;/p&gt;
+&lt;p&gt;程序员面试指南是华科大佬写的，工作主要用 Python，打算用 Python 与 Go 写笔记。&lt;/p&gt;
+&lt;p&gt;工作一段时间，真的觉得做技术最重要的是计算机基础与英文。&lt;/p&gt;
+&lt;p&gt;加油！Rubinera1n！精诚所至，金石为开。&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>Set Goal</title>
       <link>https://blog.xiufuguo.com/post/write/set_goal/</link>
       <pubDate>Mon, 25 May 2020 06:40:00 +0800</pubDate>
