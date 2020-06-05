@@ -6,10 +6,19 @@
     <description>Recent content in python on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 05 Jun 2020 01:41:16 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jun 2020 01:49:23 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>6. 用栈来求解汉诺塔问题</title>
+      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/%E7%94%A8%E6%A0%88%E6%9D%A5%E6%B1%82%E8%A7%A3%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Sat, 06 Jun 2020 01:49:23 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/%E7%94%A8%E6%A0%88%E6%9D%A5%E6%B1%82%E8%A7%A3%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98/</guid>
+      <description>牛客网评测系统 python code go code</description>
+    </item>
     
     <item>
       <title>5. 用一个栈实现另一个栈的排序</title>
