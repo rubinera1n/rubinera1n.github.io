@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>6. 用栈来求解汉诺塔问题 - Rubinera1n&#39;s Blog</title>
+  <title>7. 生成窗口最大值数组 - Rubinera1n&#39;s Blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -35,7 +35,7 @@
 <meta name="generator" content="Hugo 0.70.0" />
 
 
-<link rel="canonical" href="https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/06_use_stack_to_solve_hanoi_tower_problem/" />
+<link rel="canonical" href="https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/07_generate_window_maximum_array/" />
 
 
 
@@ -59,22 +59,22 @@
 
 
 
-<meta property="og:title" content="6. 用栈来求解汉诺塔问题" />
+<meta property="og:title" content="7. 生成窗口最大值数组" />
 <meta property="og:description" content="牛客网评测系统 python code go code" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/06_use_stack_to_solve_hanoi_tower_problem/" />
-<meta property="article:published_time" content="2020-06-06T01:49:23+08:00" />
-<meta property="article:modified_time" content="2020-06-06T20:03:16+08:00" />
-<meta itemprop="name" content="6. 用栈来求解汉诺塔问题">
+<meta property="og:url" content="https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/07_generate_window_maximum_array/" />
+<meta property="article:published_time" content="2020-06-07T01:41:24+08:00" />
+<meta property="article:modified_time" content="2020-06-07T01:43:10+08:00" />
+<meta itemprop="name" content="7. 生成窗口最大值数组">
 <meta itemprop="description" content="牛客网评测系统 python code go code">
-<meta itemprop="datePublished" content="2020-06-06T01:49:23&#43;08:00" />
-<meta itemprop="dateModified" content="2020-06-06T20:03:16&#43;08:00" />
+<meta itemprop="datePublished" content="2020-06-07T01:41:24&#43;08:00" />
+<meta itemprop="dateModified" content="2020-06-07T01:43:10&#43;08:00" />
 <meta itemprop="wordCount" content="11">
 
 
 
 <meta itemprop="keywords" content="algorithm,python,go," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="6. 用栈来求解汉诺塔问题"/>
+<meta name="twitter:title" content="7. 生成窗口最大值数组"/>
 <meta name="twitter:description" content="牛客网评测系统 python code go code"/>
 
 <!--[if lte IE 9]>
@@ -295,11 +295,11 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">6. 用栈来求解汉诺塔问题</h1>
+      <h1 class="post-title">7. 生成窗口最大值数组</h1>
       
       <div class="post-meta">
-        <time datetime="2020-06-06" class="post-time">
-          2020-06-06
+        <time datetime="2020-06-07" class="post-time">
+          2020-06-07
         </time>
         <div class="post-category">
             <a href="https://blog.xiufuguo.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BB%A3%E7%A0%81%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8D%97/"> 程序员代码面试指南 </a>
@@ -327,7 +327,7 @@
 
     
     <div class="post-content">
-      <p><a href="https://www.nowcoder.com/practice/1a2f618b3433487295657b3414f4e7c4?tpId=101&amp;tqId=33090&amp;tPage=1&amp;rp=1&amp;ru=/ta/programmer-code-interview-guide&amp;qru=/ta/programmer-code-interview-guide/question-ranking">牛客网评测系统</a></p>
+      <p><a href="https://www.nowcoder.com/practice/b316c7f9617744b98fa311ae29ac516c?tpId=101&amp;tqId=33083&amp;tPage=1&amp;rp=1&amp;ru=/ta/programmer-code-interview-guide&amp;qru=/ta/programmer-code-interview-guide/question-ranking">牛客网评测系统</a></p>
 <p>python code</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -355,10 +355,10 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2020-06-06
+      2020-06-07
       
-        <a href="https://github.com/rubinera1n/blogs/commit/2fdea02387de41c7efad4fbfb671d5603a38b451" title="post">
-          (2fdea02)
+        <a href="https://github.com/rubinera1n/blogs/commit/b8b172755afbd0f26348db3056900973e4d469e3" title="post">
+          (b8b1727)
         </a>
         
       
@@ -386,22 +386,9 @@
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/programmer_code_interview_guide/ch01_stack_and_queue/07_generate_window_maximum_array/">
-            
-            <i class="iconfont">
-              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
-  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  width="18" height="18">
-  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
-</svg>
-
-            </i>
-            <span class="prev-text nav-default">7. 生成窗口最大值数组</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
         
-          <a class="next" href="/post/programmer_code_interview_guide/ch01_stack_and_queue/05_use_one_stack_to_sort_another_stack/">
-            <span class="next-text nav-default">5. 用一个栈实现另一个栈的排序</span>
+          <a class="next" href="/post/programmer_code_interview_guide/ch01_stack_and_queue/06_use_stack_to_solve_hanoi_tower_problem/">
+            <span class="next-text nav-default">6. 用栈来求解汉诺塔问题</span>
             <span class="prev-text nav-mobile">Next</span>
             
             <i class="iconfont">
