@@ -25,10 +25,10 @@
     
     <item>
       <title>6. 用栈来求解汉诺塔问题</title>
-      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/06%E7%94%A8%E6%A0%88%E6%9D%A5%E6%B1%82%E8%A7%A3%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98/</link>
+      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/06_use_stack_to_solve_hanoi_tower_problem/</link>
       <pubDate>Sat, 06 Jun 2020 01:49:23 +0800</pubDate>
       
-      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/06%E7%94%A8%E6%A0%88%E6%9D%A5%E6%B1%82%E8%A7%A3%E6%B1%89%E8%AF%BA%E5%A1%94%E9%97%AE%E9%A2%98/</guid>
+      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/06_use_stack_to_solve_hanoi_tower_problem/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://www.nowcoder.com/practice/1a2f618b3433487295657b3414f4e7c4?tpId=101&amp;amp;tqId=33090&amp;amp;tPage=1&amp;amp;rp=1&amp;amp;ru=/ta/programmer-code-interview-guide&amp;amp;qru=/ta/programmer-code-interview-guide/question-ranking&#34;&gt;牛客网评测系统&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;python code&lt;/p&gt;
@@ -51,10 +51,10 @@
     
     <item>
       <title>5. 用一个栈实现另一个栈的排序</title>
-      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/05%E7%94%A8%E4%B8%80%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%A0%88%E7%9A%84%E6%8E%92%E5%BA%8F/</link>
+      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/05_use_one_stack_to_sort_another_stack/</link>
       <pubDate>Fri, 05 Jun 2020 01:41:16 +0800</pubDate>
       
-      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/05%E7%94%A8%E4%B8%80%E4%B8%AA%E6%A0%88%E5%AE%9E%E7%8E%B0%E5%8F%A6%E4%B8%80%E4%B8%AA%E6%A0%88%E7%9A%84%E6%8E%92%E5%BA%8F/</guid>
+      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/05_use_one_stack_to_sort_another_stack/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://www.nowcoder.com/practice/ff8cba64e7894c5582deafa54cca8ff2?tpId=101&amp;amp;tqId=33081&amp;amp;tPage=1&amp;amp;rp=1&amp;amp;ru=/ta/programmer-code-interview-guide&amp;amp;qru=/ta/programmer-code-interview-guide/question-ranking&#34;&gt;牛客网评测系统&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;python code&lt;/p&gt;
@@ -77,10 +77,10 @@
     
     <item>
       <title>4. 猫狗队列</title>
-      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/04%E7%8C%AB%E7%8B%97%E9%98%9F%E5%88%97/</link>
+      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/04_cat_and_dog_queue/</link>
       <pubDate>Thu, 04 Jun 2020 02:30:09 +0800</pubDate>
       
-      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/04%E7%8C%AB%E7%8B%97%E9%98%9F%E5%88%97/</guid>
+      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/04_cat_and_dog_queue/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://www.nowcoder.com/practice/8a7e04cff6a54b7095b94261d78108f5?tpId=101&amp;amp;tqId=33168&amp;amp;tPage=1&amp;amp;rp=1&amp;amp;ru=/ta/programmer-code-interview-guide&amp;amp;qru=/ta/programmer-code-interview-guide/question-ranking&#34;&gt;牛客网评测系统&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;python code&lt;/p&gt;
@@ -103,10 +103,10 @@
     
     <item>
       <title>3. 用递归函数和栈逆序一个栈</title>
-      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/03%E7%94%A8%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E5%92%8C%E6%A0%88%E9%80%86%E5%BA%8F%E4%B8%80%E4%B8%AA%E6%A0%88/</link>
+      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/03_reverse_stack_use_recursive_function/</link>
       <pubDate>Wed, 03 Jun 2020 02:25:22 +0800</pubDate>
       
-      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/03%E7%94%A8%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0%E5%92%8C%E6%A0%88%E9%80%86%E5%BA%8F%E4%B8%80%E4%B8%AA%E6%A0%88/</guid>
+      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/03_reverse_stack_use_recursive_function/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://www.nowcoder.com/practice/1de82c89cc0e43e9aa6ee8243f4dbefd?tpId=101&amp;amp;tqId=33075&amp;amp;rp=1&amp;amp;ru=/ta/programmer-code-interview-guide&amp;amp;qru=/ta/programmer-code-interview-guide/question-ranking&#34;&gt;牛客网评测系统&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;python code&lt;/p&gt;
@@ -129,10 +129,10 @@
     
     <item>
       <title>2. 由两个栈组成的队列</title>
-      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/02%E7%94%B1%E4%B8%A4%E4%B8%AA%E6%A0%88%E7%BB%84%E6%88%90%E7%9A%84%E9%98%9F%E5%88%97/</link>
+      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/02_implement_queue_using_stacks/</link>
       <pubDate>Tue, 02 Jun 2020 12:58:33 +0800</pubDate>
       
-      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/02%E7%94%B1%E4%B8%A4%E4%B8%AA%E6%A0%88%E7%BB%84%E6%88%90%E7%9A%84%E9%98%9F%E5%88%97/</guid>
+      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/02_implement_queue_using_stacks/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://www.nowcoder.com/practice/6bc058b32ee54a5fa18c62f29bae9863?tpId=101&amp;amp;tqId=33074&amp;amp;tPage=1&amp;amp;rp=1&amp;amp;ru=/ta/programmer-code-interview-guide&amp;amp;qru=/ta/programmer-code-interview-guide/question-ranking&#34;&gt;牛客网评测系统&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;python code&lt;/p&gt;
@@ -235,10 +235,10 @@
     
     <item>
       <title>1. 设计 getMin 功能的栈</title>
-      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/01%E8%AE%BE%E8%AE%A1getmin%E5%8A%9F%E8%83%BD%E7%9A%84%E6%A0%88/</link>
+      <link>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/01_min_stack/</link>
       <pubDate>Mon, 01 Jun 2020 18:46:37 +0800</pubDate>
       
-      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/01%E8%AE%BE%E8%AE%A1getmin%E5%8A%9F%E8%83%BD%E7%9A%84%E6%A0%88/</guid>
+      <guid>https://blog.xiufuguo.com/post/programmer_code_interview_guide/ch01_stack_and_queue/01_min_stack/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://www.nowcoder.com/practice/05e57ce2cd8e4a1eae8c3b0a7e9886be?tpId=101&amp;amp;tqId=33073&amp;amp;rp=1&amp;amp;ru=/ta/programmer-code-interview-guide&amp;amp;qru=/ta/programmer-code-interview-guide/question-ranking&#34;&gt;牛客网评测系统&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;python code&lt;/p&gt;
