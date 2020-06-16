@@ -295,6 +295,115 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/write/mooc/">MOOC</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-05-31" class="post-time">
+        2020-05-31
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/write/"> write </a>
+          
+        </div>
+      <span class="more-meta"> 628 words </span>
+      <span class="more-meta"> 2 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      最近发现 Coursera 六月课程要开始了，以前念书时就知道 MOOC，工作求职开始用 Linkedin，突然发现证书可以发布到 Linkedin，这样可以增加面
+    </div>
+    <div class="read-more">
+      <a href="/post/write/mooc/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/write/set_goal/">Set Goal</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-05-25" class="post-time">
+        2020-05-25
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/write/"> write </a>
+          
+        </div>
+      <span class="more-meta"> 595 words </span>
+      <span class="more-meta"> 2 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      2020年上半年快结束了，突然想写 Blog 记录下自己的生活与技术学习， 自己习惯用Scrivener做笔记，真的没有习惯写博客，写一些生活记录比较容
+    </div>
+    <div class="read-more">
+      <a href="/post/write/set_goal/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/template/reverse_linked_list/">Reverse Linked List</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-05-19" class="post-time">
+        2020-05-19
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
+          
+        </div>
+      <span class="more-meta"> 122 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      code
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35  class ListNode: def __init__(self, x): self.value = x self.next = None def reverse_link(head): if not head: return pre, nxt, curr = None, None, head while curr: nxt = curr.next curr.next = pre pre = curr curr = nxt return pre def create_link(nums): dummy = ListNode(0) curr = dummy for i in nums: curr.
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/template/reverse_linked_list/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/template/hash_table/">HashMap</a>
     </h1>
     
@@ -365,118 +474,6 @@
 </article>
 
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/dfs/">DFS</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
-          
-        </div>
-      <span class="more-meta"> 68 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Check whether there is a path from |start| to |target| in graph G.
-neighbor(x) returns the neighbors of x in G.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  seen = set([start]) def dfs(n): if n == target: return True for t in neighbor(n): if t in seen: continue seen.add(t) if dfs(t): return True seen.remove(t) # back-tracking return False return dfs(start)   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/dfs/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/bfs/">BFS</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
-          
-        </div>
-      <span class="more-meta"> 84 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Find the shortest path from |start| to |target| in a unweighted graph G.
-neighbor(x) returns the neighbors of x in G.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  q = deque([start]) seen = set([start]) steps = 0 while q: size = len(q) for _ in range(size): n = q.popleft() if n == target: return steps for t in neighbor(n): if t in seen: continue q.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/bfs/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/sliding_window/">Sliding Window</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
-          
-        </div>
-      <span class="more-meta"> 632 words </span>
-      <span class="more-meta"> 2 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      面试常见题型。无意间发现国内版力扣，有人归类滑动窗口，写的不错。链结 题目参考：LeetCode 3. Combinations 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Given a string, find the
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/sliding_window/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
 </section>
 
 
@@ -516,6 +513,10 @@ neighbor(x) returns the neighbors of x in G.
       
       <li >
         <a href="/page/4/">4</a>
+      </li>
+      
+      <li >
+        <a href="/page/5/">5</a>
       </li>
       
     </ul>
