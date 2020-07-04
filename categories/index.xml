@@ -6,26 +6,17 @@
     <description>Recent content in Categories on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 26 Jun 2020 04:34:52 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 05 Jul 2020 01:03:39 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>linux</title>
-      <link>https://blog.xiufuguo.com/categories/linux/</link>
-      <pubDate>Fri, 26 Jun 2020 04:34:52 +0800</pubDate>
+      <title>leetcode-tree</title>
+      <link>https://blog.xiufuguo.com/categories/leetcode-tree/</link>
+      <pubDate>Sun, 05 Jul 2020 01:03:39 +0800</pubDate>
       
-      <guid>https://blog.xiufuguo.com/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>程序员代码面试指南</title>
-      <link>https://blog.xiufuguo.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BB%A3%E7%A0%81%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8D%97/</link>
-      <pubDate>Tue, 16 Jun 2020 12:29:20 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/categories/%E7%A8%8B%E5%BA%8F%E5%91%98%E4%BB%A3%E7%A0%81%E9%9D%A2%E8%AF%95%E6%8C%87%E5%8D%97/</guid>
+      <guid>https://blog.xiufuguo.com/categories/leetcode-tree/</guid>
       <description></description>
     </item>
     
