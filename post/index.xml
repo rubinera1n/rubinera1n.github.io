@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 16 Jun 2020 12:29:20 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jun 2020 04:34:52 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Thread</title>
+      <link>https://blog.xiufuguo.com/post/linux/thread/</link>
+      <pubDate>Fri, 26 Jun 2020 04:34:52 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/linux/thread/</guid>
+      <description>1. 线程的基本概念 线程英文单词是 thread。 说到线程不得不提到”进程”，一个进程代表计算机中实际跑起来的一个程序，在现代操作系统的保护模式下</description>
+    </item>
     
     <item>
       <title>[链表] 05.反转部分单向链表</title>
@@ -187,15 +196,6 @@ neighbor(x) returns the neighbors of x in G.
       
       <guid>https://blog.xiufuguo.com/post/leetcode/template/combinations/</guid>
       <description>思路：使用一个常量记录位置，避免重复 1 2 3 4 5 6 7 8 9 10 11 def C(n, m, idx, cur): if len(cur) == m: print(cur) return for i in range(idx, n): cur.append(i + 1) C(n, m, i + 1, cur) cur.pop() n, m = 5, 3 C(n, m, 0, []) 参考题目： LeetCode</description>
-    </item>
-    
-    <item>
-      <title>Permutations</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/template/permutations/</link>
-      <pubDate>Mon, 18 May 2020 21:40:49 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/template/permutations/</guid>
-      <description>思路：使用数组记住使用过数字 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 def P(n, m, cur, used): if len(cur) == m: print(cur) return for i in range(n): if used[i]: continue used[i] = True cur.append(i + 1) P(n, m, cur, used) cur.pop() used[i] = False n, m = 5, 3 P(n, m, [], [False]</description>
     </item>
     
   </channel>
