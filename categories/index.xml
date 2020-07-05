@@ -6,15 +6,24 @@
     <description>Recent content in Categories on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Jul 2020 01:03:39 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 04:07:47 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>golang</title>
+      <link>https://blog.xiufuguo.com/categories/golang/</link>
+      <pubDate>Mon, 06 Jul 2020 04:07:47 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>leetcode-tree</title>
       <link>https://blog.xiufuguo.com/categories/leetcode-tree/</link>
-      <pubDate>Sun, 05 Jul 2020 01:03:39 +0800</pubDate>
+      <pubDate>Sun, 05 Jul 2020 15:18:39 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/categories/leetcode-tree/</guid>
       <description></description>

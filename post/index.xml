@@ -6,10 +6,41 @@
     <description>Recent content in Posts on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 05 Jul 2020 01:03:39 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jul 2020 04:07:47 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>深入浅出 Go 协程</title>
+      <link>https://blog.xiufuguo.com/post/golang/head_first_goroutine/</link>
+      <pubDate>Mon, 06 Jul 2020 04:07:47 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/golang/head_first_goroutine/</guid>
+      <description>深入浅出 Golang 协程 一、什么是 Goroutines Goroutines 是用户空间线程。 从概念上讲，它类似于由 OS 管理的内核线程，但完全由 Go 运行时管理。 比内核线程更轻巧，更便宜。 调度程序</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 106. Construct Binary Tree from Inorder and Postorder Traversal</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/construct-binary-tree-from-inorder-and-postorder-traversal/</link>
+      <pubDate>Sun, 05 Jul 2020 15:18:39 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/construct-binary-tree-from-inorder-and-postorder-traversal/</guid>
+      <description>106. Construct Binary Tree from Inorder and Postorder Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  class Solution: def buildTree(self, inorder: List[int], postorder: List[int]) -&amp;gt; TreeNode: if not inorder or not postorder: return None return self.helper(inorder, 0, len(inorder) - 1, postorder, 0, len(postorder) - 1) def helper(self, inorder, i_left, i_right, postorder, p_left, p_right): if i_left &amp;gt; i_right: return None if i_left == i_right: return TreeNode(postorder[p_right]) idx = inorder.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 105. Construct Binary Tree from Preorder and Inorder Traversal</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/construct-binary-tree-from-preorder-and-inorder-traversal/</link>
+      <pubDate>Sun, 05 Jul 2020 15:16:20 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/construct-binary-tree-from-preorder-and-inorder-traversal/</guid>
+      <description>105. Construct Binary Tree from Preorder and Inorder Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  class Solution: def buildTree(self, preorder: List[int], inorder: List[int]) -&amp;gt; TreeNode: if not preorder or not inorder: return None return self.helper(preorder, 0, len(preorder) - 1, inorder, 0, len(inorder) - 1) def helper(self, preorder, p_left, p_right, inorder, i_left, i_right): if p_left &amp;gt; p_right: return None if p_left == p_right: return TreeNode(preorder[p_left]) idx = inorder.</description>
+    </item>
     
     <item>
       <title>[LeetCode] 104. Maximum Depth of Binary Tree</title>
@@ -189,24 +220,6 @@ neighbor(x) returns the neighbors of x in G.
       
       <guid>https://blog.xiufuguo.com/post/leetcode/template/combinations/</guid>
       <description>思路：使用一个常量记录位置，避免重复 1 2 3 4 5 6 7 8 9 10 11 def C(n, m, idx, cur): if len(cur) == m: print(cur) return for i in range(idx, n): cur.append(i + 1) C(n, m, i + 1, cur) cur.pop() n, m = 5, 3 C(n, m, 0, []) 参考题目： LeetCode</description>
-    </item>
-    
-    <item>
-      <title>Permutations</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/template/permutations/</link>
-      <pubDate>Mon, 18 May 2020 21:40:49 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/template/permutations/</guid>
-      <description>思路：使用数组记住使用过数字 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 def P(n, m, cur, used): if len(cur) == m: print(cur) return for i in range(n): if used[i]: continue used[i] = True cur.append(i + 1) P(n, m, cur, used) cur.pop() used[i] = False n, m = 5, 3 P(n, m, [], [False]</description>
-    </item>
-    
-    <item>
-      <title>Binary Search</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/template/binary_search/</link>
-      <pubDate>Mon, 18 May 2020 21:37:10 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/template/binary_search/</guid>
-      <description>思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 1 2 3 4 5 6 7 8 9 10 11 12 def binary_search(nums, target): l, r = 0, len(nums) while l &amp;lt; r: m = l + (r - l) // 2 # python不会溢出，</description>
     </item>
     
   </channel>
