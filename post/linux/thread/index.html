@@ -32,7 +32,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/linux/thread/" />
@@ -64,12 +64,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xiufuguo.com/post/linux/thread/" />
 <meta property="article:published_time" content="2020-06-26T04:34:52+08:00" />
-<meta property="article:modified_time" content="2020-07-05T00:23:18+08:00" />
+<meta property="article:modified_time" content="2020-07-06T15:33:32+08:00" />
 <meta itemprop="name" content="Thread">
 <meta itemprop="description" content="1. 线程的基本概念 线程英文单词是 thread。 说到线程不得不提到”进程”，一个进程代表计算机中实际跑起来的一个程序，在现代操作系统的保护模式下">
 <meta itemprop="datePublished" content="2020-06-26T04:34:52&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-05T00:23:18&#43;08:00" />
-<meta itemprop="wordCount" content="20412">
+<meta itemprop="dateModified" content="2020-07-06T15:33:32&#43;08:00" />
+<meta itemprop="wordCount" content="20426">
 
 
 
@@ -305,7 +305,7 @@
             <a href="https://blog.xiufuguo.com/categories/linux/"> linux </a>
             
           </div>
-        <span class="more-meta"> 20412 words </span>
+        <span class="more-meta"> 20426 words </span>
           <span class="more-meta"> 41 min read </span>
 
         
@@ -364,7 +364,7 @@
         <li><a href="#避免活锁的一些建议">避免活锁的一些建议</a></li>
       </ul>
     </li>
-    <li><a href="#7-线程局部存储">7. 线程局部存储</a></li>
+    <li><a href="#7-线程局部存储todo">7. 线程局部存储(TODO&hellip;)</a></li>
   </ul>
 </nav>
   </div>
@@ -421,9 +421,9 @@ root     <span class="m">60928</span>     <span class="m">1</span>  <span class=
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-c" data-lang="c"><span class="kt">int</span> <span class="nf">pthread_create</span><span class="p">(</span><span class="n">pthread_t</span> <span class="o">*</span><span class="kr">thread</span><span class="p">,</span>
-									 <span class="k">const</span> <span class="n">pthread_attr_t</span> <span class="o">*</span><span class="n">attr</span><span class="p">,</span>
-									 <span class="kt">void</span> <span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="n">start_routine</span><span class="p">)</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">),</span>
-									 <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">);</span>
+                   <span class="k">const</span> <span class="n">pthread_attr_t</span> <span class="o">*</span><span class="n">attr</span><span class="p">,</span>
+                   <span class="kt">void</span> <span class="o">*</span><span class="p">(</span><span class="o">*</span><span class="n">start_routine</span><span class="p">)</span> <span class="p">(</span><span class="kt">void</span> <span class="o">*</span><span class="p">),</span>
+                   <span class="kt">void</span> <span class="o">*</span><span class="n">arg</span><span class="p">);</span>
 </code></pre></td></tr></table>
 </div>
 </div><ul>
@@ -652,13 +652,13 @@ $ pstack <span class="m">22255</span>
 <hr>
 <p>在实际开发中，我们经常需要去排查和定位一个进程 CPU 占用率过高的问题，如何排查呢？这里可以使用 Linux <strong>top</strong> 和 <strong>pstack</strong> 命令结合使用来排查。我们来看一个具体的例子：</p>
 <p>我们使用 top 命令发现我们的机器上有一个叫 qmarket 的进程 CPU 使用率非常高，如下图所示：</p>
-<p><img src="http://qbdu2qzd0.bkt.clouddn.com/thread_1.png" alt="avatar"></p>
+<p><img src="https://heuristic-nightingale-6c42ab.netlify.app/img/thread_1.png" alt="avatar"></p>
 <p>上图中进程 ID 为 <strong>4427</strong> 的 qmarket 进程占用 CPU 使用率达到 <strong>22.8%</strong>。我们使用 <strong>top -H</strong> 命令再次输出下系统的“进程”列表。</p>
 <blockquote>
 <p>top 命令的 -H 选项的作用是显示每个一个进程的各个线程运行状态（线程模式）。</p>
 </blockquote>
 <p>我们来看下执行结果：</p>
-<p><img src="http://qbdu2qzd0.bkt.clouddn.com/thread_2.png" alt="avatar"></p>
+<p><img src="https://heuristic-nightingale-6c42ab.netlify.app/img/thread_2.png" alt="avatar"></p>
 <p>如上图所示，top 命令第一栏虽然输出还叫 PID，但此时显示的实际是每个线程的线程 ID。我们可以发现 qmarket 程序的线程号为 <strong>4429</strong>、<strong>4430</strong>、<strong>4431</strong>、<strong>4432</strong>、<strong>4433</strong>、<strong>4434</strong>、<strong>4445</strong> 这几个线程占用 CPU 使用率较高。那么这几个线程到底做了什么导致 CPU 使用率高呢？我们使用 <strong>pstack 4427</strong> 来看一下这几个线程（<strong>4427</strong> 是 qmarket 的进程 ID）。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1269,7 +1269,7 @@ Current Time is: 2018/09/24 21:06:01.
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><img src="http://qbdu2qzd0.bkt.clouddn.com/thread_3.png" alt="avatar"></p>
+</div><p><img src="https://heuristic-nightingale-6c42ab.netlify.app/img/thread_3.png" alt="avatar"></p>
 <p>我们预想的结果是<strong>线程 1</strong> 和<strong>线程 2</strong> 的三条指令各自执行，<em><em>最终 *<em>a</em></em> 的值变为 <strong>2</strong>，但是由于操作系统线程调度的不确定性，<strong>线程 1</strong> 执行完指令①和②后，<strong>eax</strong> 寄存器中的值变为 <strong>1</strong>，此时操作系统切换到 <strong>线程2</strong> 执行，执行指令③④⑤，此时 <strong>eax</strong> 的值变为</em><em>1</em>*；接着操作系统切回**线程 1 **继续执行，执行指令⑦，得到 *****a** 的最终结果 **1**。</p>
 <ul>
 <li>把一个变量的值赋值给另外一个变量，或者把一个表达式的值赋值给另外一个变量，如</li>
@@ -2518,7 +2518,7 @@ handle a task, taskID: 9, threadID: <span class="m">140055302559488</span>
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><img src="http://qbdu2qzd0.bkt.clouddn.com/thread_4.png" alt="avatar"></p>
+</div><p><img src="https://heuristic-nightingale-6c42ab.netlify.app/img/thread_4.png" alt="avatar"></p>
 <p>这段逻辑的用途是我们需要反复判断一个多线程共享条件是否满足，一直到该条件满足为止，由于该条件被多个线程操作因此每次判断之前我们都需要进行加锁操作，判断完毕后需要进行解锁操作。但是上述逻辑存在严重的效率问题，假设我们解锁离开临界区后，此时由于其他线程修改了条件导致条件满足了，此时程序仍然需要睡眠 n 秒后才能得到反馈。因此我们需要这样一种机制：</p>
 <blockquote>
 <p>某个线程 A 在条件不满足的情况下，主动让出互斥量，让其他线程去折腾，线程在此处等待，等待条件的满足；一旦条件满足，线程就可以被立刻唤醒。线程 A 之所以可以安心等待，依赖的是其他线程的协作，它确信会有一个线程在发现条件满足以后，将向它发送信号，并且让出互斥量。如果其他线程不配合（不发信号，不让出互斥量），这个主动让出互斥量并等待事件发生的线程 A 就真的要等到花儿都谢了。</p>
@@ -4349,7 +4349,7 @@ start thread successfully， index: <span class="m">4</span>
 <h3 id="避免活锁的一些建议">避免活锁的一些建议</h3>
 <p>前面说了避免“死锁”，读者应该能理解，但是这里突然出现了避免“活锁”，我相信很多人看到这个标题一下子就懵了。所谓活锁就是，当多个线程使用 <strong>trylock</strong> 系列的函数时，由于多个线程相互谦让，导致即使在某段时间内锁资源是可用的，也可能导致需要锁的线程拿不到锁。举个生活中的例子，马路上两个人迎面走来，两个人同时往一个方向避让，原来本意是给对方让路，结果还是发生了碰撞。</p>
 <p>我们在实际编码时，尽量避免不要过多的线程使用 <strong>trylock</strong> 请求锁，以免出现“活锁”现象，这是对资源的一种浪费。</p>
-<h2 id="7-线程局部存储">7. 线程局部存储</h2>
+<h2 id="7-线程局部存储todo">7. 线程局部存储(TODO&hellip;)</h2>
 <hr>
 
     </div>
@@ -4364,10 +4364,10 @@ start thread successfully， index: <span class="m">4</span>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2020-07-05
+      2020-07-06
       
-        <a href="https://github.com/rubinera1n/blogs/commit/61941393fa702c7e993ebedb22f30836cf2d6d0d" title="update">
-          (6194139)
+        <a href="https://github.com/rubinera1n/blogs/commit/7e7c7201b08cdaf0291ac2269c6f48520e08ca80" title="update">
+          (7e7c720)
         </a>
         
       
@@ -4393,9 +4393,22 @@ start thread successfully， index: <span class="m">4</span>
       
       <nav class="post-nav">
         
+          <a class="prev" href="/post/leetcode/tags/tree/same-tree/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">[LeetCode] 100. Same Tree</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         
-          <a class="next" href="/post/programmer_code_interview_guide/ch02_linked_list/05_reverse_part_of_one_way_linked_list/">
-            <span class="next-text nav-default">[链表] 05.反转部分单向链表</span>
+          <a class="next" href="/post/life/mooc/">
+            <span class="next-text nav-default">MOOC</span>
             <span class="prev-text nav-mobile">Next</span>
             
             <i class="iconfont">
