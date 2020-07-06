@@ -68,13 +68,13 @@ neighbor(x) returns the neighbors of x in G.
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xiufuguo.com/post/leetcode/template/bfs/" />
 <meta property="article:published_time" content="2020-05-18T22:39:32+08:00" />
-<meta property="article:modified_time" content="2020-05-19T11:41:59+08:00" />
+<meta property="article:modified_time" content="2020-05-18T22:39:32+08:00" />
 <meta itemprop="name" content="BFS">
 <meta itemprop="description" content="Find the shortest path from |start| to |target| in a unweighted graph G.
 neighbor(x) returns the neighbors of x in G.
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  q = deque([start]) seen = set([start]) steps = 0 while q: size = len(q) for _ in range(size): n = q.popleft() if n == target: return steps for t in neighbor(n): if t in seen: continue q.">
 <meta itemprop="datePublished" content="2020-05-18T22:39:32&#43;08:00" />
-<meta itemprop="dateModified" content="2020-05-19T11:41:59&#43;08:00" />
+<meta itemprop="dateModified" content="2020-05-18T22:39:32&#43;08:00" />
 <meta itemprop="wordCount" content="84">
 
 
@@ -390,12 +390,7 @@ neighbor(x) returns the neighbors of x in G.
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2020-05-19
-      
-        <a href="https://github.com/rubinera1n/blogs/commit/4e857638807bde70b7da8e516ad9ced3b8a878c8" title="update">
-          (4e85763)
-        </a>
-        
+      2020-05-18
       
     </span>
   </p>
