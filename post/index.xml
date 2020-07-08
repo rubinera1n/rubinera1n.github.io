@@ -6,10 +6,57 @@
     <description>Recent content in Posts on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 06 Jul 2020 04:07:47 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 Jul 2020 14:37:34 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[LeetCode] 110. Balanced Binary Tree</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/balanced-binary-tree/</link>
+      <pubDate>Tue, 07 Jul 2020 14:37:34 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/balanced-binary-tree/</guid>
+      <description>110. Balanced Binary Tree
+python
+1 2 3 4 5 6 7 8 9 10  class Solution: def isBalanced(self, root: TreeNode) -&amp;gt; bool: return self.helper(root)[1] def helper(self, root): if not root: return (0, True) l_depth, l_balanced = self.helper(root.left) r_depth, r_balanced = self.helper(root.right) return max(l_depth, r_depth) + 1, l_balanced and r_balanced and abs(l_depth - r_depth) &amp;lt;= 1   go
+   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 98. Validate Binary Search Tree</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/validate-binary-search-tree/</link>
+      <pubDate>Tue, 07 Jul 2020 14:31:46 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/validate-binary-search-tree/</guid>
+      <description>98. Validate Binary Search Tree
+python
+1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&amp;gt; bool: return self.helper(root, float(&amp;#39;-inf&amp;#39;), float(&amp;#39;inf&amp;#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &amp;gt; lower and root.val &amp;lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   go
+   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 108. Convert Sorted Array to Binary Search Tree</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/</link>
+      <pubDate>Mon, 06 Jul 2020 11:58:22 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/</guid>
+      <description>108. Convert Sorted Array to Binary Search Tree
+python
+1 2 3 4 5 6 7 8 9 10  class Solution: def sortedArrayToBST(self, nums: List[int]) -&amp;gt; TreeNode: l, r = 0, len(nums) - 1 if l &amp;lt;= r: m = l + (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m+1:]) return root   go
+   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 103. Binary Tree Zigzag Level Order Traversal</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-zigzag-level-order-traversal/</link>
+      <pubDate>Mon, 06 Jul 2020 11:50:03 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-zigzag-level-order-traversal/</guid>
+      <description>103. Binary Tree Zigzag Level Order Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33  class Solution: def zigzagLevelOrder(self, root: TreeNode) -&amp;gt; List[List[int]]: res = [] self.dfs(root, 0, res) return res def dfs(self, root, level, res): if not root: return if len(res) &amp;lt;= level: res.</description>
+    </item>
     
     <item>
       <title>Head First Goroutine</title>
@@ -45,7 +92,7 @@ python
     <item>
       <title>[LeetCode] 104. Maximum Depth of Binary Tree</title>
       <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/maximum-depth-of-binary-tree/</link>
-      <pubDate>Sun, 05 Jul 2020 01:03:39 +0800</pubDate>
+      <pubDate>Sat, 04 Jul 2020 01:03:39 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/maximum-depth-of-binary-tree/</guid>
       <description>104. Maximum Depth of Binary Tree
@@ -57,7 +104,7 @@ python
     <item>
       <title>[LeetCode] 107. Binary Tree Level Order Traversal II</title>
       <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-level-order-traversal-ii/</link>
-      <pubDate>Sun, 05 Jul 2020 01:01:23 +0800</pubDate>
+      <pubDate>Sat, 04 Jul 2020 01:01:23 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-level-order-traversal-ii/</guid>
       <description>107. Binary Tree Level Order Traversal II
@@ -68,7 +115,7 @@ python
     <item>
       <title>[LeetCode] 96. Unique Binary Search Trees</title>
       <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/unique-binary-search-trees/</link>
-      <pubDate>Sun, 05 Jul 2020 00:58:28 +0800</pubDate>
+      <pubDate>Fri, 03 Jul 2020 00:58:28 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/unique-binary-search-trees/</guid>
       <description>96. Unique Binary Search Trees
@@ -80,7 +127,7 @@ python
     <item>
       <title>[LeetCode] 95. Unique Binary Search Trees II</title>
       <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/unique-binary-search-trees-ii/</link>
-      <pubDate>Sun, 05 Jul 2020 00:56:02 +0800</pubDate>
+      <pubDate>Fri, 03 Jul 2020 00:56:02 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/unique-binary-search-trees-ii/</guid>
       <description>95. Unique Binary Search Trees II
@@ -91,7 +138,7 @@ python
     <item>
       <title>[LeetCode] 102. Binary Tree Level Order Traversal</title>
       <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-level-order-traversal/</link>
-      <pubDate>Sun, 05 Jul 2020 00:52:52 +0800</pubDate>
+      <pubDate>Thu, 02 Jul 2020 00:52:52 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-level-order-traversal/</guid>
       <description>102. Binary Tree Level Order Traversal
@@ -102,7 +149,7 @@ python
     <item>
       <title>[LeetCode] 94. Binary Tree Inorder Traversal</title>
       <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-inorder-traversal/</link>
-      <pubDate>Sun, 05 Jul 2020 00:50:40 +0800</pubDate>
+      <pubDate>Thu, 02 Jul 2020 00:50:40 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-inorder-traversal/</guid>
       <description>94. Binary Tree Inorder Traversal
@@ -114,7 +161,7 @@ python
     <item>
       <title>[LeetCode] 101. Symmetric Tree</title>
       <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/symmetric-tree/</link>
-      <pubDate>Sun, 05 Jul 2020 00:47:21 +0800</pubDate>
+      <pubDate>Wed, 01 Jul 2020 00:47:21 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/symmetric-tree/</guid>
       <description>101. Symmetric Tree
@@ -125,22 +172,13 @@ python
     <item>
       <title>[LeetCode] 100. Same Tree</title>
       <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/same-tree/</link>
-      <pubDate>Sun, 05 Jul 2020 00:32:28 +0800</pubDate>
+      <pubDate>Wed, 01 Jul 2020 00:32:28 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/same-tree/</guid>
       <description>100. Same Tree
 python
 1 2 3 4 5 6 7 8  class Solution: def isSameTree(self, p: TreeNode, q: TreeNode) -&amp;gt; bool: if not p and not q: return True if not p or not q: return False return p.val == q.val and self.isSameTree(p.left, q.left) and \ self.isSameTree(p.right, q.right)   go
 1 2 3 4 5 6 7 8 9  func isSameTree(p *TreeNode, q *TreeNode) bool { if p == nil &amp;amp;&amp;amp; q == nil { return true } if p == nil || q == nil { return false } return p.</description>
-    </item>
-    
-    <item>
-      <title>Thread</title>
-      <link>https://blog.xiufuguo.com/post/linux/thread/</link>
-      <pubDate>Fri, 26 Jun 2020 04:34:52 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/linux/thread/</guid>
-      <description>1. 线程的基本概念 线程英文单词是 thread。 说到线程不得不提到”进程”，一个进程代表计算机中实际跑起来的一个程序，在现代操作系统的保护模式下</description>
     </item>
     
     <item>
@@ -189,37 +227,6 @@ python
       <guid>https://blog.xiufuguo.com/post/leetcode/template/tree_traversal/</guid>
       <description>preorder inorder postorder  code
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51  class TreeNode(object): def __init__(self, x): self.val = x self.left = None self.right = None def make_tree(lst): node = None if not lst: return if lst[0] is not None: node = TreeNode(lst.</description>
-    </item>
-    
-    <item>
-      <title>DFS</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/template/dfs/</link>
-      <pubDate>Mon, 18 May 2020 22:41:51 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/template/dfs/</guid>
-      <description>Check whether there is a path from |start| to |target| in graph G.
-neighbor(x) returns the neighbors of x in G.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  seen = set([start]) def dfs(n): if n == target: return True for t in neighbor(n): if t in seen: continue seen.add(t) if dfs(t): return True seen.remove(t) # back-tracking return False return dfs(start)   </description>
-    </item>
-    
-    <item>
-      <title>BFS</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/template/bfs/</link>
-      <pubDate>Mon, 18 May 2020 22:39:32 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/template/bfs/</guid>
-      <description>Find the shortest path from |start| to |target| in a unweighted graph G.
-neighbor(x) returns the neighbors of x in G.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  q = deque([start]) seen = set([start]) steps = 0 while q: size = len(q) for _ in range(size): n = q.popleft() if n == target: return steps for t in neighbor(n): if t in seen: continue q.</description>
-    </item>
-    
-    <item>
-      <title>Sliding Window</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/template/sliding_window/</link>
-      <pubDate>Mon, 18 May 2020 21:59:16 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/template/sliding_window/</guid>
-      <description>面试常见题型。无意间发现国内版力扣，有人归类滑动窗口，写的不错。链结 题目参考：LeetCode 3. Combinations 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Given a string, find the</description>
     </item>
     
   </channel>
