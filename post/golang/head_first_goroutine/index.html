@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>深入浅出 Go 协程 - Rubinera1n&#39;s Blog</title>
+  <title>Head First Goroutine - Rubinera1n&#39;s Blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,7 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="rubinera1n" />
-  <meta name="description" content="深入浅出 Golang 协程 一、什么是 Goroutines Goroutines 是用户空间线程。 从概念上讲，它类似于由 OS 管理的内核线程，但完全由 Go 运行时管理。 比内核线程更轻巧，更便宜。 调度程序" />
+  <meta name="description" content="深入浅出 Go 协程 一、什么是 Goroutines Goroutines 是用户空间线程。 从概念上讲，它类似于由 OS 管理的内核线程，但完全由 Go 运行时管理。 比内核线程更轻巧，更便宜。 调度程序" />
 
   <meta name="keywords" content="Hugo, blog, rubinera1n" />
 
@@ -59,23 +59,23 @@
 
 
 
-<meta property="og:title" content="深入浅出 Go 协程" />
-<meta property="og:description" content="深入浅出 Golang 协程 一、什么是 Goroutines Goroutines 是用户空间线程。 从概念上讲，它类似于由 OS 管理的内核线程，但完全由 Go 运行时管理。 比内核线程更轻巧，更便宜。 调度程序" />
+<meta property="og:title" content="Head First Goroutine" />
+<meta property="og:description" content="深入浅出 Go 协程 一、什么是 Goroutines Goroutines 是用户空间线程。 从概念上讲，它类似于由 OS 管理的内核线程，但完全由 Go 运行时管理。 比内核线程更轻巧，更便宜。 调度程序" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xiufuguo.com/post/golang/head_first_goroutine/" />
 <meta property="article:published_time" content="2020-07-06T04:07:47+08:00" />
-<meta property="article:modified_time" content="2020-07-06T04:26:57+08:00" />
-<meta itemprop="name" content="深入浅出 Go 协程">
-<meta itemprop="description" content="深入浅出 Golang 协程 一、什么是 Goroutines Goroutines 是用户空间线程。 从概念上讲，它类似于由 OS 管理的内核线程，但完全由 Go 运行时管理。 比内核线程更轻巧，更便宜。 调度程序">
+<meta property="article:modified_time" content="2020-07-08T14:54:42+08:00" />
+<meta itemprop="name" content="Head First Goroutine">
+<meta itemprop="description" content="深入浅出 Go 协程 一、什么是 Goroutines Goroutines 是用户空间线程。 从概念上讲，它类似于由 OS 管理的内核线程，但完全由 Go 运行时管理。 比内核线程更轻巧，更便宜。 调度程序">
 <meta itemprop="datePublished" content="2020-07-06T04:07:47&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-06T04:26:57&#43;08:00" />
-<meta itemprop="wordCount" content="8353">
+<meta itemprop="dateModified" content="2020-07-08T14:54:42&#43;08:00" />
+<meta itemprop="wordCount" content="8371">
 
 
 
 <meta itemprop="keywords" content="golang," /><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="深入浅出 Go 协程"/>
-<meta name="twitter:description" content="深入浅出 Golang 协程 一、什么是 Goroutines Goroutines 是用户空间线程。 从概念上讲，它类似于由 OS 管理的内核线程，但完全由 Go 运行时管理。 比内核线程更轻巧，更便宜。 调度程序"/>
+<meta name="twitter:title" content="Head First Goroutine"/>
+<meta name="twitter:description" content="深入浅出 Go 协程 一、什么是 Goroutines Goroutines 是用户空间线程。 从概念上讲，它类似于由 OS 管理的内核线程，但完全由 Go 运行时管理。 比内核线程更轻巧，更便宜。 调度程序"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -295,7 +295,7 @@
           <article class="post bg-white">
     
     <header class="post-header">
-      <h1 class="post-title">深入浅出 Go 协程</h1>
+      <h1 class="post-title">Head First Goroutine</h1>
       
       <div class="post-meta">
         <time datetime="2020-07-06" class="post-time">
@@ -305,7 +305,7 @@
             <a href="https://blog.xiufuguo.com/categories/golang/"> golang </a>
             
           </div>
-        <span class="more-meta"> 8353 words </span>
+        <span class="more-meta"> 8371 words </span>
           <span class="more-meta"> 17 min read </span>
 
         
@@ -347,7 +347,7 @@
 
     
     <div class="post-content">
-      <h1 id="深入浅出-golang-协程">深入浅出 Golang 协程</h1>
+      <h1 id="深入浅出-go-协程">深入浅出 Go 协程</h1>
 <h2 id="一什么是-goroutines">一、什么是 Goroutines</h2>
 <p>Goroutines 是用户空间线程。</p>
 <ul>
@@ -377,19 +377,20 @@
 <p>熟悉 POSIX thread API 的人都知道，POSIX 在很大程度上对现有 Unix 进程模型逻辑进行扩展，因此，线程获得了许多与进程相同的控件。线程具有自己的信号掩码，可以分配给 <a href="https://en.wikipedia.org/wiki/Processor_affinity">CPU affinity</a>，可以放入 <a href="https://en.wikipedia.org/wiki/Cgroups">cgroups</a> 中，并可以查询它们使用的资源。但是很多特征对于 Go 程序来说都是累赘。 尤其是 context 上下文切换的耗时。</p>
 <p>另一个原因是 Go 的垃圾回收需要所有的 goroutine 停止，内存必须处于一致状态。垃圾回收的时间点是不确定的，如果依靠 OS 自身的 scheduler 来调度，那么会有大量的线程需要停止工作。</p>
 <p>单独的开发一个 Go 调度器，可以知道在什么时候内存状态是一致的，也就是说，当开始垃圾回收时，运行时只需要为当前正在 CPU 核上运行的那个线程等待即可，而不是等待所有的线程。</p>
-<p>为此，Go 采用了类 coroutine 的概念来解决这些问题，Go 将之称为 ”goroutine“。goroutine 占用的资源非常小，goroutine 调度的切换也不用陷入操作系统内核层完成，代价很低。因此，一个 Go 程序中可以创建成千上万个并发的 goroutine。所有的 Go 代码都在 goroutine 中执行，哪怕是 go 的 runtime 也不例外。将这些 goroutines 按照一定算法放到 “CPU” 上执行的程序就称为 <strong>go scheduler</strong>。</p>
+<p>为此，Go 采用了类 coroutine 的概念来解决这些问题，Go 将之称为<code>goroutine</code>。</p>
+<p>goroutine 占用的资源非常小，goroutine 调度的切换也不用陷入操作系统内核层完成，代价很低。因此，一个 Go 程序中可以创建成千上万个并发的 goroutine。所有的 Go 代码都在 goroutine 中执行，哪怕是 go 的 runtime 也不例外。将这些 goroutines 按照一定算法放到 CPU 上执行的程序就称为 <strong>go scheduler</strong>。</p>
 <h3 id="线程模型">线程模型</h3>
 <hr>
 <p>线程的三种实现方式：用户级线程，内核级线程和混合型线程</p>
 <ul>
 <li>
-<p>用户级线程，多对一（N : 1）：多个用户线程的一般从属于单个进程并且多线程的调度是由用户自己的线程库来完成，线程的创建、销毁以及多线程之间的协调等操作都是由用户自己的线程库来负责而无须借助系统调用来实现。一个进程中所有创建的线程都只和同一个 KSE 在运行时动态绑定，也就是说，操作系统只知道用户进程而对其中的线程是无感知的，内核的所有调度都是基于用户进程。许多语言实现的 协程库 基本上都属于这种方式（比如 python 的 gevent）。由于线程调度是在用户层面完成的，也就是相较于内核调度不需要让 CPU 在用户态和内核态之间切换，这种实现方式相比内核级线程可以做的很轻量级，对系统资源的消耗会小很多，因此可以创建的线程数量与上下文切换所花费的代价也会小得多。</p>
+<p>用户级线程，多对一（N : 1）：多个用户线程的一般从属于单个进程并且多线程的调度是由用户自己的线程库来完成，线程的创建、销毁以及多线程之间的协调等操作都是由用户自己的线程库来负责而无须借助系统调用来实现。一个进程中所有创建的线程都只和同一个 KSE 在运行时动态绑定，也就是说，操作系统只知道用户进程而对其中的线程是无感知的，内核的所有调度都是基于用户进程。许多语言实现的<strong>协程库</strong>基本上都属于这种方式（比如 python 的 gevent）。由于线程调度是在用户层面完成的，也就是相较于内核调度不需要让 CPU 在用户态和内核态之间切换，这种实现方式相比内核级线程可以做的很轻量级，对系统资源的消耗会小很多，因此可以创建的线程数量与上下文切换所花费的代价也会小得多。但该模型有个缺点：并不能做到真正意义上的并发。</p>
 </li>
 <li>
-<p>内核级线程，一对一（1 : 1）：每一个用户线程绑定一个实际的内核线程，而线程的调度则完全交付给操作系统内核去做，应用程序对线程的创建、终止以及同步都基于内核提供的系统调用来完成，大部分编程语言的线程库(比如 Java 的 java.lang.Thread、C++11 的 std::thread 等等)都是对操作系统的线程（内核级线程）的一层封装，创建出来的每个线程与一个独立的 KSE 静态绑定，因此其调度完全由操作系统内核调度器去做，也就是说，一个进程里创建出来的多个线程每一个都绑定一个 KSE。这种模型的优势和劣势同样明显：优势是实现简单，直接借助操作系统内核的线程以及调度器，所以 CPU 可以快速切换调度线程，于是多个线程可以同时运行，因此相较于用户级线程模型它真正做到了并行处理；但它的劣势是，由于直接借助了操作系统内核来创建、销毁和以及多个线程之间的上下文切换和调度，因此资源成本大幅上涨，且对性能影响很大。</p>
+<p>内核级线程，一对一（1 : 1）：每一个用户线程绑定一个实际的内核线程，而线程的调度则完全交付给操作系统内核去做，应用程序对线程的创建、终止以及同步都基于内核提供的系统调用来完成，大部分编程语言的线程库（Java 的 java.lang.Thread、C++11 的 std::thread 等等）都是对操作系统的线程（内核级线程）的一层封装，创建出来的每个线程与一个独立的 KSE 静态绑定，因此其调度完全由操作系统内核调度器去做，也就是说，一个进程里创建出来的多个线程每一个都绑定一个 KSE。这种模型的优势和劣势同样明显：优势是实现简单，直接借助操作系统内核的线程以及调度器，所以 CPU 可以快速切换调度线程，于是多个线程可以同时运行，因此相较于用户级线程模型它真正做到了并行处理；但它的劣势是，由于直接借助了操作系统内核来创建、销毁和以及多个线程之间的上下文切换和调度，因此资源成本大幅上涨，且对性能影响很大。</p>
 </li>
 <li>
-<p>混合型线程，多对多（M : N）：首先，区别于用户级线程模型，两级线程模型中的一个进程可以与多个内核线程 KSE 关联，也就是说一个进程内的多个线程可以分别绑定一个自己的 KSE，这点和内核级线程模型相似；其次，又区别于内核级线程模型，它的进程里的线程并不与 KSE 唯一绑定，而是可以多个用户线程映射到同一个 KSE，当某个 KSE 因为其绑定的线程的阻塞操作被内核调度出 CPU 时，其关联的进程中其余用户线程可以重新与其他 KSE 绑定运行。因为这种模型的高度复杂性，操作系统内核开发者一般不会使用，所以更多时候是作为第三方库的形式出现，而 <strong>Go 语言中的 runtime 调度器就是采用的这种实现方案</strong>，实现了 Goroutine 与 KSE 之间的动态关联。</p>
+<p>混合型线程，多对多（M : N）：首先，区别于用户级线程模型，混合线程模型中的一个进程可以与多个内核线程 KSE 关联，也就是说一个进程内的多个线程可以分别绑定一个自己的 KSE，这点和内核级线程模型相似；其次，又区别于内核级线程模型，它的进程里的线程并不与 KSE 唯一绑定，而是可以多个用户线程映射到同一个 KSE，当某个 KSE 因为其绑定的线程的阻塞操作被内核调度出 CPU 时，其关联的进程中其余用户线程可以重新与其他 KSE 绑定运行。因为这种模型的高度复杂性，操作系统内核开发者一般不会使用，所以更多时候是作为第三方库的形式出现，而 <strong>Go 语言中的 runtime 调度器就是采用的这种实现方案</strong>，实现了 Goroutine 与 KSE 之间的动态关联。</p>
 </li>
 </ul>
 <p>Go runtime 负责 goroutine 生命周期，从创建到销毁。runtime 会在程序启动的时候，创建 M 个线程，之后创建的 N 个 goroutine 都会依附在这 M 个线程上执行。这就是 M : N 模型：</p>
@@ -552,7 +553,8 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>结构体 M 中有两个 G 是需要关注一下的，一个是 curg，代表结构体 M 当前绑定的结构体 G。另一个是g0，是带有调度栈的 goroutine，这是一个比较特殊的 goroutine。普通的 goroutine 的栈是在堆上分配的可增长的栈，而 g0 的栈是 M 对应的线程的栈。所有调度相关的代码，会先切换到该 goroutine 的栈中再执行。也就是说线程的栈也是用的 g 实现，而不是使用的 OS 的。</p>
-<p><strong>P</strong> 代表一个处理器，每一个运行的 M 都必须绑定一个 P，就像线程必须在么一个 CPU 核上执行一样，由 P 来调度 G 在 M 上的运行，P 的个数就是 GOMAXPROCS (最大256)，启动时固定的，一般不修改；M 的个数和 P 的个数不一定一样多 (会有休眠的 M 或者不需要太多的 M) (最大10000)；每一个 P 保存着本地 G 任务队列，也有一个全局 G 任务队列。其数据结构：</p>
+<p><strong>P</strong> 代表一个处理器，每一个运行的 M 都必须绑定一个 P，就像线程必须在么一个 CPU 核上执行一样，由 P 来调度 G 在 M 上的运行，P 的个数就是 GOMAXPROCS (最大256)，启动时固定的，一般不修改；M 的个数和 P 的个数不一定一样多 (会有休眠的 M 或者不需要太多的 M) (最大10000)；每一个 P 保存着本地 G 任务队列，也有一个全局 G 任务队列。</p>
+<p>其数据结构：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt"> 1
@@ -599,11 +601,11 @@
 
 	<span class="nx">id</span>          <span class="kt">int32</span>
 	<span class="cm">/*
-</span><span class="cm">    Pidle：没有关联的M
-</span><span class="cm">    Prunning：已和某个M关联
-</span><span class="cm">    Psyscall：当前P中的被运行的那个G正在进行系统调用
-</span><span class="cm">    Pgcstop： 系统正在GC
-</span><span class="cm">    Pdead: 当前P不再使用
+</span><span class="cm">        Pidle：没有关联的M
+</span><span class="cm">        Prunning：已和某个M关联
+</span><span class="cm">        Psyscall：当前P中的被运行的那个G正在进行系统调用
+</span><span class="cm">        Pgcstop： 系统正在GC
+</span><span class="cm">        Pdead: 当前P不再使用
 </span><span class="cm">	*/</span>
 	<span class="nx">status</span>      <span class="kt">uint32</span>     <span class="c1">// 状态，可以为pidle/prunning/...
 </span><span class="c1"></span>	<span class="nx">link</span>        <span class="nx">puintptr</span>
@@ -633,7 +635,7 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>其中 P 的状态有 Pidle, Prunning, Psyscall, Pgcstop, Pdead；在其内部队列 runqhead 里面有可运行的 goroutine，P 优先从内部获取执行的 g，这样能够提高效率。</p>
+</div><p>其中 P 的状态有 Pidle / Prunning / Psyscall / Pgcstop / Pdead；在其内部队列 runqhead 里面有可运行的 goroutine，P 优先从内部获取执行的 g，这样能够提高效率。</p>
 <p>除此之外，还有一个数据结构需要在这里提及，就是 <strong>schedt</strong>，可以看做是一个全局的调度者：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -701,7 +703,9 @@
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>大多数需要的信息都已放在了结构体 M、G 和 P 中，schedt 结构体只是一个壳。可以看到，其中有 M 的 idle 队列，P 的 idle 队列，以及一个全局的就绪的 G 队列。schedt 结构体中的 Lock 是非常必须的，如果 M 或 P 等做一些非局部的操作，它们一般需要先锁住调度器。</p>
+</div><p>大多数需要的信息都已放在了结构体 M、G 和 P 中，schedt 结构体只是一个壳。</p>
+<p>可以看到，其中有 M 的 idle 队列，P 的 idle 队列，以及一个全局的就绪的 G 队列。</p>
+<p>schedt 结构体中的 Lock 是非常必须的，如果 M 或 P 等做一些非局部的操作，它们一般需要先锁住调度器。</p>
 <h2 id="三goroutines-是怎么工作的-">三、Goroutines 是怎么工作的 ？</h2>
 <h3 id="go-程序启动过程">Go 程序启动过程</h3>
 <hr>
@@ -978,13 +982,13 @@ Breakpoint <span class="m">2</span> at 0x104dd30: file /usr/local/go/src/runtime
 <span class="nx">DATA</span>	<span class="nx">runtime</span><span class="err">·</span><span class="nx">mainPC</span><span class="o">+</span><span class="mi">0</span><span class="p">(</span><span class="nx">SB</span><span class="p">)</span><span class="o">/</span><span class="mi">8</span><span class="p">,</span><span class="err">$</span><span class="nx">runtime</span><span class="err">·</span><span class="nf">main</span><span class="p">(</span><span class="nx">SB</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>按顺序总结下 runtime.rt0_go 里几件重要的事：</p>
+</div><p>按顺序总结下 runtime.rt0_go 主要做哪些事：</p>
 <ol>
 <li>检查运行平台的 CPU，设置好程序运行需要相关标志。</li>
 <li>TLS 的初始化。</li>
 <li>runtime.args、runtime.osinit、runtime.schedinit 三个方法做好程序运行需要的各种变量与调度器。</li>
-<li><strong>runtime.newproc 创建新的 goroutine 用于绑定用户写的 main 方法</strong>。</li>
-<li><strong>runtime.mstart 开始 goroutine 的调度</strong>。</li>
+<li>runtime.newproc 创建新的 goroutine 用于绑定用户写的 main 方法。</li>
+<li>runtime.mstart 开始 goroutine 的调度。</li>
 </ol>
 <h3 id="goroutine-的运行过程">goroutine 的运行过程</h3>
 <hr>
@@ -1235,7 +1239,8 @@ Breakpoint <span class="m">2</span> at 0x104dd30: file /usr/local/go/src/runtime
 <li>将 G 实例的状态变更为 Grunnable，放到 P 实例的本地可运行队列里等待调度执行，若队列满了，就把一半的 G 移到全局调度器下。</li>
 <li>释放 M 实例的不可抢占状态。返回新的 G 实例。</li>
 </ol>
-<p>这个绑定只要 M 没有突破上限 GOMAXPROCS，就拿一个 M 绑定一个 G。如果 M 的 waiting 队列中有就从队列中拿，否则就要新建一个 M，调用<code>newm</code>。</p>
+<p>这个绑定只要 M 没有突破上限 GOMAXPROCS，就拿一个 M 绑定一个 G。</p>
+<p>如果 M 的 waiting 队列中有就从队列中拿，否则就要新建一个 M，调用<code>newm</code>。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1299,7 +1304,7 @@ Breakpoint <span class="m">2</span> at 0x104dd30: file /usr/local/go/src/runtime
 </span><span class="c1"></span><span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>里面最重要的就是 schedule 了，在 schedule 中的动作大体就是找到一个等待运行的 g，然后然后搬到 m 上，设置其状态为 Grunning，直接切换到 g 的上下文环境，恢复 g 的执行。</p>
+</div><p>里面最重要的就是 <strong>schedule</strong> 了，在 schedule 中的动作大体就是找到一个等待运行的 g，然后然后搬到 m 上，设置其状态为 Grunning，直接切换到 g 的上下文环境，恢复 g 的执行。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -1322,20 +1327,23 @@ Breakpoint <span class="m">2</span> at 0x104dd30: file /usr/local/go/src/runtime
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p><em>schedule func获取 g -&gt; 必要时休眠 -&gt; 唤醒后继续获取 -&gt; execute func执行 g -&gt; 执行后返回到 goexit -&gt; 重新执行 schedule func</em></p>
-<p>g 所经历的几个主要的过程就是：Gwaiting -&gt; Grunnable -&gt; Grunning。经历了创建，到挂在就绪队列，到从就绪队列拿出并运行整个过程。</p>
-<p>引入了 struct m 这层抽象。m 就是这里的 worker，但不是线程。处理系统调用中的 m 不会占用 mcpu 数量，只有干事的 m 才会对应到线程，当 mcpu 数量少于GOMAXPROCS 时可以一直开新的线程干活。而 goroutine 的执行则是在 m 和 g 都满足之后通过 schedule 切换上下文进入的。</p>
+</div><p><code>schedule</code>函数获取 g -&gt; 必要时休眠 -&gt; 唤醒后继续获取 -&gt; <code>execute</code>函数执行 g -&gt; 执行后返回到 goexit -&gt; 重新执行<code>schedule</code>函数</p>
+<p>g 所经历的几个主要的过程就是：Gwaiting -&gt; Grunnable -&gt; Grunning。</p>
+<p>经历了创建，到挂在就绪队列，到从就绪队列拿出并运行整个过程。</p>
+<p>引入了 struct m 这层抽象。m 就是这里的 worker，但不是线程。</p>
+<p>处理系统调用中的 m 不会占用 mcpu 数量，只有干事的 m 才会对应到线程，当 mcpu 数量少于 GOMAXPROCS 时可以一直开新的线程干活。</p>
+<p>而 goroutine 的执行则是在 m 和 g 都满足之后通过 schedule 切换上下文进入的。</p>
 <h3 id="抢占式调度">抢占式调度</h3>
 <hr>
 <p>当有很多 goroutine 需要执行的时候，是怎么调度的 ?</p>
 <p>上面说的 P 还没有出场呢，在<code>runtime.main</code>中会创建一个额外 m 运行<code>sysmon</code>函数，抢占就是在 sysmon 中实现的。</p>
-<p>sysmon 会进入一个无限循环，第一轮回休眠20us，之后每次休眠时间倍增，最终每一轮都会休眠10ms。</p>
+<p>sysmon 会进入一个无限循环，第一轮回休眠 20 us，之后每次休眠时间倍增，最终每一轮都会休眠 10 ms。</p>
 <p>sysmon 有下面几个处理：</p>
 <ul>
-<li>netpool (获取fd事件)</li>
-<li>retake (抢占)</li>
-<li>forcegc (按时间强制执行gc)</li>
-<li>scavenge heap (释放自由列表中多余的项减少内存占用)</li>
+<li>netpool（获取 fd 事件）</li>
+<li>retake（抢占）</li>
+<li>forcegc（按时间强制执行 gc）</li>
+<li>scavenge heap（释放自由列表中多余的项减少内存占用）</li>
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -1480,16 +1488,15 @@ Breakpoint <span class="m">2</span> at 0x104dd30: file /usr/local/go/src/runtime
 <span class="p">}</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>枚举所有的 P，如果 P 在系统调用中 (Psyscall)，且经过了一次 sysmon 循环(20us~10ms)，则抢占这个 P，调用 handoffp 解除 M 和 P 之间的关联，如果 P 在运行中 (_Prunning)，且经过了一次 sysmon 循环并且 G 运行时间超过 forcePreemptNS(10ms)，则抢占这个 P</p>
-<p>并设置 g.preempt = true，g.stackguard0 = stackPreempt。</p>
+</div><p>枚举所有的 P，如果 P 在系统调用中（Psyscall），且经过了一次 sysmon 循环（20us ~ 10ms），则抢占这个 P，调用 handoffp 解除 M 和 P 之间的关联，如果 P 在运行中（_Prunning），且经过了一次 sysmon 循环并且 G 运行时间超过 forcePreemptNS（10ms），则抢占这个 P，并设置 g.preempt = true，g.stackguard0 = stackPreempt。</p>
 <p>为什么设置了 stackguard 就可以实现抢占?</p>
 <p>因为这个值用于检查当前栈空间是否足够，go 函数的开头会比对这个值判断是否需要扩张栈。</p>
-<p>newstack 函数判断 g.stackguard0 等于 stackPreempt，就知道这是抢占触发的，这时会再检查一遍是否要抢占。</p>
-<p>抢占机制保证了不会有一个 G 长时间的运行导致其他 G 无法运行的情况发生。</p>
+<p><code>newstack</code>函数判断 g.stackguard0 等于 stackPreempt，就知道这是抢占触发的，这时会再检查一遍是否要抢占。</p>
+<p><strong>抢占机制保证了不会有一个 G 长时间的运行导致其他 G 无法运行的情况发生</strong>。</p>
 <h3 id="总结">总结</h3>
 <hr>
 <p>相比大多数并行设计模型，Go 比较优势的设计就是 P 上下文这个概念的出现，如果只有 G 和 M 的对应关系，那么当 G 阻塞在 IO 上的时候，M 是没有实际在工作的，这样造成了资源的浪费，没有了 P，那么所有 G 的列表都放在全局，这样导致临界区太大，对多核调度造成极大影响。</p>
-<p>而 goroutine 使用上面的特点，感觉既可以用来做密集的多核计算，又可以做高并发的 IO 应用，做 IO 应用的时候，写起来感觉和对程序员最友好的同步阻塞一样，而实际上由于 runtime 的调度，底层是以同步非阻塞的方式在运行（即IO多路复用）。</p>
+<p>而 goroutine 使用上面的特点，感觉既可以用来做密集的多核计算，又可以做高并发的 IO 应用，做 IO 应用的时候，写起来感觉和对程序员最友好的同步阻塞一样，而实际上由于 runtime 的调度，底层是以同步非阻塞的方式在运行（即 IO 多路复用）。</p>
 <p>所以说保护现场的抢占式调度和 G 被阻塞后传递给其他 m 调用的核心思想，使得 goroutine 的产生。</p>
 <h2 id="四参考资料">四、参考资料</h2>
 <hr>
@@ -1499,13 +1506,12 @@ Breakpoint <span class="m">2</span> at 0x104dd30: file /usr/local/go/src/runtime
 <li><a href="https://morsmachine.dk/go-scheduler">The Go scheduler</a></li>
 <li><a href="https://www.youtube.com/watch?v=YHRO5WQGh0k&amp;list=PLhrlUMtJvak5wx2I0nxkMKWQuolCgqmGz">GopherCon 2018: Kavya Joshi - The Scheduler Saga</a></li>
 <li><a href="https://medium.com/@ankur_anand/illustrated-tales-of-go-runtime-scheduler-74809ef6d19b">Illustrated Tales of Go Runtime Scheduler.</a></li>
-<li><a href="%5Bhttps://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-goroutine/#654-%E5%88%9B%E5%BB%BA-goroutine%5D(https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-goroutine/#654-%E5%88%9B%E5%BB%BA-goroutine)">Go 语言设计与实现</a></li>
+<li><a href="https://draveness.me/golang/docs/part3-runtime/ch06-concurrency/golang-goroutine/#654-%E5%88%9B%E5%BB%BA-goroutine">Go 语言设计与实现</a></li>
 <li><a href="https://zhuanlan.zhihu.com/p/95056679">腾讯技术工程</a></li>
-<li><a href="https://juejin.im/post/5d6cfa13518825267a75685e">深度解密Go语言之 scheduler</a></li>
+<li><a href="https://juejin.im/post/5d6cfa13518825267a75685e">深度解密 Go 语言之 scheduler</a></li>
 <li><a href="https://blog.csdn.net/gatieme/article/details/51892437">线程的三种实现方式-内核级线程, 用户级线程和混合型线程</a></li>
 <li><a href="https://taohuawu.club/high-performance-implementation-of-goroutine-pool">Goroutine 并发调度模型深度解析之手撸一个高性能 goroutine 池</a></li>
-<li><a href="%5Bhttps://cbsheng.github.io/posts/%E6%8E%A2%E7%B4%A2golang%E7%A8%8B%E5%BA%8F%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/%5D(https://cbsheng.github.io/posts/%E6%8E%A2%E7%B4%A2golang%E7%A8%8B%E5%BA%8F%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B/)">探索golang程序启动过程</a></li>
-<li><a href="https://www.cnblogs.com/sunsky303/p/9705727.html">深入Golang调度器之GMP模型</a></li>
+<li><a href="https://www.cnblogs.com/sunsky303/p/9705727.html">深入 Golang 调度器之 GMP 模型</a></li>
 </ul>
 
     </div>
@@ -1520,10 +1526,10 @@ Breakpoint <span class="m">2</span> at 0x104dd30: file /usr/local/go/src/runtime
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2020-07-06
+      2020-07-08
       
-        <a href="https://github.com/rubinera1n/blogs/commit/b3f067e40e88539a0ee87185d98b371af8e481ed" title="update">
-          (b3f067e)
+        <a href="https://github.com/rubinera1n/blogs/commit/c1464880ccf2e8d183e06e3048f69dea72ce8cfa" title="update">
+          (c146488)
         </a>
         
       
@@ -1549,6 +1555,19 @@ Breakpoint <span class="m">2</span> at 0x104dd30: file /usr/local/go/src/runtime
       
       <nav class="post-nav">
         
+          <a class="prev" href="/post/leetcode/tags/tree/binary-tree-zigzag-level-order-traversal/">
+            
+            <i class="iconfont">
+              <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M691.908486 949.511495l75.369571-89.491197c10.963703-12.998035 10.285251-32.864502-1.499144-44.378743L479.499795 515.267417 757.434875 204.940602c11.338233-12.190647 11.035334-32.285311-0.638543-44.850487l-80.46666-86.564541c-11.680017-12.583596-30.356378-12.893658-41.662889-0.716314L257.233596 494.235404c-11.332093 12.183484-11.041474 32.266891 0.657986 44.844348l80.46666 86.564541c1.772366 1.910513 3.706415 3.533476 5.750981 4.877077l306.620399 321.703933C662.505829 963.726242 680.945807 962.528973 691.908486 949.511495z"></path>
+</svg>
+
+            </i>
+            <span class="prev-text nav-default">[LeetCode] 103. Binary Tree Zigzag Level Order Traversal</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         
           <a class="next" href="/post/leetcode/tags/tree/construct-binary-tree-from-inorder-and-postorder-traversal/">
             <span class="next-text nav-default">[LeetCode] 106. Construct Binary Tree from Inorder and Postorder Traversal</span>
