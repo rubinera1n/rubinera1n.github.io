@@ -62,7 +62,7 @@
 <meta property="og:description" content="Rubinera1n&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-07-08T14:54:42+08:00" />
+<meta property="og:updated_time" content="2020-07-13T22:49:12+08:00" />
 <meta itemprop="name" content="Rubinera1n&#39;s Blog">
 <meta itemprop="description" content="Rubinera1n&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rubinera1n&#39;s Blog"/>
@@ -295,18 +295,18 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/template/dfs/">DFS</a>
+      <a class="post-link" href="/post/leetcode/tags/tree/binary-tree-level-order-traversal-ii/">[LeetCode] 107. Binary Tree Level Order Traversal II</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
+      <time datetime="2020-07-04" class="post-time">
+        2020-07-04
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
+          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
           
         </div>
-      <span class="more-meta"> 68 words </span>
+      <span class="more-meta"> 128 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -317,12 +317,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      Check whether there is a path from |start| to |target| in graph G.
-neighbor(x) returns the neighbors of x in G.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  seen = set([start]) def dfs(n): if n == target: return True for t in neighbor(n): if t in seen: continue seen.add(t) if dfs(t): return True seen.remove(t) # back-tracking return False return dfs(start)   
+      107. Binary Tree Level Order Traversal II
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  class Solution: &#34;&#34;&#34; def levelOrderBottom(self, root: TreeNode) -&gt; List[List[int]]: # BFS + Queue queue, res = collections.deque([(root, 0)]), [] while queue: node, level = queue.popleft() if node: if len(res) &lt; level + 1: res.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/template/dfs/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/tree/binary-tree-level-order-traversal-ii/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -333,18 +333,18 @@ neighbor(x) returns the neighbors of x in G.
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/template/bfs/">BFS</a>
+      <a class="post-link" href="/post/leetcode/tags/tree/unique-binary-search-trees/">[LeetCode] 96. Unique Binary Search Trees</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
+      <time datetime="2020-07-03" class="post-time">
+        2020-07-03
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
+          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
           
         </div>
-      <span class="more-meta"> 84 words </span>
+      <span class="more-meta"> 51 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -355,12 +355,13 @@ neighbor(x) returns the neighbors of x in G.
   <div class="post-content">
     
     <div class="post-summary">
-      Find the shortest path from |start| to |target| in a unweighted graph G.
-neighbor(x) returns the neighbors of x in G.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  q = deque([start]) seen = set([start]) steps = 0 while q: size = len(q) for _ in range(size): n = q.popleft() if n == target: return steps for t in neighbor(n): if t in seen: continue q.
+      96. Unique Binary Search Trees
+python
+1 2 3 4 5 6 7 8  class Solution: def numTrees(self, n: int) -&gt; int: res = [0] * (n + 1) res[0] = 1 for i in range(1, n + 1): for j in range(i): res[i] += res[j] * res[i-1-j] return res[n]   go
+   
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/template/bfs/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/tree/unique-binary-search-trees/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -371,54 +372,18 @@ neighbor(x) returns the neighbors of x in G.
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/template/sliding_window/">Sliding Window</a>
+      <a class="post-link" href="/post/leetcode/tags/tree/unique-binary-search-trees-ii/">[LeetCode] 95. Unique Binary Search Trees II</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
+      <time datetime="2020-07-03" class="post-time">
+        2020-07-03
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
+          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
           
         </div>
-      <span class="more-meta"> 632 words </span>
-      <span class="more-meta"> 2 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      面试常见题型。无意间发现国内版力扣，有人归类滑动窗口，写的不错。链结 题目参考：LeetCode 3. Combinations 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 Given a string, find the
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/sliding_window/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/combinations/">Combinations</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
-          
-        </div>
-      <span class="more-meta"> 232 words </span>
+      <span class="more-meta"> 92 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -429,10 +394,12 @@ neighbor(x) returns the neighbors of x in G.
   <div class="post-content">
     
     <div class="post-summary">
-      思路：使用一个常量记录位置，避免重复 1 2 3 4 5 6 7 8 9 10 11 def C(n, m, idx, cur): if len(cur) == m: print(cur) return for i in range(idx, n): cur.append(i + 1) C(n, m, i + 1, cur) cur.pop() n, m = 5, 3 C(n, m, 0, []) 参考题目： LeetCode
+      95. Unique Binary Search Trees II
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def generateTrees(self, n: int) -&gt; List[TreeNode]: def generate(l, r): # split between [l, r) if l == r: return [None] nodes = [] for i in range(l, r): for lchild in generate(l, i): for rchild in generate(i+1, r): node = TreeNode(i+1) # +1 to convert the index to the actual value node.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/template/combinations/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/tree/unique-binary-search-trees-ii/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -443,18 +410,18 @@ neighbor(x) returns the neighbors of x in G.
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/template/permutations/">Permutations</a>
+      <a class="post-link" href="/post/leetcode/tags/tree/binary-tree-level-order-traversal/">[LeetCode] 102. Binary Tree Level Order Traversal</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
+      <time datetime="2020-07-02" class="post-time">
+        2020-07-02
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
+          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
           
         </div>
-      <span class="more-meta"> 235 words </span>
+      <span class="more-meta"> 194 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -465,10 +432,51 @@ neighbor(x) returns the neighbors of x in G.
   <div class="post-content">
     
     <div class="post-summary">
-      思路：使用数组记住使用过数字 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 def P(n, m, cur, used): if len(cur) == m: print(cur) return for i in range(n): if used[i]: continue used[i] = True cur.append(i + 1) P(n, m, cur, used) cur.pop() used[i] = False n, m = 5, 3 P(n, m, [], [False]
+      102. Binary Tree Level Order Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30  class Solution: &#34;&#34;&#34; # DFS def levelOrder(self, root: TreeNode) -&gt; List[List[int]]: res = [] self.dfs(root, 0, res) return res def dfs(self, root, level, res): if not root: return if len(res) &lt;= level: res.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/template/permutations/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/tree/binary-tree-level-order-traversal/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/tree/binary-tree-inorder-traversal/">[LeetCode] 94. Binary Tree Inorder Traversal</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-02" class="post-time">
+        2020-07-02
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+          
+        </div>
+      <span class="more-meta"> 97 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      94. Binary Tree Inorder Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13  class Solution: def inorderTraversal(self, root: TreeNode) -&gt; List[int]: res = [] self.helper(root, res) return res def helper(self, root, res): if not root: return self.helper(root.left, res) res.append(root.val) self.helper(root.right, res)   go
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  func inorderTraversal(root *TreeNode) []int { res := []int{} dfs(root, &amp;res) return res } func dfs(node *TreeNode, res *[]int) { if node == nil { return } dfs(node.
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/tree/binary-tree-inorder-traversal/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -522,6 +530,14 @@ neighbor(x) returns the neighbors of x in G.
       
       <li >
         <a href="/page/6/">6</a>
+      </li>
+      
+      <li >
+        <a href="/page/7/">7</a>
+      </li>
+      
+      <li >
+        <a href="/page/8/">8</a>
       </li>
       
     </ul>
