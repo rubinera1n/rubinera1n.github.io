@@ -9,42 +9,56 @@
   </url>
   
   <url>
-    <loc>https://blog.xiufuguo.com/post/leetcode/tags/array/find-first-and-last-position-of-element-in-sorted-array/</loc>
-    <lastmod>2020-07-12T22:53:05+08:00</lastmod>
+    <loc>https://blog.xiufuguo.com/post/leetcode/tags/array/find-all-numbers-disappeared-in-an-array/</loc>
+    <lastmod>2020-07-13T22:49:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.xiufuguo.com/categories/</loc>
-    <lastmod>2020-07-12T22:53:05+08:00</lastmod>
+    <lastmod>2020-07-13T22:49:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.xiufuguo.com/tags/leetcode/</loc>
-    <lastmod>2020-07-12T22:53:05+08:00</lastmod>
+    <lastmod>2020-07-13T22:49:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.xiufuguo.com/categories/leetcode-array/</loc>
-    <lastmod>2020-07-12T22:53:05+08:00</lastmod>
+    <lastmod>2020-07-13T22:49:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.xiufuguo.com/post/</loc>
-    <lastmod>2020-07-12T22:53:05+08:00</lastmod>
+    <lastmod>2020-07-13T22:49:12+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://blog.xiufuguo.com/tags/</loc>
+    <lastmod>2020-07-13T22:49:12+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xiufuguo.com/post/leetcode/tags/array/find-all-duplicates-in-an-array/</loc>
+    <lastmod>2020-07-13T22:47:33+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xiufuguo.com/post/leetcode/tags/array/find-first-and-last-position-of-element-in-sorted-array/</loc>
     <lastmod>2020-07-12T22:53:05+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -256,13 +270,6 @@
   <url>
     <loc>https://blog.xiufuguo.com/post/life/mooc/</loc>
     <lastmod>2020-07-06T14:19:31+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xiufuguo.com/post/life/set_goal/</loc>
-    <lastmod>2020-06-19T11:20:15+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

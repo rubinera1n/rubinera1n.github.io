@@ -295,6 +295,43 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/template/tree_traversal/">Tree Traversal</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-05-19" class="post-time">
+        2020-05-19
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
+          
+        </div>
+      <span class="more-meta"> 156 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      preorder inorder postorder  code
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51  class TreeNode(object): def __init__(self, x): self.val = x self.left = None self.right = None def make_tree(lst): node = None if not lst: return if lst[0] is not None: node = TreeNode(lst.
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/template/tree_traversal/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/template/dfs/">DFS</a>
     </h1>
     
@@ -433,42 +470,6 @@ neighbor(x) returns the neighbors of x in G.
     </div>
     <div class="read-more">
       <a href="/post/leetcode/template/combinations/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/permutations/">Permutations</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-template/"> leetcode-template </a>
-          
-        </div>
-      <span class="more-meta"> 235 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      思路：使用数组记住使用过数字 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 def P(n, m, cur, used): if len(cur) == m: print(cur) return for i in range(n): if used[i]: continue used[i] = True cur.append(i + 1) P(n, m, cur, used) cur.pop() used[i] = False n, m = 5, 3 P(n, m, [], [False]
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/permutations/" class="read-more-link">Read more</a>
     </div>
     
   </div>
