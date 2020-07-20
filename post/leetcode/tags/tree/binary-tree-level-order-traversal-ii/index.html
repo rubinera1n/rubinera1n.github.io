@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-level-order-traversal-ii/" />
@@ -75,7 +75,7 @@ python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  class Solution: &#34;&#34;&#34; def levelOrderBottom(self, root: TreeNode) -&gt; List[List[int]]: # BFS &#43; Queue queue, res = collections.deque([(root, 0)]), [] while queue: node, level = queue.popleft() if node: if len(res) &lt; level &#43; 1: res.">
 <meta itemprop="datePublished" content="2020-07-04T01:01:23&#43;08:00" />
 <meta itemprop="dateModified" content="2020-07-04T01:01:23&#43;08:00" />
-<meta itemprop="wordCount" content="128">
+<meta itemprop="wordCount" content="127">
 
 
 
@@ -313,7 +313,7 @@ python
             <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
             
           </div>
-        <span class="more-meta"> 128 words </span>
+        <span class="more-meta"> 127 words </span>
           <span class="more-meta"> 1 min read </span>
 
         
@@ -385,13 +385,13 @@ python
 </span><span class="s2">                queue.append((node.right, level + 1))
 </span><span class="s2">        return res[::-1]
 </span><span class="s2">    &#34;&#34;&#34;</span>
-    
+
     <span class="k">def</span> <span class="nf">levelOrderBottom</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
         <span class="c1"># DFS</span>
         <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">res</span>
-    
+
     <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">root</span><span class="p">:</span>
             <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">level</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:</span>
@@ -400,13 +400,6 @@ python
             <span class="bp">self</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">level</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">level</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
 </code></pre></td></tr></table>
-</div>
-</div><p>go</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"></code></pre></td></tr></table>
 </div>
 </div>
     </div>

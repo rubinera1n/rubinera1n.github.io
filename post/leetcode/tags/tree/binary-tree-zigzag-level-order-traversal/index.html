@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-zigzag-level-order-traversal/" />
@@ -379,10 +379,10 @@ python
         <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">res</span>
-    
+
     <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">level</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>
         <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
-            <span class="k">return</span> 
+            <span class="k">return</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">res</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">level</span><span class="p">:</span>
             <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">([])</span>
         <span class="k">if</span> <span class="n">level</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>

@@ -19,8 +19,7 @@
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/balanced-binary-tree/</guid>
       <description>110. Balanced Binary Tree
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def isBalanced(self, root: TreeNode) -&amp;gt; bool: return self.helper(root)[1] def helper(self, root): if not root: return (0, True) l_depth, l_balanced = self.helper(root.left) r_depth, r_balanced = self.helper(root.right) return max(l_depth, r_depth) + 1, l_balanced and r_balanced and abs(l_depth - r_depth) &amp;lt;= 1   go
-   </description>
+1 2 3 4 5 6 7 8 9 10  class Solution: def isBalanced(self, root: TreeNode) -&amp;gt; bool: return self.helper(root)[1] def helper(self, root): if not root: return (0, True) l_depth, l_balanced = self.helper(root.left) r_depth, r_balanced = self.helper(root.right) return max(l_depth, r_depth) + 1, l_balanced and r_balanced and abs(l_depth - r_depth) &amp;lt;= 1   </description>
     </item>
     
     <item>
@@ -31,8 +30,7 @@ python
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/validate-binary-search-tree/</guid>
       <description>98. Validate Binary Search Tree
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&amp;gt; bool: return self.helper(root, float(&amp;#39;-inf&amp;#39;), float(&amp;#39;inf&amp;#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &amp;gt; lower and root.val &amp;lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   go
-   </description>
+1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&amp;gt; bool: return self.helper(root, float(&amp;#39;-inf&amp;#39;), float(&amp;#39;inf&amp;#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &amp;gt; lower and root.val &amp;lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   </description>
     </item>
     
     <item>
@@ -43,8 +41,7 @@ python
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/</guid>
       <description>108. Convert Sorted Array to Binary Search Tree
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def sortedArrayToBST(self, nums: List[int]) -&amp;gt; TreeNode: l, r = 0, len(nums) - 1 if l &amp;lt;= r: m = l + (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m+1:]) return root   go
-   </description>
+1 2 3 4 5 6 7 8 9  class Solution: def sortedArrayToBST(self, nums: List[int]) -&amp;gt; TreeNode: l, r = 0, len(nums) - 1 if l &amp;lt;= r: m = l + (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m+1:]) return root   </description>
     </item>
     
     <item>
@@ -88,8 +85,7 @@ python
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/maximum-depth-of-binary-tree/</guid>
       <description>104. Maximum Depth of Binary Tree
 python
-1 2 3 4 5  class Solution: def maxDepth(self, root: TreeNode) -&amp;gt; int: if not root: return 0 return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1   go
-   </description>
+1 2 3 4 5  class Solution: def maxDepth(self, root: TreeNode) -&amp;gt; int: if not root: return 0 return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1   </description>
     </item>
     
     <item>
@@ -111,8 +107,7 @@ python
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/unique-binary-search-trees/</guid>
       <description>96. Unique Binary Search Trees
 python
-1 2 3 4 5 6 7 8  class Solution: def numTrees(self, n: int) -&amp;gt; int: res = [0] * (n + 1) res[0] = 1 for i in range(1, n + 1): for j in range(i): res[i] += res[j] * res[i-1-j] return res[n]   go
-   </description>
+1 2 3 4 5 6 7 8  class Solution: def numTrees(self, n: int) -&amp;gt; int: res = [0] * (n + 1) res[0] = 1 for i in range(1, n + 1): for j in range(i): res[i] += res[j] * res[i-1-j] return res[n]   </description>
     </item>
     
     <item>
@@ -157,7 +152,7 @@ python
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/symmetric-tree/</guid>
       <description>101. Symmetric Tree
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def isSymmetric(self, root: TreeNode) -&amp;gt; bool: if not root: return True return self.helper(root.left, root.right) def helper(self, left, right): if not left and not right: return True if not left or not right: return False if left.val != right.val: return False return self.helper(left.left, right.right) and self.helper(left.right, right.left)   go</description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  class Solution: def isSymmetric(self, root: TreeNode) -&amp;gt; bool: if not root: return True return self.helper(root.left, root.right) def helper(self, left, right): if not left and not right: return True if not left or not right: return False if left.val != right.val: return False return self.helper(left.left, right.right) and self.helper(left.right, right.left)   go</description>
     </item>
     
     <item>

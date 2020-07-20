@@ -6,15 +6,24 @@
     <description>Recent content in Categories on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 13 Jul 2020 22:49:12 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 20 Jul 2020 12:17:56 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>leetcode-linked-list</title>
+      <link>https://blog.xiufuguo.com/categories/leetcode-linked-list/</link>
+      <pubDate>Mon, 20 Jul 2020 12:17:56 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/categories/leetcode-linked-list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>leetcode-array</title>
       <link>https://blog.xiufuguo.com/categories/leetcode-array/</link>
-      <pubDate>Mon, 13 Jul 2020 22:49:12 +0800</pubDate>
+      <pubDate>Tue, 14 Jul 2020 11:49:43 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/categories/leetcode-array/</guid>
       <description></description>
@@ -35,15 +44,6 @@
       <pubDate>Mon, 06 Jul 2020 04:07:47 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/categories/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>life</title>
-      <link>https://blog.xiufuguo.com/categories/life/</link>
-      <pubDate>Sun, 31 May 2020 15:36:12 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/categories/life/</guid>
       <description></description>
     </item>
     

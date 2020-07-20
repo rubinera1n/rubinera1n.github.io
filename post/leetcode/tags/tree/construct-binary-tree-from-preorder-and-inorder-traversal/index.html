@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/tree/construct-binary-tree-from-preorder-and-inorder-traversal/" />
@@ -363,7 +363,7 @@ python
         <span class="k">if</span> <span class="ow">not</span> <span class="n">preorder</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">inorder</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">None</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="p">(</span><span class="n">preorder</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">preorder</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inorder</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">inorder</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-        
+
     <span class="k">def</span> <span class="nf">helper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">preorder</span><span class="p">,</span> <span class="n">p_left</span><span class="p">,</span> <span class="n">p_right</span><span class="p">,</span> <span class="n">inorder</span><span class="p">,</span> <span class="n">i_left</span><span class="p">,</span> <span class="n">i_right</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">p_left</span> <span class="o">&gt;</span> <span class="n">p_right</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">None</span>

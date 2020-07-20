@@ -25,8 +25,7 @@
 <meta name="author" content="rubinera1n" />
   <meta name="description" content="108. Convert Sorted Array to Binary Search Tree
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def sortedArrayToBST(self, nums: List[int]) -&amp;gt; TreeNode: l, r = 0, len(nums) - 1 if l &amp;lt;= r: m = l &#43; (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m&#43;1:]) return root   go
-   " />
+1 2 3 4 5 6 7 8 9  class Solution: def sortedArrayToBST(self, nums: List[int]) -&amp;gt; TreeNode: l, r = 0, len(nums) - 1 if l &amp;lt;= r: m = l &#43; (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m&#43;1:]) return root   " />
 
   <meta name="keywords" content="Hugo, blog, rubinera1n" />
 
@@ -35,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/" />
@@ -65,8 +64,7 @@ python
 <meta property="og:title" content="[LeetCode] 108. Convert Sorted Array to Binary Search Tree" />
 <meta property="og:description" content="108. Convert Sorted Array to Binary Search Tree
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def sortedArrayToBST(self, nums: List[int]) -&gt; TreeNode: l, r = 0, len(nums) - 1 if l &lt;= r: m = l &#43; (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m&#43;1:]) return root   go
-   " />
+1 2 3 4 5 6 7 8 9  class Solution: def sortedArrayToBST(self, nums: List[int]) -&gt; TreeNode: l, r = 0, len(nums) - 1 if l &lt;= r: m = l &#43; (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m&#43;1:]) return root   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xiufuguo.com/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/" />
 <meta property="article:published_time" content="2020-07-06T11:58:22+08:00" />
@@ -74,11 +72,10 @@ python
 <meta itemprop="name" content="[LeetCode] 108. Convert Sorted Array to Binary Search Tree">
 <meta itemprop="description" content="108. Convert Sorted Array to Binary Search Tree
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def sortedArrayToBST(self, nums: List[int]) -&gt; TreeNode: l, r = 0, len(nums) - 1 if l &lt;= r: m = l &#43; (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m&#43;1:]) return root   go
-   ">
+1 2 3 4 5 6 7 8 9  class Solution: def sortedArrayToBST(self, nums: List[int]) -&gt; TreeNode: l, r = 0, len(nums) - 1 if l &lt;= r: m = l &#43; (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m&#43;1:]) return root   ">
 <meta itemprop="datePublished" content="2020-07-06T11:58:22&#43;08:00" />
 <meta itemprop="dateModified" content="2020-07-06T11:58:22&#43;08:00" />
-<meta itemprop="wordCount" content="59">
+<meta itemprop="wordCount" content="57">
 
 
 
@@ -86,8 +83,7 @@ python
 <meta name="twitter:title" content="[LeetCode] 108. Convert Sorted Array to Binary Search Tree"/>
 <meta name="twitter:description" content="108. Convert Sorted Array to Binary Search Tree
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def sortedArrayToBST(self, nums: List[int]) -&gt; TreeNode: l, r = 0, len(nums) - 1 if l &lt;= r: m = l &#43; (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m&#43;1:]) return root   go
-   "/>
+1 2 3 4 5 6 7 8 9  class Solution: def sortedArrayToBST(self, nums: List[int]) -&gt; TreeNode: l, r = 0, len(nums) - 1 if l &lt;= r: m = l &#43; (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m&#43;1:]) return root   "/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -317,7 +313,7 @@ python
             <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
             
           </div>
-        <span class="more-meta"> 59 words </span>
+        <span class="more-meta"> 57 words </span>
           <span class="more-meta"> 1 min read </span>
 
         
@@ -343,20 +339,18 @@ python
 <p>python</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python">
-<span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">sortedArrayToBST</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nums</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="n">TreeNode</span><span class="p">:</span>
         <span class="n">l</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span>
         <span class="k">if</span> <span class="n">l</span> <span class="o">&lt;=</span> <span class="n">r</span><span class="p">:</span>
@@ -366,13 +360,6 @@ python
             <span class="n">root</span><span class="o">.</span><span class="n">right</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">sortedArrayToBST</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">:])</span>
             <span class="k">return</span> <span class="n">root</span>
 </code></pre></td></tr></table>
-</div>
-</div><p>go</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"></code></pre></td></tr></table>
 </div>
 </div>
     </div>
