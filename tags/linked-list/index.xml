@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linked-list on Rubinera1n&#39;s Blog</title>
+    <link>https://blog.xiufuguo.com/tags/linked-list/</link>
+    <description>Recent content in linked-list on Rubinera1n&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Jul 2020 15:44:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.xiufuguo.com/tags/linked-list/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[LeetCode] 148. Sort List</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/sort-list/</link>
+      <pubDate>Tue, 21 Jul 2020 15:44:20 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/sort-list/</guid>
+      <description>148. Sort List
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  class Solution: def sortList(self, head: ListNode) -&amp;gt; ListNode: if not head or not head.next: return head slow = fast = head while fast.next and fast.next.next: slow, fast = slow.next, fast.next.next fast = slow slow = slow.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 143. Reorder List</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/reorder-list/</link>
+      <pubDate>Tue, 21 Jul 2020 15:42:33 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/reorder-list/</guid>
+      <description>143. Reorder List
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  class Solution: def reorderList(self, head: ListNode) -&amp;gt; None: if not head: return # find the mid point slow = fast = head while fast and fast.next: slow = slow.next fast = fast.next.next # reverse the second half in-place pre, node = None, slow while node: pre, node.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 25. Reverse Nodes in k-Group</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/reverse-nodes-in-k-group/</link>
+      <pubDate>Mon, 20 Jul 2020 12:17:56 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/reverse-nodes-in-k-group/</guid>
+      <description>25. Reverse Nodes in k-Group
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Solution: def reverseKGroup(self, head: ListNode, k: int) -&amp;gt; ListNode: count, node = 0, head while node: count += 1 node = node.next if k &amp;lt;= 1 or count &amp;lt; k: return head pre = nxt = None curr = head for _ in range(k): nxt = curr.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 23. Merge k Sorted Lists</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/merge-k-sorted-lists/</link>
+      <pubDate>Mon, 20 Jul 2020 12:16:33 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/merge-k-sorted-lists/</guid>
+      <description>23. Merge k Sorted Lists
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  class Solution: def mergeKLists(self, lists: List[ListNode]) -&amp;gt; ListNode: if not lists: return None if len(lists) == 1: return lists[0] mid = len(lists) // 2 l1 = self.mergeKLists(lists[:mid]) l2 = self.mergeKLists(lists[mid:]) return self.merge(l1, l2) def merge(self, l1, l2): cur = dummy = ListNode(0) while l1 and l2: if l1.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 142. Linked List Cycle II</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/linked-list-cycle-ii/</link>
+      <pubDate>Sun, 19 Jul 2020 12:14:46 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/linked-list-cycle-ii/</guid>
+      <description>142. Linked List Cycle II
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def detectCycle(self, head: ListNode) -&amp;gt; ListNode: if not head: return None fast = slow = head while fast and fast.next: fast = fast.next.next slow = slow.next if fast is slow: fast = head while fast and fast != slow: fast = fast.next slow = slow.next return fast return None   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 141. Linked List Cycle</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/linked-list-cycle/</link>
+      <pubDate>Sun, 19 Jul 2020 12:13:15 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/linked-list-cycle/</guid>
+      <description>141. Linked List Cycle
+python
+1 2 3 4 5 6 7 8 9 10 11  class Solution: def hasCycle(self, head: ListNode) -&amp;gt; bool: if not head: return False fast = slow = head while fast and fast.next: fast = fast.next.next slow = slow.next if fast is slow: return True return False   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 82. Remove Duplicates from Sorted List II</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/remove-duplicates-from-sorted-list-ii/</link>
+      <pubDate>Sat, 18 Jul 2020 12:09:48 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/remove-duplicates-from-sorted-list-ii/</guid>
+      <description>82. Remove Duplicates from Sorted List II
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  class Solution: def deleteDuplicates(self, head: ListNode) -&amp;gt; ListNode: if not head: return None dummy = pre = ListNode(0) dummy.next = head while head and head.next: if head.val == head.next.val: while head and head.next and head.val == head.next.val: head = head.next # pass number head = head.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 83. Remove Duplicates from Sorted List</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/remove-duplicates-from-sorted-list/</link>
+      <pubDate>Sat, 18 Jul 2020 12:09:48 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/remove-duplicates-from-sorted-list/</guid>
+      <description>83. Remove Duplicates from Sorted List
+python
+1 2 3 4 5 6 7 8 9 10 11  class Solution: def deleteDuplicates(self, head: ListNode) -&amp;gt; ListNode: if not head: return None cur = head while cur and cur.next: if cur.val == cur.next.val: cur.next = cur.next.next else: cur = cur.next return head   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 61. Rotate List</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/rotate-list/</link>
+      <pubDate>Fri, 17 Jul 2020 12:02:39 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/rotate-list/</guid>
+      <description>61. Rotate List
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23  class Solution: def rotateRight(self, head: ListNode, k: int) -&amp;gt; ListNode: if not head or not head.next or k == 0: return head cur, count = head, 0 while cur: count += 1 cur = cur.next k %= count if k == 0: return head fast = slow = head for _ in range(k): fast = fast.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 92. Reverse Linked List II</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/reverse-linked-list-ii/</link>
+      <pubDate>Fri, 17 Jul 2020 12:02:39 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/reverse-linked-list-ii/</guid>
+      <description>92. Reverse Linked List II
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  class Solution: def reverseBetween(self, head: ListNode, m: int, n: int) -&amp;gt; ListNode: if m == n: return head dummy = ListNode(0) dummy.next = head pre = dummy for i in range(m - 1): pre = pre.next # reverse the [m, n] nodes reverse = nxt = None cur = pre.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 24. Swap Nodes in Pairs</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/swap-nodes-in-pairs/</link>
+      <pubDate>Thu, 16 Jul 2020 11:59:12 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/swap-nodes-in-pairs/</guid>
+      <description>24. Swap Nodes in Pairs
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Solution: def swapPairs(self, head: ListNode) -&amp;gt; ListNode: if not head or not head.next: return head second = head.next pre = ListNode(0) while head and head.next: nxt = head.next head.next = nxt.next nxt.next = head pre.next = nxt head = head.next pre = nxt.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 21. Merge Two Sorted Lists</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/merge-two-sorted-lists/</link>
+      <pubDate>Thu, 16 Jul 2020 11:56:04 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/merge-two-sorted-lists/</guid>
+      <description>21. Merge Two Sorted Lists
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&amp;gt; ListNode: tail = dummy = ListNode(0) while l1 and l2: if l1.val &amp;lt; l2.val: tail.next = l1 l1 = l1.next else: tail.next = l2 l2 = l2.next tail = tail.next tail.next = l1 or l2 return dummy.next   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 19. Remove Nth Node From End of List</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/remove-nth-node-from-end-of-list/</link>
+      <pubDate>Wed, 15 Jul 2020 11:54:22 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/remove-nth-node-from-end-of-list/</guid>
+      <description>19. Remove Nth Node From End of List
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def removeNthFromEnd(self, head: ListNode, n: int) -&amp;gt; ListNode: if not head: return None dummy = ListNode(0) dummy.next = head slow = fast = dummy for _ in range(n): fast = fast.next while fast and fast.next: fast = fast.next slow = slow.next slow.next = slow.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 2. Add Two Numbers</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/add-two-numbers/</link>
+      <pubDate>Wed, 15 Jul 2020 11:52:46 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/add-two-numbers/</guid>
+      <description>2. Add Two Numbers
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def addTwoNumbers(self, l1: ListNode, l2: ListNode) -&amp;gt; ListNode: tail = dummy = ListNode(0) carry = 0 while l1 or l2 or carry: if l1: carry += l1.val l1 = l1.next if l2: carry += l2.val l2 = l2.next tail.next = ListNode(carry % 10) carry //= 10 tail = tail.</description>
+    </item>
+    
+  </channel>
+</rss>

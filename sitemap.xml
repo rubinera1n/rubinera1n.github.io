@@ -30,20 +30,6 @@
   </url>
   
   <url>
-    <loc>https://blog.xiufuguo.com/tags/leetcode/</loc>
-    <lastmod>2020-07-23T14:58:16+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.xiufuguo.com/categories/leetcode-two-pointers/</loc>
-    <lastmod>2020-07-23T14:58:16+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.xiufuguo.com/post/</loc>
     <lastmod>2020-07-23T14:58:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -59,6 +45,20 @@
   
   <url>
     <loc>https://blog.xiufuguo.com/tags/</loc>
+    <lastmod>2020-07-23T14:58:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xiufuguo.com/tags/two-pointers/</loc>
+    <lastmod>2020-07-23T14:58:16+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xiufuguo.com/categories/two-pointers/</loc>
     <lastmod>2020-07-23T14:58:16+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -86,7 +86,14 @@
   </url>
   
   <url>
-    <loc>https://blog.xiufuguo.com/categories/leetcode-linked-list/</loc>
+    <loc>https://blog.xiufuguo.com/tags/linked-list/</loc>
+    <lastmod>2020-07-21T15:44:20+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xiufuguo.com/categories/linked-list/</loc>
     <lastmod>2020-07-21T15:44:20+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -191,7 +198,14 @@
   </url>
   
   <url>
-    <loc>https://blog.xiufuguo.com/categories/leetcode-array/</loc>
+    <loc>https://blog.xiufuguo.com/tags/array/</loc>
+    <lastmod>2020-07-14T11:49:43+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xiufuguo.com/categories/array/</loc>
     <lastmod>2020-07-14T11:49:43+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -296,7 +310,14 @@
   </url>
   
   <url>
-    <loc>https://blog.xiufuguo.com/categories/leetcode-tree/</loc>
+    <loc>https://blog.xiufuguo.com/tags/tree/</loc>
+    <lastmod>2020-07-07T14:37:34+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xiufuguo.com/categories/tree/</loc>
     <lastmod>2020-07-07T14:37:34+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -415,14 +436,21 @@
   </url>
   
   <url>
-    <loc>https://blog.xiufuguo.com/categories/leetcode-template/</loc>
+    <loc>https://blog.xiufuguo.com/post/leetcode/template/reverse_linked_list/</loc>
     <lastmod>2020-05-19T01:53:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://blog.xiufuguo.com/post/leetcode/template/reverse_linked_list/</loc>
+    <loc>https://blog.xiufuguo.com/tags/template/</loc>
+    <lastmod>2020-05-19T01:53:36+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.xiufuguo.com/categories/template/</loc>
     <lastmod>2020-05-19T01:53:36+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
