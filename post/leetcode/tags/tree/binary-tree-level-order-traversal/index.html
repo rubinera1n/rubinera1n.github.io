@@ -79,7 +79,7 @@ python
 
 
 
-<meta itemprop="keywords" content="leetcode," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="tree," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[LeetCode] 102. Binary Tree Level Order Traversal"/>
 <meta name="twitter:description" content="102. Binary Tree Level Order Traversal
 python
@@ -310,7 +310,7 @@ python
           2020-07-02
         </time>
         <div class="post-category">
-            <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+            <a href="https://blog.xiufuguo.com/categories/tree/"> tree </a>
             
           </div>
         <span class="more-meta"> 194 words </span>
@@ -373,22 +373,22 @@ python
 <td class="lntd">
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="s2">&#34;&#34;&#34;
-</span><span class="s2">    # DFS 
+</span><span class="s2">    # DFS
 </span><span class="s2">    def levelOrder(self, root: TreeNode) -&gt; List[List[int]]:
 </span><span class="s2">        res = []
 </span><span class="s2">        self.dfs(root, 0, res)
 </span><span class="s2">        return res
-</span><span class="s2">        
+</span><span class="s2">
 </span><span class="s2">    def dfs(self, root, level, res):
 </span><span class="s2">        if not root:
-</span><span class="s2">            return 
+</span><span class="s2">            return
 </span><span class="s2">        if len(res) &lt;= level:
 </span><span class="s2">            res.append([])
 </span><span class="s2">        res[level].append(root.val)
 </span><span class="s2">        self.dfs(root.left, level + 1, res)
 </span><span class="s2">        self.dfs(root.right, level + 1, res)
-</span><span class="s2">    &#34;&#34;&#34;</span> 
-    
+</span><span class="s2">    &#34;&#34;&#34;</span>
+
     <span class="c1"># BFS + Queue</span>
     <span class="k">def</span> <span class="nf">levelOrder</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]]:</span>
         <span class="n">res</span><span class="p">,</span> <span class="n">queue</span> <span class="o">=</span> <span class="p">[],</span> <span class="p">[(</span><span class="n">root</span><span class="p">,</span> <span class="mi">0</span><span class="p">)]</span>
@@ -433,10 +433,10 @@ python
 
 <span class="kd">func</span> <span class="nf">dfs</span><span class="p">(</span><span class="nx">node</span> <span class="o">*</span><span class="nx">TreeNode</span><span class="p">,</span> <span class="nx">level</span> <span class="kt">int</span><span class="p">,</span> <span class="nx">res</span> <span class="o">*</span><span class="p">[][]</span><span class="kt">int</span><span class="p">)</span> <span class="p">{</span>
     <span class="k">if</span> <span class="nx">node</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
-        <span class="k">return</span> 
+        <span class="k">return</span>
     <span class="p">}</span>
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="o">*</span><span class="nx">res</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="nx">level</span> <span class="p">{</span>
-        <span class="o">*</span><span class="nx">res</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="o">*</span><span class="nx">res</span><span class="p">,</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{})</span>       
+        <span class="o">*</span><span class="nx">res</span> <span class="p">=</span> <span class="nb">append</span><span class="p">(</span><span class="o">*</span><span class="nx">res</span><span class="p">,</span> <span class="p">[]</span><span class="kt">int</span><span class="p">{})</span>
     <span class="p">}</span>
     <span class="p">(</span><span class="o">*</span><span class="nx">res</span><span class="p">)[</span><span class="nx">level</span><span class="p">]</span> <span class="p">=</span> <span class="nb">append</span><span class="p">((</span><span class="o">*</span><span class="nx">res</span><span class="p">)[</span><span class="nx">level</span><span class="p">],</span> <span class="nx">node</span><span class="p">.</span><span class="nx">Val</span><span class="p">)</span>
     <span class="nf">dfs</span><span class="p">(</span><span class="nx">node</span><span class="p">.</span><span class="nx">Left</span><span class="p">,</span> <span class="nx">level</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span>
@@ -474,7 +474,7 @@ python
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="https://blog.xiufuguo.com/tags/leetcode/">leetcode</a>
+          <a href="https://blog.xiufuguo.com/tags/tree/">tree</a>
           
         </div>
 

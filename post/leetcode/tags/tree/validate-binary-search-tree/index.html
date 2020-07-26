@@ -25,8 +25,7 @@
 <meta name="author" content="rubinera1n" />
   <meta name="description" content="98. Validate Binary Search Tree
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&amp;gt; bool: return self.helper(root, float(&amp;#39;-inf&amp;#39;), float(&amp;#39;inf&amp;#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &amp;gt; lower and root.val &amp;lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   go
-   " />
+1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&amp;gt; bool: return self.helper(root, float(&amp;#39;-inf&amp;#39;), float(&amp;#39;inf&amp;#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &amp;gt; lower and root.val &amp;lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   " />
 
   <meta name="keywords" content="Hugo, blog, rubinera1n" />
 
@@ -65,8 +64,7 @@ python
 <meta property="og:title" content="[LeetCode] 98. Validate Binary Search Tree" />
 <meta property="og:description" content="98. Validate Binary Search Tree
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&gt; bool: return self.helper(root, float(&#39;-inf&#39;), float(&#39;inf&#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &gt; lower and root.val &lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   go
-   " />
+1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&gt; bool: return self.helper(root, float(&#39;-inf&#39;), float(&#39;inf&#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &gt; lower and root.val &lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   " />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xiufuguo.com/post/leetcode/tags/tree/validate-binary-search-tree/" />
 <meta property="article:published_time" content="2020-07-07T14:31:46+08:00" />
@@ -74,20 +72,18 @@ python
 <meta itemprop="name" content="[LeetCode] 98. Validate Binary Search Tree">
 <meta itemprop="description" content="98. Validate Binary Search Tree
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&gt; bool: return self.helper(root, float(&#39;-inf&#39;), float(&#39;inf&#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &gt; lower and root.val &lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   go
-   ">
+1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&gt; bool: return self.helper(root, float(&#39;-inf&#39;), float(&#39;inf&#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &gt; lower and root.val &lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   ">
 <meta itemprop="datePublished" content="2020-07-07T14:31:46&#43;08:00" />
 <meta itemprop="dateModified" content="2020-07-07T14:31:46&#43;08:00" />
-<meta itemprop="wordCount" content="57">
+<meta itemprop="wordCount" content="56">
 
 
 
-<meta itemprop="keywords" content="leetcode," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="tree," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[LeetCode] 98. Validate Binary Search Tree"/>
 <meta name="twitter:description" content="98. Validate Binary Search Tree
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&gt; bool: return self.helper(root, float(&#39;-inf&#39;), float(&#39;inf&#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &gt; lower and root.val &lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   go
-   "/>
+1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&gt; bool: return self.helper(root, float(&#39;-inf&#39;), float(&#39;inf&#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &gt; lower and root.val &lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   "/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -314,10 +310,10 @@ python
           2020-07-07
         </time>
         <div class="post-category">
-            <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+            <a href="https://blog.xiufuguo.com/categories/tree/"> tree </a>
             
           </div>
-        <span class="more-meta"> 57 words </span>
+        <span class="more-meta"> 56 words </span>
           <span class="more-meta"> 1 min read </span>
 
         
@@ -358,21 +354,14 @@ python
 <pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
     <span class="k">def</span> <span class="nf">isValidBST</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;-inf&#39;</span><span class="p">),</span> <span class="nb">float</span><span class="p">(</span><span class="s1">&#39;inf&#39;</span><span class="p">))</span>
-    
+
     <span class="k">def</span> <span class="nf">helper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">upper</span><span class="p">):</span>
-        <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span> 
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
             <span class="k">return</span> <span class="bp">True</span>
         <span class="k">return</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span> <span class="o">&gt;</span> <span class="n">lower</span> <span class="ow">and</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span> <span class="o">&lt;</span> <span class="n">upper</span> \
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">lower</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">)</span> \
             <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">helper</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">,</span> <span class="n">upper</span><span class="p">)</span>
 </code></pre></td></tr></table>
-</div>
-</div><p>go</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"></code></pre></td></tr></table>
 </div>
 </div>
     </div>
@@ -404,7 +393,7 @@ python
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="https://blog.xiufuguo.com/tags/leetcode/">leetcode</a>
+          <a href="https://blog.xiufuguo.com/tags/tree/">tree</a>
           
         </div>
 

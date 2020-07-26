@@ -295,18 +295,18 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/tree/binary-tree-level-order-traversal-ii/">[LeetCode] 107. Binary Tree Level Order Traversal II</a>
+      <a class="post-link" href="/post/leetcode/tags/linked_list/rotate-list/">[LeetCode] 61. Rotate List</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-04" class="post-time">
-        2020-07-04
+      <time datetime="2020-07-17" class="post-time">
+        2020-07-17
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
           
         </div>
-      <span class="more-meta"> 128 words </span>
+      <span class="more-meta"> 104 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -317,12 +317,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      107. Binary Tree Level Order Traversal II
+      61. Rotate List
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29  class Solution: &#34;&#34;&#34; def levelOrderBottom(self, root: TreeNode) -&gt; List[List[int]]: # BFS + Queue queue, res = collections.deque([(root, 0)]), [] while queue: node, level = queue.popleft() if node: if len(res) &lt; level + 1: res.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23  class Solution: def rotateRight(self, head: ListNode, k: int) -&gt; ListNode: if not head or not head.next or k == 0: return head cur, count = head, 0 while cur: count += 1 cur = cur.next k %= count if k == 0: return head fast = slow = head for _ in range(k): fast = fast.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/tree/binary-tree-level-order-traversal-ii/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/linked_list/rotate-list/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -333,18 +333,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/tree/unique-binary-search-trees/">[LeetCode] 96. Unique Binary Search Trees</a>
+      <a class="post-link" href="/post/leetcode/tags/linked_list/reverse-linked-list-ii/">[LeetCode] 92. Reverse Linked List II</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-03" class="post-time">
-        2020-07-03
+      <time datetime="2020-07-17" class="post-time">
+        2020-07-17
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
           
         </div>
-      <span class="more-meta"> 51 words </span>
+      <span class="more-meta"> 109 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -355,13 +355,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      96. Unique Binary Search Trees
+      92. Reverse Linked List II
 python
-1 2 3 4 5 6 7 8  class Solution: def numTrees(self, n: int) -&gt; int: res = [0] * (n + 1) res[0] = 1 for i in range(1, n + 1): for j in range(i): res[i] += res[j] * res[i-1-j] return res[n]   go
-   
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  class Solution: def reverseBetween(self, head: ListNode, m: int, n: int) -&gt; ListNode: if m == n: return head dummy = ListNode(0) dummy.next = head pre = dummy for i in range(m - 1): pre = pre.next # reverse the [m, n] nodes reverse = nxt = None cur = pre.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/tree/unique-binary-search-trees/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/linked_list/reverse-linked-list-ii/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -372,18 +371,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/tree/unique-binary-search-trees-ii/">[LeetCode] 95. Unique Binary Search Trees II</a>
+      <a class="post-link" href="/post/leetcode/tags/linked_list/swap-nodes-in-pairs/">[LeetCode] 24. Swap Nodes in Pairs</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-03" class="post-time">
-        2020-07-03
+      <time datetime="2020-07-16" class="post-time">
+        2020-07-16
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
           
         </div>
-      <span class="more-meta"> 92 words </span>
+      <span class="more-meta"> 100 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -394,12 +393,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      95. Unique Binary Search Trees II
+      24. Swap Nodes in Pairs
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def generateTrees(self, n: int) -&gt; List[TreeNode]: def generate(l, r): # split between [l, r) if l == r: return [None] nodes = [] for i in range(l, r): for lchild in generate(l, i): for rchild in generate(i+1, r): node = TreeNode(i+1) # +1 to convert the index to the actual value node.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Solution: def swapPairs(self, head: ListNode) -&gt; ListNode: if not head or not head.next: return head second = head.next pre = ListNode(0) while head and head.next: nxt = head.next head.next = nxt.next nxt.next = head pre.next = nxt head = head.next pre = nxt.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/tree/unique-binary-search-trees-ii/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/linked_list/swap-nodes-in-pairs/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -410,18 +409,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/tree/binary-tree-level-order-traversal/">[LeetCode] 102. Binary Tree Level Order Traversal</a>
+      <a class="post-link" href="/post/leetcode/tags/linked_list/merge-two-sorted-lists/">[LeetCode] 21. Merge Two Sorted Lists</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-02" class="post-time">
-        2020-07-02
+      <time datetime="2020-07-16" class="post-time">
+        2020-07-16
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
           
         </div>
-      <span class="more-meta"> 194 words </span>
+      <span class="more-meta"> 67 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -432,12 +431,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      102. Binary Tree Level Order Traversal
+      21. Merge Two Sorted Lists
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30  class Solution: &#34;&#34;&#34; # DFS def levelOrder(self, root: TreeNode) -&gt; List[List[int]]: res = [] self.dfs(root, 0, res) return res def dfs(self, root, level, res): if not root: return if len(res) &lt;= level: res.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&gt; ListNode: tail = dummy = ListNode(0) while l1 and l2: if l1.val &lt; l2.val: tail.next = l1 l1 = l1.next else: tail.next = l2 l2 = l2.next tail = tail.next tail.next = l1 or l2 return dummy.next   
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/tree/binary-tree-level-order-traversal/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/linked_list/merge-two-sorted-lists/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -448,18 +447,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/tree/binary-tree-inorder-traversal/">[LeetCode] 94. Binary Tree Inorder Traversal</a>
+      <a class="post-link" href="/post/leetcode/tags/linked_list/remove-nth-node-from-end-of-list/">[LeetCode] 19. Remove Nth Node From End of List</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-02" class="post-time">
-        2020-07-02
+      <time datetime="2020-07-15" class="post-time">
+        2020-07-15
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
           
         </div>
-      <span class="more-meta"> 97 words </span>
+      <span class="more-meta"> 72 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -470,13 +469,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      94. Binary Tree Inorder Traversal
+      19. Remove Nth Node From End of List
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13  class Solution: def inorderTraversal(self, root: TreeNode) -&gt; List[int]: res = [] self.helper(root, res) return res def helper(self, root, res): if not root: return self.helper(root.left, res) res.append(root.val) self.helper(root.right, res)   go
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  func inorderTraversal(root *TreeNode) []int { res := []int{} dfs(root, &amp;res) return res } func dfs(node *TreeNode, res *[]int) { if node == nil { return } dfs(node.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def removeNthFromEnd(self, head: ListNode, n: int) -&gt; ListNode: if not head: return None dummy = ListNode(0) dummy.next = head slow = fast = dummy for _ in range(n): fast = fast.next while fast and fast.next: fast = fast.next slow = slow.next slow.next = slow.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/tree/binary-tree-inorder-traversal/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/linked_list/remove-nth-node-from-end-of-list/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -538,6 +536,26 @@ python
       
       <li >
         <a href="/page/8/">8</a>
+      </li>
+      
+      <li >
+        <a href="/page/9/">9</a>
+      </li>
+      
+      <li >
+        <a href="/page/10/">10</a>
+      </li>
+      
+      <li >
+        <a href="/page/11/">11</a>
+      </li>
+      
+      <li >
+        <a href="/page/12/">12</a>
+      </li>
+      
+      <li >
+        <a href="/page/13/">13</a>
       </li>
       
     </ul>

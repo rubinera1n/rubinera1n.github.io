@@ -295,18 +295,18 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/array/spiral-matrix/">[LeetCode] 54. Spiral Matrix</a>
+      <a class="post-link" href="/post/leetcode/tags/two_pointers/container-with-most-water/">[LeetCode] 11. Container With Most Water</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-08" class="post-time">
-        2020-07-08
+      <time datetime="2020-07-22" class="post-time">
+        2020-07-22
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-array/"> leetcode-array </a>
+          <a href="https://blog.xiufuguo.com/categories/two-pointers/"> two-pointers </a>
           
         </div>
-      <span class="more-meta"> 185 words </span>
+      <span class="more-meta"> 67 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -317,10 +317,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      54. Spiral Matrix python 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 class Solution: def spiralOrder(self, matrix: List[List[int]]) -&gt; List[int]: if not matrix: return [] res = [] left, right = 0, len(matrix[0]) - 1 top, bottom = 0, len(matrix) - 1 while
+      11. Container With Most Water
+python
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def maxArea(self, height: List[int]) -&gt; int: if len(height) &lt; 2: return 0 area, l, r = 0, 0, len(height) - 1 while l &lt; r: area = max(area, min(height[l], height[r]) * (r - l)) if height[l] &lt; height[r]: l += 1 else: r -= 1 return area   
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/array/spiral-matrix/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/two_pointers/container-with-most-water/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -331,18 +333,18 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/array/rotate-image/">[LeetCode] 48. Rotate Image</a>
+      <a class="post-link" href="/post/leetcode/tags/two_pointers/3sum/">[LeetCode] 15. 3Sum</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-08" class="post-time">
-        2020-07-08
+      <time datetime="2020-07-22" class="post-time">
+        2020-07-22
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-array/"> leetcode-array </a>
+          <a href="https://blog.xiufuguo.com/categories/two-pointers/"> two-pointers </a>
           
         </div>
-      <span class="more-meta"> 32 words </span>
+      <span class="more-meta"> 134 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -353,13 +355,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      48. Rotate Image
+      15. 3Sum
 python
-1 2 3 4 5 6  class Solution: def rotate(self, matrix: List[List[int]]) -&gt; None: &#34;&#34;&#34; Do not return anything, modify matrix in-place instead. &#34;&#34;&#34; matrix[:] = zip(*matrix[::-1])   go
-   
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  class Solution: def threeSum(self, nums: List[int]) -&gt; List[List[int]]: res = [] nums.sort() for i in range(len(nums) - 2): # pass duplicate if i &gt; 0 and nums[i] == nums[i - 1]: continue l, r = i + 1, len(nums) - 1 while l &lt; r: s = nums[i] + nums[l] + nums[r] if s &lt; 0: l += 1 elif s &gt; 0: r -= 1 else: res.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/array/rotate-image/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/two_pointers/3sum/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -370,18 +371,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/tree/balanced-binary-tree/">[LeetCode] 110. Balanced Binary Tree</a>
+      <a class="post-link" href="/post/leetcode/tags/linked_list/sort-list/">[LeetCode] 148. Sort List</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-07" class="post-time">
-        2020-07-07
+      <time datetime="2020-07-21" class="post-time">
+        2020-07-21
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
           
         </div>
-      <span class="more-meta"> 57 words </span>
+      <span class="more-meta"> 123 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -392,13 +393,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      110. Balanced Binary Tree
+      148. Sort List
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def isBalanced(self, root: TreeNode) -&gt; bool: return self.helper(root)[1] def helper(self, root): if not root: return (0, True) l_depth, l_balanced = self.helper(root.left) r_depth, r_balanced = self.helper(root.right) return max(l_depth, r_depth) + 1, l_balanced and r_balanced and abs(l_depth - r_depth) &lt;= 1   go
-   
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  class Solution: def sortList(self, head: ListNode) -&gt; ListNode: if not head or not head.next: return head slow = fast = head while fast.next and fast.next.next: slow, fast = slow.next, fast.next.next fast = slow slow = slow.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/tree/balanced-binary-tree/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/linked_list/sort-list/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -409,18 +409,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/tree/validate-binary-search-tree/">[LeetCode] 98. Validate Binary Search Tree</a>
+      <a class="post-link" href="/post/leetcode/tags/linked_list/reorder-list/">[LeetCode] 143. Reorder List</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-07" class="post-time">
-        2020-07-07
+      <time datetime="2020-07-21" class="post-time">
+        2020-07-21
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
           
         </div>
-      <span class="more-meta"> 57 words </span>
+      <span class="more-meta"> 110 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -431,13 +431,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      98. Validate Binary Search Tree
+      143. Reorder List
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&gt; bool: return self.helper(root, float(&#39;-inf&#39;), float(&#39;inf&#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &gt; lower and root.val &lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   go
-   
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  class Solution: def reorderList(self, head: ListNode) -&gt; None: if not head: return # find the mid point slow = fast = head while fast and fast.next: slow = slow.next fast = fast.next.next # reverse the second half in-place pre, node = None, slow while node: pre, node.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/tree/validate-binary-search-tree/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/linked_list/reorder-list/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -448,18 +447,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/">[LeetCode] 108. Convert Sorted Array to Binary Search Tree</a>
+      <a class="post-link" href="/post/leetcode/tags/linked_list/reverse-nodes-in-k-group/">[LeetCode] 25. Reverse Nodes in k-Group</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-06" class="post-time">
-        2020-07-06
+      <time datetime="2020-07-20" class="post-time">
+        2020-07-20
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
           
         </div>
-      <span class="more-meta"> 59 words </span>
+      <span class="more-meta"> 89 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -470,13 +469,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      108. Convert Sorted Array to Binary Search Tree
+      25. Reverse Nodes in k-Group
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def sortedArrayToBST(self, nums: List[int]) -&gt; TreeNode: l, r = 0, len(nums) - 1 if l &lt;= r: m = l + (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m+1:]) return root   go
-   
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Solution: def reverseKGroup(self, head: ListNode, k: int) -&gt; ListNode: count, node = 0, head while node: count += 1 node = node.next if k &lt;= 1 or count &lt; k: return head pre = nxt = None curr = head for _ in range(k): nxt = curr.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/linked_list/reverse-nodes-in-k-group/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -538,6 +536,26 @@ python
       
       <li >
         <a href="/page/8/">8</a>
+      </li>
+      
+      <li >
+        <a href="/page/9/">9</a>
+      </li>
+      
+      <li >
+        <a href="/page/10/">10</a>
+      </li>
+      
+      <li >
+        <a href="/page/11/">11</a>
+      </li>
+      
+      <li >
+        <a href="/page/12/">12</a>
+      </li>
+      
+      <li >
+        <a href="/page/13/">13</a>
       </li>
       
     </ul>

@@ -75,11 +75,11 @@ python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def generateTrees(self, n: int) -&gt; List[TreeNode]: def generate(l, r): # split between [l, r) if l == r: return [None] nodes = [] for i in range(l, r): for lchild in generate(l, i): for rchild in generate(i&#43;1, r): node = TreeNode(i&#43;1) # &#43;1 to convert the index to the actual value node.">
 <meta itemprop="datePublished" content="2020-07-03T00:56:02&#43;08:00" />
 <meta itemprop="dateModified" content="2020-07-03T00:56:02&#43;08:00" />
-<meta itemprop="wordCount" content="92">
+<meta itemprop="wordCount" content="91">
 
 
 
-<meta itemprop="keywords" content="leetcode," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="tree," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[LeetCode] 95. Unique Binary Search Trees II"/>
 <meta name="twitter:description" content="95. Unique Binary Search Trees II
 python
@@ -310,10 +310,10 @@ python
           2020-07-03
         </time>
         <div class="post-category">
-            <a href="https://blog.xiufuguo.com/categories/leetcode-tree/"> leetcode-tree </a>
+            <a href="https://blog.xiufuguo.com/categories/tree/"> tree </a>
             
           </div>
-        <span class="more-meta"> 92 words </span>
+        <span class="more-meta"> 91 words </span>
           <span class="more-meta"> 1 min read </span>
 
         
@@ -373,13 +373,6 @@ python
         <span class="k">return</span> <span class="n">generate</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="k">else</span> <span class="p">[]</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>go</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"></code></pre></td></tr></table>
-</div>
 </div>
     </div>
 
@@ -410,7 +403,7 @@ python
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="https://blog.xiufuguo.com/tags/leetcode/">leetcode</a>
+          <a href="https://blog.xiufuguo.com/tags/tree/">tree</a>
           
         </div>
 

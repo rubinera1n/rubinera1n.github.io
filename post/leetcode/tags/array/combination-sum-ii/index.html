@@ -75,11 +75,11 @@ python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  class Solution: def combinationSum2(self, candidates: List[int], target: int) -&gt; List[List[int]]: res = [] candidates.sort() self.dfs(candidates, target, 0, [], res) return res def dfs(self, lst, target, index, path, res): if target &lt; 0: return if target == 0: res.append(path) return res for i in range(index, len(lst)): if i &gt; index and lst[i] == lst[i-1]: continue self.">
 <meta itemprop="datePublished" content="2020-07-11T22:14:56&#43;08:00" />
 <meta itemprop="dateModified" content="2020-07-11T22:14:56&#43;08:00" />
-<meta itemprop="wordCount" content="88">
+<meta itemprop="wordCount" content="87">
 
 
 
-<meta itemprop="keywords" content="leetcode," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="array," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[LeetCode] 40. Combination Sum II"/>
 <meta name="twitter:description" content="40. Combination Sum II
 python
@@ -310,10 +310,10 @@ python
           2020-07-11
         </time>
         <div class="post-category">
-            <a href="https://blog.xiufuguo.com/categories/leetcode-array/"> leetcode-array </a>
+            <a href="https://blog.xiufuguo.com/categories/array/"> array </a>
             
           </div>
-        <span class="more-meta"> 88 words </span>
+        <span class="more-meta"> 87 words </span>
           <span class="more-meta"> 1 min read </span>
 
         
@@ -377,13 +377,6 @@ python
             <span class="bp">self</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span><span class="n">lst</span><span class="p">,</span> <span class="n">target</span> <span class="o">-</span> <span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">path</span> <span class="o">+</span> <span class="p">[</span><span class="n">lst</span><span class="p">[</span><span class="n">i</span><span class="p">]],</span> <span class="n">res</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
-</div><p>go</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code></code></pre></td>
-<td class="lntd">
-<pre class="chroma"><code class="language-go" data-lang="go"></code></pre></td></tr></table>
-</div>
 </div>
     </div>
 
@@ -414,7 +407,7 @@ python
 
     <footer class="post-footer">
       <div class="post-tags">
-          <a href="https://blog.xiufuguo.com/tags/leetcode/">leetcode</a>
+          <a href="https://blog.xiufuguo.com/tags/array/">array</a>
           
         </div>
 

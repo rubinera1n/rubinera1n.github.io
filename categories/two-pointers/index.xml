@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>two-pointers on Rubinera1n&#39;s Blog</title>
+    <link>https://blog.xiufuguo.com/categories/two-pointers/</link>
+    <description>Recent content in two-pointers on Rubinera1n&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Jul 2020 22:23:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.xiufuguo.com/categories/two-pointers/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[LeetCode] 209. Minimum Size Subarray Sum</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/minimum-size-subarray-sum/</link>
+      <pubDate>Sun, 26 Jul 2020 22:23:58 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/minimum-size-subarray-sum/</guid>
+      <description>209. Minimum Size Subarray Sum
+python
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def minSubArrayLen(self, s: int, nums: List[int]) -&amp;gt; int: total = left = right = 0 res = len(nums) + 1 while right &amp;lt; len(nums): total += nums[right] while total &amp;gt;= s: res = min(res, right - left + 1) total -= nums[left] left += 1 right += 1 return res if res &amp;lt;= len(nums) else 0   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 167. Two Sum II - Input array is sorted</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/two-sum-ii-input-array-is-sorted/</link>
+      <pubDate>Sun, 26 Jul 2020 22:22:34 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/two-sum-ii-input-array-is-sorted/</guid>
+      <description>167. Two Sum II - Input array is sorted
+python
+1 2 3 4 5 6 7 8 9 10  class Solution: def twoSum(self, numbers: List[int], target: int) -&amp;gt; List[int]: l, r = 0, len(numbers) - 1 while l &amp;lt; r: if numbers[l] + numbers[r] == target: return [l + 1, r + 1] elif numbers[l] + numbers[r] &amp;gt; target: r -= 1 else: l += 1   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 75. Sort Colors</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/sort-colors/</link>
+      <pubDate>Sat, 25 Jul 2020 22:18:54 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/sort-colors/</guid>
+      <description>75. Sort Colors
+python
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def sortColors(self, nums: List[int]) -&amp;gt; None: l, r, zero = 0, len(nums) - 1, 0 while l &amp;lt;= r: if nums[l] == 0: nums[l], nums[zero] = nums[zero], nums[l] l += 1; zero += 1 elif nums[l] == 2: nums[l], nums[r] = nums[r], nums[l] r -= 1 else: l += 1   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 88. Merge Sorted Array</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/merge-sorted-array/</link>
+      <pubDate>Sat, 25 Jul 2020 22:18:54 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/merge-sorted-array/</guid>
+      <description>88. Merge Sorted Array
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&amp;gt; None: i = m - 1 j = n - 1 k = m + n - 1 while i &amp;gt;= 0 and j &amp;gt;= 0: if nums1[i] &amp;gt;= nums2[j]: nums1[k] = nums1[i] i -= 1 else: nums1[k] = nums2[j] j -= 1 k -= 1 while j &amp;gt;= 0: nums1[k] = nums2[j] k -= 1 j -= 1 return   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 344. Reverse String</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/reverse-string/</link>
+      <pubDate>Fri, 24 Jul 2020 23:29:06 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/reverse-string/</guid>
+      <description>344. Reverse String
+python
+1 2 3 4 5 6 7  class Solution: def reverseString(self, s: List[str]) -&amp;gt; None: l, r = 0, len(s) - 1 while l &amp;lt; r: s[l], s[r] = s[r], s[l] l += 1; r -= 1 return   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 28. Implement strStr()</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/implement-strstr/</link>
+      <pubDate>Fri, 24 Jul 2020 23:26:15 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/implement-strstr/</guid>
+      <description>28. Implement strStr()
+python
+1 2 3 4 5 6 7 8  class Solution: def strStr(self, haystack: str, needle: str) -&amp;gt; int: L, n = len(needle), len(haystack) for start in range(n - L + 1): if haystack[start: start + L] == needle: return start return -1   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 16. 3Sum Closest</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/3sum-closest/</link>
+      <pubDate>Thu, 23 Jul 2020 14:58:16 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/3sum-closest/</guid>
+      <description>16. 3Sum Closest
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Solution: def threeSumClosest(self, nums: List[int], target: int) -&amp;gt; int: nums.sort() d = sys.maxsize res = 0 for i in range(len(nums) - 2): l, r = i + 1, len(nums) - 1 while l &amp;lt; r: s = nums[i] + nums[l] + nums[r] if s == target: return s diff = abs(s - target) if diff &amp;lt; d: d = diff res = s if s &amp;lt; target: l += 1 else: r -= 1 return res   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 18. 4Sum</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/4sum/</link>
+      <pubDate>Thu, 23 Jul 2020 14:58:16 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/4sum/</guid>
+      <description>18. 4Sum
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33  class Solution: def fourSum(self, nums: List[int], target: int) -&amp;gt; List[List[int]]: nums.sort() res = [] self.findNSum(nums, target, 4, [], res) return res def findNSum(self, nums, target, N, path, res): if len(nums) &amp;lt; N or N &amp;lt; 2: return # solve 2-sum if N == 2: l, r = 0, len(nums) - 1 while l &amp;lt; r: if nums[l] + nums[r] == target: res.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 11. Container With Most Water</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/container-with-most-water/</link>
+      <pubDate>Wed, 22 Jul 2020 14:58:16 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/container-with-most-water/</guid>
+      <description>11. Container With Most Water
+python
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def maxArea(self, height: List[int]) -&amp;gt; int: if len(height) &amp;lt; 2: return 0 area, l, r = 0, 0, len(height) - 1 while l &amp;lt; r: area = max(area, min(height[l], height[r]) * (r - l)) if height[l] &amp;lt; height[r]: l += 1 else: r -= 1 return area   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 15. 3Sum</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/3sum/</link>
+      <pubDate>Wed, 22 Jul 2020 14:58:16 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/3sum/</guid>
+      <description>15. 3Sum
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  class Solution: def threeSum(self, nums: List[int]) -&amp;gt; List[List[int]]: res = [] nums.sort() for i in range(len(nums) - 2): # pass duplicate if i &amp;gt; 0 and nums[i] == nums[i - 1]: continue l, r = i + 1, len(nums) - 1 while l &amp;lt; r: s = nums[i] + nums[l] + nums[r] if s &amp;lt; 0: l += 1 elif s &amp;gt; 0: r -= 1 else: res.</description>
+    </item>
+    
+  </channel>
+</rss>
