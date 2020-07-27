@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Rubinera1n&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-05-17T22:00:00+08:00" />
+<meta property="og:updated_time" content="2020-07-27T16:11:18+08:00" />
 <meta itemprop="name" content="Rubinera1n&#39;s Blog">
 <meta itemprop="description" content="Rubinera1n&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rubinera1n&#39;s Blog"/>
@@ -295,6 +295,82 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/linked_list/remove-duplicates-from-sorted-list-ii/">[LeetCode] 82. Remove Duplicates from Sorted List II</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-18" class="post-time">
+        2020-07-18
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
+          
+        </div>
+      <span class="more-meta"> 83 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      82. Remove Duplicates from Sorted List II
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  class Solution: def deleteDuplicates(self, head: ListNode) -&gt; ListNode: if not head: return None dummy = pre = ListNode(0) dummy.next = head while head and head.next: if head.val == head.next.val: while head and head.next and head.val == head.next.val: head = head.next # pass number head = head.
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/linked_list/remove-duplicates-from-sorted-list-ii/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/linked_list/remove-duplicates-from-sorted-list/">[LeetCode] 83. Remove Duplicates from Sorted List</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-18" class="post-time">
+        2020-07-18
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
+          
+        </div>
+      <span class="more-meta"> 51 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      83. Remove Duplicates from Sorted List
+python
+1 2 3 4 5 6 7 8 9 10 11  class Solution: def deleteDuplicates(self, head: ListNode) -&gt; ListNode: if not head: return None cur = head while cur and cur.next: if cur.val == cur.next.val: cur.next = cur.next.next else: cur = cur.next return head   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/linked_list/remove-duplicates-from-sorted-list/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/linked_list/rotate-list/">[LeetCode] 61. Rotate List</a>
     </h1>
     
@@ -405,82 +481,6 @@ python
 </article>
 
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/linked_list/merge-two-sorted-lists/">[LeetCode] 21. Merge Two Sorted Lists</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-16" class="post-time">
-        2020-07-16
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
-          
-        </div>
-      <span class="more-meta"> 67 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      21. Merge Two Sorted Lists
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def mergeTwoLists(self, l1: ListNode, l2: ListNode) -&gt; ListNode: tail = dummy = ListNode(0) while l1 and l2: if l1.val &lt; l2.val: tail.next = l1 l1 = l1.next else: tail.next = l2 l2 = l2.next tail = tail.next tail.next = l1 or l2 return dummy.next   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/linked_list/merge-two-sorted-lists/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/linked_list/remove-nth-node-from-end-of-list/">[LeetCode] 19. Remove Nth Node From End of List</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-15" class="post-time">
-        2020-07-15
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
-          
-        </div>
-      <span class="more-meta"> 72 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      19. Remove Nth Node From End of List
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def removeNthFromEnd(self, head: ListNode, n: int) -&gt; ListNode: if not head: return None dummy = ListNode(0) dummy.next = head slow = fast = dummy for _ in range(n): fast = fast.next while fast and fast.next: fast = fast.next slow = slow.next slow.next = slow.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/linked_list/remove-nth-node-from-end-of-list/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
 </section>
 
 
@@ -503,65 +503,475 @@ python
 
   
   
-  <nav class="pagination">
-    <ul>
-      
-      <li >
-        <a href="/">1</a>
-      </li>
-      
-      <li >
-        <a href="/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/page/3/">3</a>
-      </li>
-      
-      <li >
-        <a href="/page/4/">4</a>
-      </li>
-      
-      <li  class="active" >
-        <a href="/page/5/">5</a>
-      </li>
-      
-      <li >
-        <a href="/page/6/">6</a>
-      </li>
-      
-      <li >
-        <a href="/page/7/">7</a>
-      </li>
-      
-      <li >
-        <a href="/page/8/">8</a>
-      </li>
-      
-      <li >
-        <a href="/page/9/">9</a>
-      </li>
-      
-      <li >
-        <a href="/page/10/">10</a>
-      </li>
-      
-      <li >
-        <a href="/page/11/">11</a>
-      </li>
-      
-      <li >
-        <a href="/page/12/">12</a>
-      </li>
-      
-      <li >
-        <a href="/page/13/">13</a>
-      </li>
-      
-    </ul>
-  </nav>
 
-  
+    <nav class="pagination">
+      <ul>
+
+      
+      
+      <li><a href="/">««</a></li>
+      
+
+      
+      
+      <li><a href="/page/4/">«</a></li>
+      
+
+      
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/">
+              1
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/2/">
+              2
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/3/">
+              3
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/4/">
+              4
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="active">
+            <a href="/page/5/">
+              5
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/6/">
+              6
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/7/">
+              7
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/8/">
+              8
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/9/">
+              9
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/10/">
+              10
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/11/">
+              11
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/12/">
+              12
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/13/">
+              13
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+      
+      
+      <li><a href="/page/6/">»</a></li>
+      
+
+      
+      
+      <li><a href="/page/14/">»»</a></li>
+      
+
+      </ul>
+    </nav>
   
 
 

@@ -6,10 +6,21 @@
     <description>Recent content in two-pointers on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 26 Jul 2020 22:23:58 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 27 Jul 2020 16:11:18 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/tags/two-pointers/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[LeetCode] 287. Find the Duplicate Number</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/find-the-duplicate-number/</link>
+      <pubDate>Mon, 27 Jul 2020 16:11:18 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/find-the-duplicate-number/</guid>
+      <description>287. Find the Duplicate Number
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def findDuplicate(self, nums: List[int]) -&amp;gt; int: slow = fast = tail = 0 while True: slow = nums[slow] fast = nums[nums[fast]] if slow == fast: break while True: slow = nums[slow] tail = nums[tail] if slow == tail: break return slow   </description>
+    </item>
     
     <item>
       <title>[LeetCode] 209. Minimum Size Subarray Sum</title>

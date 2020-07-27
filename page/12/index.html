@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="Rubinera1n&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-05-17T22:00:00+08:00" />
+<meta property="og:updated_time" content="2020-07-27T16:11:18+08:00" />
 <meta itemprop="name" content="Rubinera1n&#39;s Blog">
 <meta itemprop="description" content="Rubinera1n&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rubinera1n&#39;s Blog"/>
@@ -295,6 +295,83 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/tree/symmetric-tree/">[LeetCode] 101. Symmetric Tree</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-01" class="post-time">
+        2020-07-01
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/tree/"> tree </a>
+          
+        </div>
+      <span class="more-meta"> 142 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      101. Symmetric Tree
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  class Solution: def isSymmetric(self, root: TreeNode) -&gt; bool: if not root: return True return self.helper(root.left, root.right) def helper(self, left, right): if not left and not right: return True if not left or not right: return False if left.val != right.val: return False return self.helper(left.left, right.right) and self.helper(left.right, right.left)   go
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/tree/symmetric-tree/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/tree/same-tree/">[LeetCode] 100. Same Tree</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-01" class="post-time">
+        2020-07-01
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/tree/"> tree </a>
+          
+        </div>
+      <span class="more-meta"> 101 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      100. Same Tree
+python
+1 2 3 4 5 6 7 8  class Solution: def isSameTree(self, p: TreeNode, q: TreeNode) -&gt; bool: if not p and not q: return True if not p or not q: return False return p.val == q.val and self.isSameTree(p.left, q.left) and \ self.isSameTree(p.right, q.right)   go
+1 2 3 4 5 6 7 8 9  func isSameTree(p *TreeNode, q *TreeNode) bool { if p == nil &amp;&amp; q == nil { return true } if p == nil || q == nil { return false } return p.
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/tree/same-tree/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/template/reverse_linked_list/">Reverse Linked List</a>
     </h1>
     
@@ -402,82 +479,6 @@
 </article>
 
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/dfs/">DFS</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/template/"> template </a>
-          
-        </div>
-      <span class="more-meta"> 68 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Check whether there is a path from |start| to |target| in graph G.
-neighbor(x) returns the neighbors of x in G.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  seen = set([start]) def dfs(n): if n == target: return True for t in neighbor(n): if t in seen: continue seen.add(t) if dfs(t): return True seen.remove(t) # back-tracking return False return dfs(start)   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/dfs/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/template/bfs/">BFS</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-05-18" class="post-time">
-        2020-05-18
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/template/"> template </a>
-          
-        </div>
-      <span class="more-meta"> 84 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      Find the shortest path from |start| to |target| in a unweighted graph G.
-neighbor(x) returns the neighbors of x in G.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  q = deque([start]) seen = set([start]) steps = 0 while q: size = len(q) for _ in range(size): n = q.popleft() if n == target: return steps for t in neighbor(n): if t in seen: continue q.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/template/bfs/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
 </section>
 
 
@@ -500,65 +501,461 @@ neighbor(x) returns the neighbors of x in G.
 
   
   
-  <nav class="pagination">
-    <ul>
-      
-      <li >
-        <a href="/">1</a>
-      </li>
-      
-      <li >
-        <a href="/page/2/">2</a>
-      </li>
-      
-      <li >
-        <a href="/page/3/">3</a>
-      </li>
-      
-      <li >
-        <a href="/page/4/">4</a>
-      </li>
-      
-      <li >
-        <a href="/page/5/">5</a>
-      </li>
-      
-      <li >
-        <a href="/page/6/">6</a>
-      </li>
-      
-      <li >
-        <a href="/page/7/">7</a>
-      </li>
-      
-      <li >
-        <a href="/page/8/">8</a>
-      </li>
-      
-      <li >
-        <a href="/page/9/">9</a>
-      </li>
-      
-      <li >
-        <a href="/page/10/">10</a>
-      </li>
-      
-      <li >
-        <a href="/page/11/">11</a>
-      </li>
-      
-      <li  class="active" >
-        <a href="/page/12/">12</a>
-      </li>
-      
-      <li >
-        <a href="/page/13/">13</a>
-      </li>
-      
-    </ul>
-  </nav>
 
-  
+    <nav class="pagination">
+      <ul>
+
+      
+      
+      <li><a href="/">««</a></li>
+      
+
+      
+      
+      <li><a href="/page/11/">«</a></li>
+      
+
+      
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/2/">
+              2
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/3/">
+              3
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/4/">
+              4
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/5/">
+              5
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/6/">
+              6
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/7/">
+              7
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/8/">
+              8
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/9/">
+              9
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/10/">
+              10
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/11/">
+              11
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="active">
+            <a href="/page/12/">
+              12
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/13/">
+              13
+            </a>
+          </li>
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+              
+            
+
+          
+          
+
+        
+        
+
+        
+        
+          <li class="">
+            <a href="/page/14/">
+              14
+            </a>
+          </li>
+        
+
+      
+
+      
+      
+      <li><a href="/page/13/">»</a></li>
+      
+
+      
+      
+      <li><a href="/page/14/">»»</a></li>
+      
+
+      </ul>
+    </nav>
   
 
 
