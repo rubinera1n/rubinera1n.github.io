@@ -62,7 +62,7 @@
 <meta property="og:description" content="Rubinera1n&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-07-27T16:11:18+08:00" />
+<meta property="og:updated_time" content="2020-07-28T14:10:41+08:00" />
 <meta itemprop="name" content="Rubinera1n&#39;s Blog">
 <meta itemprop="description" content="Rubinera1n&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rubinera1n&#39;s Blog"/>
@@ -295,6 +295,44 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/array/next-permutation/">[LeetCode] 31. Next Permutation</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-09" class="post-time">
+        2020-07-09
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/array/"> array </a>
+          
+        </div>
+      <span class="more-meta"> 104 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      31. Next Permutation
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def nextPermutation(self, nums: List[int]) -&gt; None: i = len(nums) - 2 while i &gt;= 0 and nums[i] &gt;= nums[i+1]: i -= 1 if i &lt; 0: # 6 5 4 3 2 1 nums.reverse() return j = len(nums) - 1 while j &gt;= 0 and nums[i] &gt;= nums[j]: j -= 1 nums[i], nums[j] = nums[j], nums[i] l, r = i + 1, len(nums) - 1 while l &lt; r: nums[l], nums[r] = nums[r], nums[l] l += 1 r -= 1   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/array/next-permutation/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/array/spiral-matrix/">[LeetCode] 54. Spiral Matrix</a>
     </h1>
     
@@ -435,44 +473,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/tree/validate-binary-search-tree/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/">[LeetCode] 108. Convert Sorted Array to Binary Search Tree</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-06" class="post-time">
-        2020-07-06
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/tree/"> tree </a>
-          
-        </div>
-      <span class="more-meta"> 57 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      108. Convert Sorted Array to Binary Search Tree
-python
-1 2 3 4 5 6 7 8 9  class Solution: def sortedArrayToBST(self, nums: List[int]) -&gt; TreeNode: l, r = 0, len(nums) - 1 if l &lt;= r: m = l + (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m+1:]) return root   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/" class="read-more-link">Read more</a>
     </div>
     
   </div>

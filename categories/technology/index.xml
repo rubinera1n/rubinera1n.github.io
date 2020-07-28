@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>technology on Rubinera1n&#39;s Blog</title>
+    <link>https://blog.xiufuguo.com/categories/technology/</link>
+    <description>Recent content in technology on Rubinera1n&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 28 Jul 2020 14:01:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.xiufuguo.com/categories/technology/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>科学上网</title>
+      <link>https://blog.xiufuguo.com/post/technology/science_internet/</link>
+      <pubDate>Tue, 28 Jul 2020 14:01:03 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/technology/science_internet/</guid>
+      <description>1. 配置前的准备 域名 VPS (虚拟专用服务器) 1.1 如何申请域名？ 免费：google search apply free domain name 我自己使用阿里付费域名，后面的 HTTPS 也方便，可配置自己博客域名</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Jul 2020 16:11:18 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2020 14:01:03 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>科学上网</title>
+      <link>https://blog.xiufuguo.com/post/technology/science_internet/</link>
+      <pubDate>Tue, 28 Jul 2020 14:01:03 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/technology/science_internet/</guid>
+      <description>1. 配置前的准备 域名 VPS (虚拟专用服务器) 1.1 如何申请域名？ 免费：google search apply free domain name 我自己使用阿里付费域名，后面的 HTTPS 也方便，可配置自己博客域名</description>
+    </item>
     
     <item>
       <title>[LeetCode] 287. Find the Duplicate Number</title>
@@ -218,17 +227,6 @@ python
       <description>142. Linked List Cycle II
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def detectCycle(self, head: ListNode) -&amp;gt; ListNode: if not head: return None fast = slow = head while fast and fast.next: fast = fast.next.next slow = slow.next if fast is slow: fast = head while fast and fast != slow: fast = fast.next slow = slow.next return fast return None   </description>
-    </item>
-    
-    <item>
-      <title>[LeetCode] 141. Linked List Cycle</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/linked-list-cycle/</link>
-      <pubDate>Sun, 19 Jul 2020 12:13:15 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/linked-list-cycle/</guid>
-      <description>141. Linked List Cycle
-python
-1 2 3 4 5 6 7 8 9 10 11  class Solution: def hasCycle(self, head: ListNode) -&amp;gt; bool: if not head: return False fast = slow = head while fast and fast.next: fast = fast.next.next slow = slow.next if fast is slow: return True return False   </description>
     </item>
     
   </channel>

@@ -6,7 +6,7 @@
     <description>Recent content on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 27 Jul 2020 16:11:18 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2020 14:01:03 +0800</lastBuildDate>
     
         <atom:link href="https://blog.xiufuguo.com/index.xml" rel="self" type="application/rss+xml" />
     
@@ -23,6 +23,796 @@
 &lt;p&gt;I’ve been living and working in Shenzhen for fives years.&lt;/p&gt;
 &lt;p&gt;This is my blog, record learning and life.&lt;/p&gt;
 &lt;p&gt;If you have any questions, please contact me on Linkedin.&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
+      <title>科学上网</title>
+      <link>https://blog.xiufuguo.com/post/technology/science_internet/</link>
+      <pubDate>Tue, 28 Jul 2020 14:01:03 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/technology/science_internet/</guid>
+      
+        <description>&lt;h2 id=&#34;1-配置前的准备&#34;&gt;1. 配置前的准备&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;域名&lt;/li&gt;
+&lt;li&gt;VPS (虚拟专用服务器)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;11-如何申请域名&#34;&gt;1.1 如何申请域名？&lt;/h3&gt;
+&lt;p&gt;免费：google search apply free domain name&lt;/p&gt;
+&lt;p&gt;我自己使用阿里付费域名，后面的 HTTPS 也方便，可配置自己博客域名或 GitHub + Netlify 搞静态文件管理都很方便。&lt;/p&gt;
+&lt;p&gt;阿里申请满简单的，可以根据自己需求，申请一个域名。&lt;a href=&#34;https://wanwang.aliyun.com/&#34;&gt;官方链结&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;12-申请一台vps&#34;&gt;1.2 申请一台vps&lt;/h3&gt;
+&lt;p&gt;关于 VPS 网上很多选择，例如：AWS、GCP、Vultr、搬瓦工、DigitalOcean、Linode&amp;hellip;等等，货比三家看哪个适合你。&lt;/p&gt;
+&lt;p&gt;如果你有 visa / mastercard 信用卡，可以直接去申请&lt;a href=&#34;https://console.cloud.google.com/&#34;&gt;Google Cloud Platform&lt;/a&gt;，只要信用卡验证成功，就送你 300 美金/年，如果不是重度科学使用者，CP 值高挺推荐，300 美金可以用很久。&lt;/p&gt;
+&lt;p&gt;我个人使用&lt;a href=&#34;https://bandwagonhost.com/&#34;&gt;搬瓦工&lt;/a&gt;（没有收广告费），国内可以使用支付宝付款，很早期就购买，我的套餐都绝版了，所以只能续费维持。&lt;/p&gt;
+&lt;p&gt;VPS 的系统推荐 &lt;code&gt;CentOS 7&lt;/code&gt; / &lt;code&gt;Ubuntu 16,18&lt;/code&gt;，大部分网上都有这两系统教程。&lt;/p&gt;
+&lt;h2 id=&#34;2-v2raywebsocket--tls&#34;&gt;2. v2ray（websocket + tls）&lt;/h2&gt;
+&lt;p&gt;这边使用 CentOS 7 操作，购买完 VPS，直接选择作业系统，配置好 key，就可以透过 ssh 远端操作。&lt;/p&gt;
+&lt;p&gt;下面有两套方法可以参考。&lt;/p&gt;
+&lt;h3 id=&#34;21-一键脚本安装&#34;&gt;2.1 一键脚本安装&lt;/h3&gt;
+&lt;p&gt;不需要申请 SSL 和配置 Nginx 服务，脚本使用 caddy web server，自動升级到 HTTPS。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;  1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;  9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 82
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 83
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 84
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 85
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 86
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 87
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 88
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 89
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 90
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 91
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 92
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 93
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 94
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 95
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 96
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 97
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 98
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 99
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;100
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;101
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;102
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;103
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;104
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;105
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;106
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;107
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;108
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;109
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;110
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;111
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;112
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;113
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;114
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;115
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;116
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;117
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;118
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;119
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;120
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;121
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;122
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;root@vps-new ~&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# bash &amp;lt;(curl -s -L https://git.io/v2ray.sh)&lt;/span&gt;
+
+........... V2Ray 一键安装脚本 &lt;span class=&#34;p&#34;&gt;&amp;amp;&lt;/span&gt; 管理脚本 by 233v2.com ..........
+帮助说明: https://233v2.com/post/1/
+搭建教程: https://233v2.com/post/2/
+ 1. 安装
+ 2. 卸载
+请选择 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1-2&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;
+
+请选择 V2Ray 传输协议 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1-32&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+  1. TCP
+  2. TCP_HTTP
+  3. WebSocket
+  4. WebSocket + TLS
+  5. HTTP/2
+  6. mKCP
+  7. mKCP_utp
+  8. mKCP_srtp
+  9. mKCP_wechat-video
+ 10. mKCP_dtls
+ 11. mKCP_wireguard
+ 12. QUIC
+ 13. QUIC_utp
+ 14. QUIC_srtp
+ 15. QUIC_wechat-video
+ 16. QUIC_dtls
+ 17. QUIC_wireguard
+ 18. TCP_dynamicPort
+ 19. TCP_HTTP_dynamicPort
+ 20. WebSocket_dynamicPort
+ 21. mKCP_dynamicPort
+ 22. mKCP_utp_dynamicPort
+ 23. mKCP_srtp_dynamicPort
+ 24. mKCP_wechat-video_dynamicPort
+ 25. mKCP_dtls_dynamicPort
+ 26. mKCP_wireguard_dynamicPort
+ 27. QUIC_dynamicPort
+ 28. QUIC_utp_dynamicPort
+ 29. QUIC_srtp_dynamicPort
+ 30. QUIC_wechat-video_dynamicPort
+ 31. QUIC_dtls_dynamicPort
+ 32. QUIC_wireguard_dynamicPort
+
+备注1: 含有 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;dynamicPort&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 的即启用动态端口..
+备注2: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;utp &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; srtp &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; wechat-video &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; dtls &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; wireguard&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; 分别伪装成 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;BT下载 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 视频通话 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 微信视频通话 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; DTLS 1.2 数据包 &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; WireGuard 数据包&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;默认协议: TCP&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;4&lt;/span&gt;
+
+ V2Ray &lt;span class=&#34;nv&#34;&gt;传输协议&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; WebSocket + TLS
+----------------------------------------------------------------
+
+请输入 V2Ray 端口 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;1-65535&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;，不能选择 &lt;span class=&#34;m&#34;&gt;80&lt;/span&gt; 或 &lt;span class=&#34;m&#34;&gt;443&lt;/span&gt; 端口
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;默认端口: 31963&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;默认就行&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+请输入一个 正确的域名，一定一定一定要正确，不！能！出！错！
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;例如：233blog.com&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;: my.domain.com&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;前面在阿里申请的域名&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+
+ &lt;span class=&#34;nv&#34;&gt;你的域名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; my.domain.com
+----------------------------------------------------------------
+
+ 请将 my.domain.com 解析到: 69.69.69.69
+
+ 请将 my.domain.com 解析到: 69.69.69.69
+
+ 请将 my.domain.com 解析到: 69.69.69.69
+----------------------------------------------------------------
+
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;是否已经正确解析: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Y&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt;: Y
+
+ &lt;span class=&#34;nv&#34;&gt;域名解析&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 我确定已经有解析了
+----------------------------------------------------------------
+
+		安装 Caddy 来实现 自动配置 TLS
+
+		如果你已经安装 Nginx 或 Caddy
+
+		并且..自己能搞定配置 TLS
+
+		那么就不需要 打开自动配置 TLS
+
+----------------------------------------------------------------
+
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;是否自动配置 TLS: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Y/N&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt;: Y
+
+ 自动配置 &lt;span class=&#34;nv&#34;&gt;TLS&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 打开
+----------------------------------------------------------------
+
+是否开启 网站伪装 和 路径分流 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Y/N&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;默认: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;N&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt;: N
+
+ 网站伪装 和 &lt;span class=&#34;nv&#34;&gt;路径分流&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 不想配置
+----------------------------------------------------------------
+
+是否开启广告拦截&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;会影响性能&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Y/N&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;默认 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;N&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt;: N
+
+ &lt;span class=&#34;nv&#34;&gt;广告拦截&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 关闭
+----------------------------------------------------------------
+
+是否配置 Shadowsocks &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Y/N&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;默认 &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;N&lt;span class=&#34;o&#34;&gt;])&lt;/span&gt;: N
+
+ ....准备安装了咯..看看有毛有配置正确了...
+
+---------- 安装信息 -------------
+
+ V2Ray &lt;span class=&#34;nv&#34;&gt;传输协议&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; WebSocket + TLS
+
+ V2Ray &lt;span class=&#34;nv&#34;&gt;端口&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;m&#34;&gt;31963&lt;/span&gt;
+
+ &lt;span class=&#34;nv&#34;&gt;你的域名&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; my.domain.com
+
+ &lt;span class=&#34;nv&#34;&gt;域名解析&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 我确定已经有解析了
+
+ 自动配置 &lt;span class=&#34;nv&#34;&gt;TLS&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 打开
+
+ 是否配置 &lt;span class=&#34;nv&#34;&gt;Shadowsocks&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 未配置
+
+---------- END -------------
+
+按 Enter 回车键 继续....或按 Ctrl + C 取消.
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;直接 Enter 就好。接下来会自动帮你配置&lt;/p&gt;
+&lt;p&gt;最后生成你配置信息&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;..由于你的 VPS 内核支持开启 BBR ...已经为你启用 BBR 优化....
+
+
+---------- V2Ray 配置信息 -------------
+
+ 地址 (Address) = my.domain.com
+
+ 端口 (Port) = 443
+
+ 用户ID (User ID / UUID) = 3f6176eb-1cd6-433f-8a93-6be9cdb834be
+
+ 额外ID (Alter Id) = 233
+
+ 传输协议 (Network) = ws
+
+ 伪装类型 (header type) = none
+
+ 伪装域名 (host) = my.domain.com
+
+ 路径 (path) = /
+
+ TLS (Enable TLS) = 打开
+
+---------- END -------------
+
+V2Ray 客户端使用教程: https://233v2.com/post/4/
+
+提示: 输入 v2ray url 可生成 vmess URL 链接 / 输入 v2ray qr 可生成二维码链接
+
+免被墙..推荐使用JMS: https://getjms.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;这边可以输入&lt;code&gt;v2ray url&lt;/code&gt; or &lt;code&gt;v2ray qr&lt;/code&gt;，配置到自己客户端就行了。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;root@vps-new ~&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;# v2ray url&lt;/span&gt;
+---------- V2Ray vmess URL / V2RayNG v0.4.1+ / V2RayN v2.1+ / 仅适合部分客户端 -------------
+vmess://ewoidiI6ICIoIiwKInBzIjogIjIzM2YyLmNvbV9hcGktdjIueGl1ZnVndW8uY29tIiwKImFkZCI6ICJhcGktdjIueGl1ZnVn
+dW8uY29tIiwKInBvcnQaOiAiNDQzIiwKImlkIjogIjA0YzRmMDY0LTZlNTYtNDIyOS04ZmIyLTE1ODBjMzNhOWU0YiIsCiJhaWQiOiAi
+VjMzIiwKIm5ldCI6ICJ3cyIsCiJ0eXBlIjogIm5vbmUiLAoiaG9zdCI6ICJhcGktdjIueGl1ZnVndW8uY29tIiwKInBhdGgiOiAiLyIs
+&lt;span class=&#34;nv&#34;&gt;CiJ0bHMiOiAidGxzIgp9Cg&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;==&lt;/span&gt;
+
+免被墙..推荐使用JMS: https://getjms.com
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h3 id=&#34;22-ssl--nginx--v2ray&#34;&gt;2.2 SSL + Nginx + v2ray&lt;/h3&gt;
+&lt;p&gt;这部份需要自己申请 SSL 证书，下载 Nginx + v2ray，自己配置 Nginx 和 v2ray 配置文件。&lt;/p&gt;
+&lt;h4 id=&#34;申请ssl&#34;&gt;申请SSL&lt;/h4&gt;
+&lt;p&gt;阿里查询产品与服务，搜索 SSL证书&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://heuristic-nightingale-6c42ab.netlify.app/img/%E9%98%BF%E9%87%8CSSL.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;点击购买证书&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://heuristic-nightingale-6c42ab.netlify.app/img/%E8%B4%AD%E4%B9%B0%E8%AF%81%E4%B9%A6.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;直接购买免费一年&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://heuristic-nightingale-6c42ab.netlify.app/img/%E4%BA%91%E7%9B%BE%E8%AF%81%E4%B9%A6%E6%9C%8D%E5%8A%A1.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;购买成功后，在控制台会看到刚刚购买&lt;code&gt;DigiCert 免费版 SSL&lt;/code&gt;，点击证书申请&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://heuristic-nightingale-6c42ab.netlify.app/img/ssl%E8%B4%AD%E4%B9%B0%E6%88%90%E5%8A%9F.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;输入自己的域名，点击下一步&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://heuristic-nightingale-6c42ab.netlify.app/img/%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;p&gt;申请完，针对你使用web server，下载对应密钥（nginx）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://heuristic-nightingale-6c42ab.netlify.app/img/%E4%B8%8B%E8%BD%BD%E5%AF%86%E9%92%A5.png&#34; alt=&#34;img&#34;&gt;&lt;/p&gt;
+&lt;h4 id=&#34;下载-v2raynginx&#34;&gt;下载 v2ray、nginx&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;$ bash &amp;lt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;curl -L -s https://install.direct/go.sh&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;
+Installing V2Ray v4.26.0 on x86_64
+Downloading V2Ray: https://github.com/v2fly/v2ray-core/releases/download/v4.26.0/v2ray-linux-64.zip
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+&lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;631&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;631&lt;/span&gt;    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;   &lt;span class=&#34;m&#34;&gt;1740&lt;/span&gt;      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; --:--:-- --:--:-- --:--:--  &lt;span class=&#34;m&#34;&gt;1738&lt;/span&gt;
+&lt;span class=&#34;m&#34;&gt;100&lt;/span&gt; 12.2M  &lt;span class=&#34;m&#34;&gt;100&lt;/span&gt; 12.2M    &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;     &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  3816k      &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;  0:00:03  0:00:03 --:--:-- 4429k
+Shutting down V2Ray service.
+Archive:  /tmp/v2ray/v2ray.zip
+  inflating: /usr/bin/v2ray/geoip.dat
+  inflating: /usr/bin/v2ray/geosite.dat
+  inflating: /usr/bin/v2ray/v2ctl
+  inflating: /usr/bin/v2ray/v2ray
+Restarting V2Ray service.
+V2Ray v4.26.0 is installed.
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;sudo&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; yum install nginx -y
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;配置文件&#34;&gt;配置文件&lt;/h4&gt;
+&lt;p&gt;nginx config（/etc/nginx/conf.d/v2ray.conf）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;server &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    listen &lt;span class=&#34;m&#34;&gt;443&lt;/span&gt; ssl&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# 阿里上面的域名&lt;/span&gt;
+    server_name &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;自己配置的域名&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;c1&#34;&gt;# 这边需要提前把前面SSL下载的密钥scp到服务器，路径自己配置&lt;/span&gt;
+    ssl_certificate      /etc/nginx/key/&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;pem文件&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    ssl_certificate_key  /etc/nginx/key/&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;key文件&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    ssl_protocols         TLSv1 TLSv1.1 TLSv1.2&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    ssl_ciphers           HIGH:!aNULL:!MD5&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    location /event &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            proxy_redirect off&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+            proxy_pass http://127.0.0.1:10000&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+            proxy_http_version 1.1&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+            proxy_set_header Upgrade &lt;span class=&#34;nv&#34;&gt;$http_upgrade&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+            proxy_set_header Connection &lt;span class=&#34;s2&#34;&gt;&amp;#34;upgrade&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+            proxy_set_header Host &lt;span class=&#34;nv&#34;&gt;$http_host&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+
+    &lt;span class=&#34;c1&#34;&gt;# Show realip in v2ray access.log&lt;/span&gt;
+    proxy_set_header X-Real-IP &lt;span class=&#34;nv&#34;&gt;$remote_addr&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    proxy_set_header X-Forwarded-For &lt;span class=&#34;nv&#34;&gt;$proxy_add_x_forwarded_for&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;/usr/lib/systemd/system/v2ray.service&lt;/code&gt; 服务主要执行 &lt;code&gt;/etc/v2ray/config.json&lt;/code&gt; 文件&lt;/p&gt;
+&lt;p&gt;配置 v2ray config（vim /etc/v2ray/config.json）&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;s2&#34;&gt;&amp;#34;inbounds&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;port&amp;#34;&lt;/span&gt;: 10000,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;listen&amp;#34;&lt;/span&gt;:&lt;span class=&#34;s2&#34;&gt;&amp;#34;127.0.0.1&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;protocol&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;vmess&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;settings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;clients&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+          &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;5128a1ca-7053-4609-b386-222fede113c0&amp;#34;&lt;/span&gt;,
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;alterId&amp;#34;&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;233&lt;/span&gt;
+          &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;streamSettings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;network&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;ws&amp;#34;&lt;/span&gt;,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;wsSettings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/api&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,
+  &lt;span class=&#34;s2&#34;&gt;&amp;#34;outbounds&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;protocol&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;freedom&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;settings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;启动系统服务&#34;&gt;启动系统服务&lt;/h4&gt;
+&lt;p&gt;nginx&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl status nginx
+systemctl start nginx
+systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; nginx // 设置下次开机时，自动启动。
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;先判断语法有没有错误，没有错误重新加载&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;root on vps in ~
+$ nginx -t
+nginx: the configuration file /etc/nginx/nginx.conf syntax is ok
+nginx: configuration file /etc/nginx/nginx.conf &lt;span class=&#34;nb&#34;&gt;test&lt;/span&gt; is successful
+
+root on vps in ~
+$ nginx -s reload
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;v2ray&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;systemctl status v2ray
+systemctl restart v2ray
+systemctl &lt;span class=&#34;nb&#34;&gt;enable&lt;/span&gt; v2ray // 设置下次开机时，自动启动。
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h4 id=&#34;客户端配置&#34;&gt;客户端配置&lt;/h4&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;45
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;46
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;47
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;48
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;49
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;50
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;51
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;52
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;53
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;54
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;55
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;56
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;57
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;58
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;59
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;60
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;61
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;62
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;63
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;64
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;65
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;66
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;67
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;68
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;69
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;70
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;71
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;72
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;73
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;74
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;75
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;76
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;77
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;78
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;79
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;80
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;81
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;82
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;83
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;84
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;85
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;86
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;87
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;88
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;89
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;90
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;91
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-shell&#34; data-lang=&#34;shell&#34;&gt;&lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+  &lt;span class=&#34;s2&#34;&gt;&amp;#34;log&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;error&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;loglevel&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;info&amp;#34;&lt;/span&gt;,
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;access&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+  &lt;span class=&#34;s2&#34;&gt;&amp;#34;inbounds&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;listen&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;127.0.0.1&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;protocol&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;socks&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;settings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;udp&amp;#34;&lt;/span&gt;: false,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;auth&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;noauth&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;port&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;1080&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;listen&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;127.0.0.1&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;protocol&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;http&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;settings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;timeout&amp;#34;&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;360&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;port&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;1087&amp;#34;&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,
+  &lt;span class=&#34;s2&#34;&gt;&amp;#34;outbounds&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;mux&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;enabled&amp;#34;&lt;/span&gt;: false,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;concurrency&amp;#34;&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;8&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;protocol&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;vmess&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;streamSettings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;wsSettings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+          &lt;span class=&#34;s2&#34;&gt;&amp;#34;path&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;/api&amp;#34;&lt;/span&gt;,             // 你设置的path
+          &lt;span class=&#34;s2&#34;&gt;&amp;#34;headers&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;host&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;
+          &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;tlsSettings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+          &lt;span class=&#34;s2&#34;&gt;&amp;#34;allowInsecure&amp;#34;&lt;/span&gt;: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;security&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;tls&amp;#34;&lt;/span&gt;,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;network&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;ws&amp;#34;&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;tag&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;proxy&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;settings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;vnext&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+          &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;address&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;you.domain.com&amp;#34;&lt;/span&gt;,   // 域名
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;users&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;
+              &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+                &lt;span class=&#34;s2&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;5128a1ca-7053-4609-b386-222fede113c0&amp;#34;&lt;/span&gt;,
+                &lt;span class=&#34;s2&#34;&gt;&amp;#34;alterId&amp;#34;&lt;/span&gt;: 233,
+                &lt;span class=&#34;s2&#34;&gt;&amp;#34;level&amp;#34;&lt;/span&gt;: 0,
+                &lt;span class=&#34;s2&#34;&gt;&amp;#34;security&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;
+              &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+            &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,
+            &lt;span class=&#34;s2&#34;&gt;&amp;#34;port&amp;#34;&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;443&lt;/span&gt;
+          &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;tag&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;direct&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;protocol&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;freedom&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;settings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;domainStrategy&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;UseIP&amp;#34;&lt;/span&gt;,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;redirect&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;&amp;#34;&lt;/span&gt;,
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;userLevel&amp;#34;&lt;/span&gt;: &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+    &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;tag&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;block&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;protocol&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;blackhole&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;settings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+        &lt;span class=&#34;s2&#34;&gt;&amp;#34;response&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+          &lt;span class=&#34;s2&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;none&amp;#34;&lt;/span&gt;
+        &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+      &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;,
+  &lt;span class=&#34;s2&#34;&gt;&amp;#34;dns&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt;,
+  &lt;span class=&#34;s2&#34;&gt;&amp;#34;routing&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+    &lt;span class=&#34;s2&#34;&gt;&amp;#34;settings&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{&lt;/span&gt;
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;domainStrategy&amp;#34;&lt;/span&gt;: &lt;span class=&#34;s2&#34;&gt;&amp;#34;AsIs&amp;#34;&lt;/span&gt;,
+      &lt;span class=&#34;s2&#34;&gt;&amp;#34;rules&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;[]&lt;/span&gt;
+    &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+  &lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;,
+  &lt;span class=&#34;s2&#34;&gt;&amp;#34;transport&amp;#34;&lt;/span&gt;: &lt;span class=&#34;o&#34;&gt;{}&lt;/span&gt;
+&lt;span class=&#34;o&#34;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;h2 id=&#34;3-参考资料&#34;&gt;3. 参考资料&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.v2ray.com/&#34;&gt;v2ray官方文档&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </description>
       
     </item>
@@ -999,55 +1789,6 @@
 
         &lt;span class=&#34;n&#34;&gt;cur&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l1&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;or&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;l2&lt;/span&gt;
         &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;dummy&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
-&lt;/div&gt;
-&lt;/div&gt;</description>
-      
-    </item>
-    
-    <item>
-      <title>[LeetCode] 142. Linked List Cycle II</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/linked-list-cycle-ii/</link>
-      <pubDate>Sun, 19 Jul 2020 12:14:46 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/linked-list-cycle-ii/</guid>
-      
-        <description>&lt;p&gt;&lt;a href=&#34;https://leetcode.com/problems/linked-list-cycle-ii/&#34;&gt;142. Linked List Cycle II&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;python&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
-&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14
-&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
-&lt;td class=&#34;lntd&#34;&gt;
-&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span class=&#34;k&#34;&gt;class&lt;/span&gt; &lt;span class=&#34;nc&#34;&gt;Solution&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-    &lt;span class=&#34;k&#34;&gt;def&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;detectCycle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;bp&#34;&gt;self&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ListNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;ListNode&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;not&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-            &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;
-        &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;slow&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-            &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt;
-            &lt;span class=&#34;n&#34;&gt;slow&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;slow&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt;
-            &lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;is&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;slow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-                &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;head&lt;/span&gt;
-                &lt;span class=&#34;k&#34;&gt;while&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt; &lt;span class=&#34;ow&#34;&gt;and&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;!=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;slow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;
-                    &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt;
-                    &lt;span class=&#34;n&#34;&gt;slow&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;slow&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;next&lt;/span&gt;
-                &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;fast&lt;/span&gt;
-        &lt;span class=&#34;k&#34;&gt;return&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;None&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
 &lt;/div&gt;</description>

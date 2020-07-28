@@ -62,7 +62,7 @@
 <meta property="og:description" content="Rubinera1n&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-07-27T16:11:18+08:00" />
+<meta property="og:updated_time" content="2020-07-28T14:10:41+08:00" />
 <meta itemprop="name" content="Rubinera1n&#39;s Blog">
 <meta itemprop="description" content="Rubinera1n&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rubinera1n&#39;s Blog"/>
@@ -295,6 +295,44 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/linked_list/linked-list-cycle/">[LeetCode] 141. Linked List Cycle</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-19" class="post-time">
+        2020-07-19
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
+          
+        </div>
+      <span class="more-meta"> 52 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      141. Linked List Cycle
+python
+1 2 3 4 5 6 7 8 9 10 11  class Solution: def hasCycle(self, head: ListNode) -&gt; bool: if not head: return False fast = slow = head while fast and fast.next: fast = fast.next.next slow = slow.next if fast is slow: return True return False   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/linked_list/linked-list-cycle/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/linked_list/remove-duplicates-from-sorted-list-ii/">[LeetCode] 82. Remove Duplicates from Sorted List II</a>
     </h1>
     
@@ -437,44 +475,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/linked_list/reverse-linked-list-ii/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/linked_list/swap-nodes-in-pairs/">[LeetCode] 24. Swap Nodes in Pairs</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-16" class="post-time">
-        2020-07-16
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
-          
-        </div>
-      <span class="more-meta"> 100 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      24. Swap Nodes in Pairs
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Solution: def swapPairs(self, head: ListNode) -&gt; ListNode: if not head or not head.next: return head second = head.next pre = ListNode(0) while head and head.next: nxt = head.next head.next = nxt.next nxt.next = head pre.next = nxt head = head.next pre = nxt.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/linked_list/swap-nodes-in-pairs/" class="read-more-link">Read more</a>
     </div>
     
   </div>

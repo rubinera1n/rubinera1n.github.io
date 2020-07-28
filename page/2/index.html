@@ -62,7 +62,7 @@
 <meta property="og:description" content="Rubinera1n&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-07-27T16:11:18+08:00" />
+<meta property="og:updated_time" content="2020-07-28T14:10:41+08:00" />
 <meta itemprop="name" content="Rubinera1n&#39;s Blog">
 <meta itemprop="description" content="Rubinera1n&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rubinera1n&#39;s Blog"/>
@@ -295,6 +295,44 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/two_pointers/sort-colors/">[LeetCode] 75. Sort Colors</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-25" class="post-time">
+        2020-07-25
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/two-pointers/"> two-pointers </a>
+          
+        </div>
+      <span class="more-meta"> 68 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      75. Sort Colors
+python
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def sortColors(self, nums: List[int]) -&gt; None: l, r, zero = 0, len(nums) - 1, 0 while l &lt;= r: if nums[l] == 0: nums[l], nums[zero] = nums[zero], nums[l] l += 1; zero += 1 elif nums[l] == 2: nums[l], nums[r] = nums[r], nums[l] r -= 1 else: l += 1   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/two_pointers/sort-colors/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/two_pointers/merge-sorted-array/">[LeetCode] 88. Merge Sorted Array</a>
     </h1>
     
@@ -437,44 +475,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/array/remove-duplicates-from-sorted-array/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/array/remove-element/">[LeetCode] 27. Remove Element</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-24" class="post-time">
-        2020-07-24
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/array/"> array </a>
-          
-        </div>
-      <span class="more-meta"> 48 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      27. Remove Element
-python
-1 2 3 4 5 6 7 8 9 10  class Solution: def removeElement(self, nums: List[int], val: int) -&gt; int: if not len(nums): return 0 count = 0 for i in range(len(nums)): if nums[i] != val: nums[count] = nums[i] count += 1 return count   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/array/remove-element/" class="read-more-link">Read more</a>
     </div>
     
   </div>
