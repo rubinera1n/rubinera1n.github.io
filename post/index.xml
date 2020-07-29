@@ -6,10 +6,32 @@
     <description>Recent content in Posts on Rubinera1n&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Jul 2020 14:01:03 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 29 Jul 2020 00:36:37 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[LeetCode] 74. Search a 2D Matrix</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/search-a-2d-matrix/</link>
+      <pubDate>Wed, 29 Jul 2020 00:36:37 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/search-a-2d-matrix/</guid>
+      <description>74. Search a 2D Matrix
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  class Solution: def searchMatrix(self, matrix: List[List[int]], target: int) -&amp;gt; bool: if not matrix or target is None: return False row, col = len(matrix), len(matrix[0]) low, high = 0, row * col - 1 while low &amp;lt;= high: mid = low + (high - low) // 2 num = matrix[mid // col][mid % col] if num == target: return True elif num &amp;lt; target: low = mid + 1 else: high = mid - 1 return False   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 35. Search Insert Position</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/search-insert-position/</link>
+      <pubDate>Wed, 29 Jul 2020 00:30:42 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/search-insert-position/</guid>
+      <description>35. Search Insert Position
+python
+1 2 3 4 5 6 7 8 9 10  class Solution: def searchInsert(self, nums: List[int], target: int) -&amp;gt; int: l, r = 0, len(nums) while l &amp;lt; r: mid = l + (r - l) // 2 if nums[mid] &amp;lt; target: l = mid + 1 else: r = mid return l   </description>
+    </item>
     
     <item>
       <title>科学上网</title>
@@ -18,6 +40,28 @@
       
       <guid>https://blog.xiufuguo.com/post/technology/science_internet/</guid>
       <description>1. 配置前的准备 域名 VPS (虚拟专用服务器) 1.1 如何申请域名？ 免费：google search apply free domain name 我自己使用阿里付费域名，后面的 HTTPS 也方便，可配置自己博客域名</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 349. Intersection of Two Arrays</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/intersection-of-two-arrays/</link>
+      <pubDate>Tue, 28 Jul 2020 00:28:18 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/intersection-of-two-arrays/</guid>
+      <description>349. Intersection of Two Arrays
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&amp;gt; List[int]: res = [] nums1.sort() nums2.sort() i = j = 0 while (i &amp;lt; len(nums1) and j &amp;lt; len(nums2)): if nums1[i] &amp;gt; nums2[j]: j += 1 elif nums1[i] &amp;lt; nums2[j]: i += 1 else: if not (len(res) and nums1[i] == res[len(res)-1]): res.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 42. Trapping Rain Water</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/trapping-rain-water/</link>
+      <pubDate>Tue, 28 Jul 2020 00:26:00 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/trapping-rain-water/</guid>
+      <description>42. Trapping Rain Water
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  class Solution: def trap(self, height: List[int]) -&amp;gt; int: if not height or len(height) &amp;lt; 3: return 0 res = 0 left, right = 0, len(height) - 1 l_max, r_max = height[left], height[right] while left &amp;lt; right: l_max, r_max = max(height[left], l_max), max(height[right], r_max) if l_max &amp;lt;= r_max: res += l_max - height[left] left += 1 else: res += r_max - height[right] right -= 1 return res   </description>
     </item>
     
     <item>
@@ -183,50 +227,6 @@ python
       <description>148. Sort List
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  class Solution: def sortList(self, head: ListNode) -&amp;gt; ListNode: if not head or not head.next: return head slow = fast = head while fast.next and fast.next.next: slow, fast = slow.next, fast.next.next fast = slow slow = slow.</description>
-    </item>
-    
-    <item>
-      <title>[LeetCode] 143. Reorder List</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/reorder-list/</link>
-      <pubDate>Tue, 21 Jul 2020 15:42:33 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/reorder-list/</guid>
-      <description>143. Reorder List
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  class Solution: def reorderList(self, head: ListNode) -&amp;gt; None: if not head: return # find the mid point slow = fast = head while fast and fast.next: slow = slow.next fast = fast.next.next # reverse the second half in-place pre, node = None, slow while node: pre, node.</description>
-    </item>
-    
-    <item>
-      <title>[LeetCode] 25. Reverse Nodes in k-Group</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/reverse-nodes-in-k-group/</link>
-      <pubDate>Mon, 20 Jul 2020 12:17:56 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/reverse-nodes-in-k-group/</guid>
-      <description>25. Reverse Nodes in k-Group
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Solution: def reverseKGroup(self, head: ListNode, k: int) -&amp;gt; ListNode: count, node = 0, head while node: count += 1 node = node.next if k &amp;lt;= 1 or count &amp;lt; k: return head pre = nxt = None curr = head for _ in range(k): nxt = curr.</description>
-    </item>
-    
-    <item>
-      <title>[LeetCode] 23. Merge k Sorted Lists</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/merge-k-sorted-lists/</link>
-      <pubDate>Mon, 20 Jul 2020 12:16:33 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/merge-k-sorted-lists/</guid>
-      <description>23. Merge k Sorted Lists
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  class Solution: def mergeKLists(self, lists: List[ListNode]) -&amp;gt; ListNode: if not lists: return None if len(lists) == 1: return lists[0] mid = len(lists) // 2 l1 = self.mergeKLists(lists[:mid]) l2 = self.mergeKLists(lists[mid:]) return self.merge(l1, l2) def merge(self, l1, l2): cur = dummy = ListNode(0) while l1 and l2: if l1.</description>
-    </item>
-    
-    <item>
-      <title>[LeetCode] 142. Linked List Cycle II</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/linked-list-cycle-ii/</link>
-      <pubDate>Sun, 19 Jul 2020 12:14:46 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/tags/linked_list/linked-list-cycle-ii/</guid>
-      <description>142. Linked List Cycle II
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def detectCycle(self, head: ListNode) -&amp;gt; ListNode: if not head: return None fast = slow = head while fast and fast.next: fast = fast.next.next slow = slow.next if fast is slow: fast = head while fast and fast != slow: fast = fast.next slow = slow.next return fast return None   </description>
     </item>
     
   </channel>
