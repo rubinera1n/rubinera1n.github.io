@@ -22,7 +22,7 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="rubinera1n" />
+<meta name="author" content="XiuFu Guo" />
   <meta name="description" content="106. Construct Binary Tree from Inorder and Postorder Traversal
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  class Solution: def buildTree(self, inorder: List[int], postorder: List[int]) -&amp;gt; TreeNode: if not inorder or not postorder: return None return self.helper(inorder, 0, len(inorder) - 1, postorder, 0, len(postorder) - 1) def helper(self, inorder, i_left, i_right, postorder, p_left, p_right): if i_left &amp;gt; i_right: return None if i_left == i_right: return TreeNode(postorder[p_right]) idx = inorder." />
@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/tree/construct-binary-tree-from-inorder-and-postorder-traversal/" />
@@ -438,7 +438,7 @@ python
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">rubinera1n</span>
+    <span class="item-content">XiuFu Guo</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>

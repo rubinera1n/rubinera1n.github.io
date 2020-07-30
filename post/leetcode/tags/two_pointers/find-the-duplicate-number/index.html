@@ -22,7 +22,7 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="rubinera1n" />
+<meta name="author" content="XiuFu Guo" />
   <meta name="description" content="287. Find the Duplicate Number
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def findDuplicate(self, nums: List[int]) -&amp;gt; int: slow = fast = tail = 0 while True: slow = nums[slow] fast = nums[nums[fast]] if slow == fast: break while True: slow = nums[slow] tail = nums[tail] if slow == tail: break return slow   " />
@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/find-the-duplicate-number/" />
@@ -381,7 +381,7 @@ python
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">rubinera1n</span>
+    <span class="item-content">XiuFu Guo</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>

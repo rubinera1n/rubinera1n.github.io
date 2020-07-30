@@ -22,7 +22,7 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="rubinera1n" />
+<meta name="author" content="XiuFu Guo" />
   <meta name="description" content="61. Rotate List
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23  class Solution: def rotateRight(self, head: ListNode, k: int) -&amp;gt; ListNode: if not head or not head.next or k == 0: return head cur, count = head, 0 while cur: count &#43;= 1 cur = cur.next k %= count if k == 0: return head fast = slow = head for _ in range(k): fast = fast." />
@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/linked_list/rotate-list/" />
@@ -397,7 +397,7 @@ python
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">rubinera1n</span>
+    <span class="item-content">XiuFu Guo</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>

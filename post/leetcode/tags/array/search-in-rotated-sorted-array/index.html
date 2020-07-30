@@ -22,7 +22,7 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="rubinera1n" />
+<meta name="author" content="XiuFu Guo" />
   <meta name="description" content="33. Search in Rotated Sorted Array
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def search(self, nums: List[int], target: int) -&amp;gt; int: l, r = 0, len(nums) - 1 while l &amp;lt;= r: mid = l &#43; (r - l) // 2 if nums[mid] == target: return mid elif nums[l] &amp;lt;= nums[mid]: if nums[l] &amp;lt;= target &amp;lt; nums[mid]: r = mid - 1 else: l = mid &#43; 1 elif nums[mid] &amp;lt;= nums[r]: if nums[mid] &amp;lt; target &amp;lt;= nums[r]: l = mid &#43; 1 else: r = mid - 1 return -1   " />
@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/array/search-in-rotated-sorted-array/" />
@@ -387,7 +387,7 @@ python
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">rubinera1n</span>
+    <span class="item-content">XiuFu Guo</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>

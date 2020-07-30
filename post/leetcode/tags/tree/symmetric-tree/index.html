@@ -22,7 +22,7 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="rubinera1n" />
+<meta name="author" content="XiuFu Guo" />
   <meta name="description" content="101. Symmetric Tree
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14  class Solution: def isSymmetric(self, root: TreeNode) -&amp;gt; bool: if not root: return True return self.helper(root.left, root.right) def helper(self, left, right): if not left and not right: return True if not left or not right: return False if left.val != right.val: return False return self.helper(left.left, right.right) and self.helper(left.right, right.left)   go" />
@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/tree/symmetric-tree/" />
@@ -418,7 +418,7 @@ python
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">rubinera1n</span>
+    <span class="item-content">XiuFu Guo</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>

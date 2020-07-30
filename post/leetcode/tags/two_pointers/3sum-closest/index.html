@@ -22,7 +22,7 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="rubinera1n" />
+<meta name="author" content="XiuFu Guo" />
   <meta name="description" content="16. 3Sum Closest
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Solution: def threeSumClosest(self, nums: List[int], target: int) -&amp;gt; int: nums.sort() d = sys.maxsize res = 0 for i in range(len(nums) - 2): l, r = i &#43; 1, len(nums) - 1 while l &amp;lt; r: s = nums[i] &#43; nums[l] &#43; nums[r] if s == target: return s diff = abs(s - target) if diff &amp;lt; d: d = diff res = s if s &amp;lt; target: l &#43;= 1 else: r -= 1 return res   " />
@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/3sum-closest/" />
@@ -391,7 +391,7 @@ python
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">rubinera1n</span>
+    <span class="item-content">XiuFu Guo</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>

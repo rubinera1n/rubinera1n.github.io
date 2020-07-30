@@ -22,7 +22,7 @@
 
 <meta name="mobile-web-app-capable" content="yes">
 
-<meta name="author" content="rubinera1n" />
+<meta name="author" content="XiuFu Guo" />
   <meta name="description" content="74. Search a 2D Matrix
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  class Solution: def searchMatrix(self, matrix: List[List[int]], target: int) -&amp;gt; bool: if not matrix or target is None: return False row, col = len(matrix), len(matrix[0]) low, high = 0, row * col - 1 while low &amp;lt;= high: mid = low &#43; (high - low) // 2 num = matrix[mid // col][mid % col] if num == target: return True elif num &amp;lt; target: low = mid &#43; 1 else: high = mid - 1 return False   " />
@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/search-a-2d-matrix/" />
@@ -389,7 +389,7 @@ python
 <div class="post-copyright">
   <p class="copyright-item">
     <span class="item-title">Author</span>
-    <span class="item-content">rubinera1n</span>
+    <span class="item-content">XiuFu Guo</span>
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
