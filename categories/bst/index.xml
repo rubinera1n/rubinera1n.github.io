@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BST on XiuFu Guo&#39;s Blog</title>
+    <link>https://blog.xiufuguo.com/categories/bst/</link>
+    <description>Recent content in BST on XiuFu Guo&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 01 Aug 2020 23:07:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://blog.xiufuguo.com/categories/bst/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>[LeetCode] 1038. Binary Search Tree to Greater Sum Tree</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/bst/binary-search-tree-to-greater-sum-tree/</link>
+      <pubDate>Sat, 01 Aug 2020 23:07:01 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/bst/binary-search-tree-to-greater-sum-tree/</guid>
+      <description>1038. Binary Search Tree to Greater Sum Tree
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13  class Solution: def bstToGst(self, root: TreeNode) -&amp;gt; TreeNode: self.sum = 0 self.helper(root) return root def helper(self, node): if not node: return self.helper(node.right) node.val += self.sum self.sum = node.val self.helper(node.left)   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 109. Convert Sorted List to Binary Search Tree</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/bst/convert-sorted-list-to-binary-search-tree/</link>
+      <pubDate>Sat, 01 Aug 2020 23:07:01 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/bst/convert-sorted-list-to-binary-search-tree/</guid>
+      <description>109. Convert Sorted List to Binary Search Tree
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def sortedListToBST(self, head: ListNode) -&amp;gt; TreeNode: lst = [] while head: lst.append(head.val) head = head.next return self.helper(lst, 0, len(lst) - 1) def helper(self, lst, start, end): if start &amp;gt; end: return None if start == end: return TreeNode(lst[start]) mid = (start + end) &amp;gt;&amp;gt; 1 root = TreeNode(lst[mid]) root.</description>
+    </item>
+    
+  </channel>
+</rss>

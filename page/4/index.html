@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.72.0" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="XiuFu Guo&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-07-30T17:57:05+08:00" />
+<meta property="og:updated_time" content="2019-01-05T22:00:00+08:00" />
 <meta itemprop="name" content="XiuFu Guo&#39;s Blog">
 <meta itemprop="description" content="XiuFu Guo&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="XiuFu Guo&#39;s Blog"/>
@@ -295,18 +295,18 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/two_pointers/3sum-closest/">[LeetCode] 16. 3Sum Closest</a>
+      <a class="post-link" href="/post/leetcode/tags/two_pointers/minimum-size-subarray-sum/">[LeetCode] 209. Minimum Size Subarray Sum</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-23" class="post-time">
-        2020-07-23
+      <time datetime="2020-07-26" class="post-time">
+        2020-07-26
       </time>
       <div class="post-category">
           <a href="https://blog.xiufuguo.com/categories/two-pointers/"> two-pointers </a>
           
         </div>
-      <span class="more-meta"> 101 words </span>
+      <span class="more-meta"> 76 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -317,12 +317,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      16. 3Sum Closest
+      209. Minimum Size Subarray Sum
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20  class Solution: def threeSumClosest(self, nums: List[int], target: int) -&gt; int: nums.sort() d = sys.maxsize res = 0 for i in range(len(nums) - 2): l, r = i + 1, len(nums) - 1 while l &lt; r: s = nums[i] + nums[l] + nums[r] if s == target: return s diff = abs(s - target) if diff &lt; d: d = diff res = s if s &lt; target: l += 1 else: r -= 1 return res   
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def minSubArrayLen(self, s: int, nums: List[int]) -&gt; int: total = left = right = 0 res = len(nums) + 1 while right &lt; len(nums): total += nums[right] while total &gt;= s: res = min(res, right - left + 1) total -= nums[left] left += 1 right += 1 return res if res &lt;= len(nums) else 0   
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/two_pointers/3sum-closest/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/two_pointers/minimum-size-subarray-sum/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -333,50 +333,12 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/two_pointers/4sum/">[LeetCode] 18. 4Sum</a>
+      <a class="post-link" href="/post/leetcode/tags/two_pointers/two-sum-ii-input-array-is-sorted/">[LeetCode] 167. Two Sum II - Input array is sorted</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-23" class="post-time">
-        2020-07-23
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/two-pointers/"> two-pointers </a>
-          
-        </div>
-      <span class="more-meta"> 207 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      18. 4Sum
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33  class Solution: def fourSum(self, nums: List[int], target: int) -&gt; List[List[int]]: nums.sort() res = [] self.findNSum(nums, target, 4, [], res) return res def findNSum(self, nums, target, N, path, res): if len(nums) &lt; N or N &lt; 2: return # solve 2-sum if N == 2: l, r = 0, len(nums) - 1 while l &lt; r: if nums[l] + nums[r] == target: res.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/two_pointers/4sum/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/two_pointers/container-with-most-water/">[LeetCode] 11. Container With Most Water</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-22" class="post-time">
-        2020-07-22
+      <time datetime="2020-07-26" class="post-time">
+        2020-07-26
       </time>
       <div class="post-category">
           <a href="https://blog.xiufuguo.com/categories/two-pointers/"> two-pointers </a>
@@ -393,12 +355,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      11. Container With Most Water
+      167. Two Sum II - Input array is sorted
 python
-1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def maxArea(self, height: List[int]) -&gt; int: if len(height) &lt; 2: return 0 area, l, r = 0, 0, len(height) - 1 while l &lt; r: area = max(area, min(height[l], height[r]) * (r - l)) if height[l] &lt; height[r]: l += 1 else: r -= 1 return area   
+1 2 3 4 5 6 7 8 9 10  class Solution: def twoSum(self, numbers: List[int], target: int) -&gt; List[int]: l, r = 0, len(numbers) - 1 while l &lt; r: if numbers[l] + numbers[r] == target: return [l + 1, r + 1] elif numbers[l] + numbers[r] &gt; target: r -= 1 else: l += 1   
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/two_pointers/container-with-most-water/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/two_pointers/two-sum-ii-input-array-is-sorted/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -409,18 +371,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/two_pointers/3sum/">[LeetCode] 15. 3Sum</a>
+      <a class="post-link" href="/post/leetcode/tags/two_pointers/sort-colors/">[LeetCode] 75. Sort Colors</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-22" class="post-time">
-        2020-07-22
+      <time datetime="2020-07-25" class="post-time">
+        2020-07-25
       </time>
       <div class="post-category">
           <a href="https://blog.xiufuguo.com/categories/two-pointers/"> two-pointers </a>
           
         </div>
-      <span class="more-meta"> 134 words </span>
+      <span class="more-meta"> 68 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -431,12 +393,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      15. 3Sum
+      75. Sort Colors
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24  class Solution: def threeSum(self, nums: List[int]) -&gt; List[List[int]]: res = [] nums.sort() for i in range(len(nums) - 2): # pass duplicate if i &gt; 0 and nums[i] == nums[i - 1]: continue l, r = i + 1, len(nums) - 1 while l &lt; r: s = nums[i] + nums[l] + nums[r] if s &lt; 0: l += 1 elif s &gt; 0: r -= 1 else: res.
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def sortColors(self, nums: List[int]) -&gt; None: l, r, zero = 0, len(nums) - 1, 0 while l &lt;= r: if nums[l] == 0: nums[l], nums[zero] = nums[zero], nums[l] l += 1; zero += 1 elif nums[l] == 2: nums[l], nums[r] = nums[r], nums[l] r -= 1 else: l += 1   
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/two_pointers/3sum/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/two_pointers/sort-colors/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -447,18 +409,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/linked_list/sort-list/">[LeetCode] 148. Sort List</a>
+      <a class="post-link" href="/post/leetcode/tags/two_pointers/merge-sorted-array/">[LeetCode] 88. Merge Sorted Array</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-21" class="post-time">
-        2020-07-21
+      <time datetime="2020-07-25" class="post-time">
+        2020-07-25
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/linked-list/"> linked-list </a>
+          <a href="https://blog.xiufuguo.com/categories/two-pointers/"> two-pointers </a>
           
         </div>
-      <span class="more-meta"> 123 words </span>
+      <span class="more-meta"> 96 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -469,12 +431,50 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      148. Sort List
+      88. Merge Sorted Array
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31  class Solution: def sortList(self, head: ListNode) -&gt; ListNode: if not head or not head.next: return head slow = fast = head while fast.next and fast.next.next: slow, fast = slow.next, fast.next.next fast = slow slow = slow.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&gt; None: i = m - 1 j = n - 1 k = m + n - 1 while i &gt;= 0 and j &gt;= 0: if nums1[i] &gt;= nums2[j]: nums1[k] = nums1[i] i -= 1 else: nums1[k] = nums2[j] j -= 1 k -= 1 while j &gt;= 0: nums1[k] = nums2[j] k -= 1 j -= 1 return   
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/linked_list/sort-list/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/two_pointers/merge-sorted-array/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/two_pointers/reverse-string/">[LeetCode] 344. Reverse String</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-24" class="post-time">
+        2020-07-24
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/two-pointers/"> two-pointers </a>
+          
+        </div>
+      <span class="more-meta"> 42 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      344. Reverse String
+python
+1 2 3 4 5 6 7  class Solution: def reverseString(self, s: List[str]) -&gt; None: l, r = 0, len(s) - 1 while l &lt; r: s[l], s[r] = s[r], s[l] l += 1; r -= 1 return   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/two_pointers/reverse-string/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -984,6 +984,30 @@ python
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/5/">»</a></li>
@@ -991,7 +1015,7 @@ python
 
       
       
-      <li><a href="/page/15/">»»</a></li>
+      <li><a href="/page/16/">»»</a></li>
       
 
       </ul>

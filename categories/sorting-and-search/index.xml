@@ -6,10 +6,74 @@
     <description>Recent content in sorting-and-search on XiuFu Guo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Jul 2020 00:36:37 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2020 23:58:18 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/categories/sorting-and-search/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[LeetCode] 179. Largest Number</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/largest-number/</link>
+      <pubDate>Sun, 02 Aug 2020 23:58:18 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/largest-number/</guid>
+      <description>179. Largest Number
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  class Solution: def largestNumber(self, nums: List[int]) -&amp;gt; str: # use quick sort, in-place self.quickSort(nums, 0, len(nums) - 1) return str(int(&amp;#34;&amp;#34;.join(map(str, nums)))) def quickSort(self, nums, l, r): if l &amp;gt;= r: return pos = self.partition(nums, l, r) self.quickSort(nums, l, pos - 1) self.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 56. Merge Intervals</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/merge-intervals/</link>
+      <pubDate>Sun, 02 Aug 2020 23:56:54 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/merge-intervals/</guid>
+      <description>56. Merge Intervals python 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution: def merge(self, intervals: List[List[int]]) -&amp;gt; List[List[int]]: if not intervals: return [] # sort intervals.sort() res = [] for interval in intervals: # 空 or 迭代的数组起点 &amp;gt; 答案最后一个数组尾巴，就进行插入</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 235. Lowest Common Ancestor of a Binary Search Tree</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/lowest-common-ancestor-of-a-binary-search-tree/</link>
+      <pubDate>Fri, 31 Jul 2020 22:58:39 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/lowest-common-ancestor-of-a-binary-search-tree/</guid>
+      <description>235. Lowest Common Ancestor of a Binary Search Tree
+python
+1 2 3 4 5 6 7 8 9 10  class Solution: def lowestCommonAncestor(self, root: &amp;#39;TreeNode&amp;#39;, p: &amp;#39;TreeNode&amp;#39;, q: &amp;#39;TreeNode&amp;#39;) -&amp;gt; &amp;#39;TreeNode&amp;#39;: if not root: return None if (root.val - p.val) * (root.val - q.val) &amp;lt;= 0: return root elif root.val &amp;gt; p.val and root.val &amp;gt; q.val: return self.lowestCommonAncestor(root.left, p, q) else: return self.lowestCommonAncestor(root.right, p, q)   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 240. Search a 2D Matrix II</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/search-a-2d-matrix-ii/</link>
+      <pubDate>Fri, 31 Jul 2020 22:58:39 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/search-a-2d-matrix-ii/</guid>
+      <description>240. Search a 2D Matrix II
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  class Solution: def searchMatrix(self, matrix, target): if not matrix or not target: return False rows, cols = len(matrix), len(matrix[0]) row, col = rows - 1, 0 while row &amp;gt;= 0 and col &amp;lt;= cols - 1: if matrix[row][col] == target: return True elif matrix[row][col] &amp;gt; target: row -= 1 else: col += 1 return False   </description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 212. Word Search II</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/word-search-ii/</link>
+      <pubDate>Thu, 30 Jul 2020 22:55:38 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/word-search-ii/</guid>
+      <description>212. Word Search II
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51  class TrieNode(): def __init__(self): self.children = collections.defaultdict(TrieNode) self.isWord = False class Trie(): def __init__(self): self.</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 79. Word Search</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/word-search/</link>
+      <pubDate>Thu, 30 Jul 2020 22:53:46 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/sorting_and_search/word-search/</guid>
+      <description>79. Word Search
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23  class Solution: def exist(self, board: List[List[str]], word: str) -&amp;gt; bool: if not board: return False for i in range(len(board)): for j in range(len(board[0])): if self.dfs(board, i, j, word): return True return False def dfs(self, board, i, j, word): if len(word) == 0: return True if i &amp;lt; 0 or i &amp;gt;= len(board) or j &amp;lt; 0 or j &amp;gt;= len(board[0]) or word[0] !</description>
+    </item>
     
     <item>
       <title>[LeetCode] 74. Search a 2D Matrix</title>

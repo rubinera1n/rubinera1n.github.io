@@ -6,7 +6,7 @@
     <description>Recent content in Categories on XiuFu Guo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Jul 2020 00:36:37 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2020 23:58:18 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,18 @@
     <item>
       <title>sorting-and-search</title>
       <link>https://blog.xiufuguo.com/categories/sorting-and-search/</link>
-      <pubDate>Wed, 29 Jul 2020 00:36:37 +0800</pubDate>
+      <pubDate>Sun, 02 Aug 2020 23:58:18 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/categories/sorting-and-search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BST</title>
+      <link>https://blog.xiufuguo.com/categories/bst/</link>
+      <pubDate>Sat, 01 Aug 2020 23:07:01 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/categories/bst/</guid>
       <description></description>
     </item>
     
