@@ -62,7 +62,7 @@
 <meta property="og:description" content="XiuFu Guo&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-08-03T12:37:45+08:00" />
+<meta property="og:updated_time" content="2020-08-03T13:30:39+08:00" />
 <meta itemprop="name" content="XiuFu Guo&#39;s Blog">
 <meta itemprop="description" content="XiuFu Guo&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="XiuFu Guo&#39;s Blog"/>
@@ -295,6 +295,82 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/array/find-all-numbers-disappeared-in-an-array/">[LeetCode] 448. Find All Numbers Disappeared in an Array</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-13" class="post-time">
+        2020-07-13
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
+          
+        </div>
+      <span class="more-meta"> 39 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      448. Find All Numbers Disappeared in an Array
+python
+1 2 3 4 5  class Solution: def findDisappearedNumbers(self, nums: List[int]) -&gt; List[int]: a = set([i for i in range(1, len(nums) + 1)]) b = set(nums) return list(a - b)   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/array/find-all-numbers-disappeared-in-an-array/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/array/find-all-duplicates-in-an-array/">[LeetCode] 442. Find All Duplicates in an Array</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-13" class="post-time">
+        2020-07-13
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
+          
+        </div>
+      <span class="more-meta"> 30 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      442. Find All Duplicates in an Array
+python
+1 2 3  class Solution: def findDuplicates(self, nums: List[int]) -&gt; List[int]: return [key for key, value in collections.Counter(nums).items() if value == 2]   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/array/find-all-duplicates-in-an-array/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/binary_search/find-first-and-last-position-of-element-in-sorted-array/">[LeetCode] 34. Find First and Last Position of Element in Sorted Array</a>
     </h1>
     
@@ -405,82 +481,6 @@ python
 </article>
 
   
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/search/combination-sum/">[LeetCode] 39. Combination Sum</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-11" class="post-time">
-        2020-07-11
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
-          
-        </div>
-      <span class="more-meta"> 72 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      39. Combination Sum
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def combinationSum(self, candidates: List[int], target: int) -&gt; List[List[int]]: res = [] candidates.sort() self.dfs(candidates, target, 0, [], res) return res def dfs(self, nums, target, idx, path, res): if target &lt; 0: return if target == 0: res.append(path) return for i in range(idx, len(nums)): self.dfs(nums, target - nums[i], i, path + [nums[i]], res)   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/search/combination-sum/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/array/pascals-triangle/">[LeetCode] 118. Pascal&#39;s Triangle</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-10" class="post-time">
-        2020-07-10
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
-          
-        </div>
-      <span class="more-meta"> 49 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      118. Pascal&rsquo;s Triangle
-python
-1 2 3 4 5 6 7 8 9 10 11  class Solution: def generate(self, numRows: int) -&gt; List[List[int]]: res = [] for i in range(numRows): res.append([]) for j in range(i + 1): if j in (0, i): res[i].append(1) else: res[i].append(res[i-1][j-1] + res[i-1][j]) return res   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/array/pascals-triangle/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
 </section>
 
 
@@ -530,9 +530,7 @@ python
           
 
             
-            
 
-          
           
 
         
@@ -553,9 +551,7 @@ python
           
 
             
-            
 
-          
           
 
         
@@ -576,9 +572,7 @@ python
           
 
             
-            
 
-          
           
 
         
@@ -598,12 +592,10 @@ python
           
           
 
-            
             
               
             
 
-          
           
 
         
@@ -630,11 +622,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -661,11 +651,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -692,11 +680,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -723,11 +709,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -754,11 +738,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -785,11 +767,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -816,11 +796,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -847,11 +825,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -878,11 +854,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -909,11 +883,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -940,11 +912,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -971,11 +941,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -992,6 +960,27 @@ python
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/11/">»</a></li>
@@ -999,7 +988,7 @@ python
 
       
       
-      <li><a href="/page/16/">»»</a></li>
+      <li><a href="/page/17/">»»</a></li>
       
 
       </ul>

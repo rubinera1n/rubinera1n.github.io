@@ -295,18 +295,18 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/search/permutations/">[LeetCode] 46. Permutations</a>
+      <a class="post-link" href="/post/leetcode/template/binary_search/">Binary Search</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-08-03" class="post-time">
-        2020-08-03
+      <time datetime="2020-05-18" class="post-time">
+        2020-05-18
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
+          <a href="https://blog.xiufuguo.com/categories/template/"> Template </a>
           
         </div>
-      <span class="more-meta"> 147 words </span>
+      <span class="more-meta"> 251 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -317,162 +317,10 @@
   <div class="post-content">
     
     <div class="post-summary">
-      46. Permutations
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39  class Solution: def permute(self, nums: List[int]) -&gt; List[List[int]]: if not nums: return [] res, used = [], [False] * len(nums) self.dfs(nums, [], res, used) return res def dfs(self, nums, path, res, used): if len(path) == len(nums): res.
+      思路：左闭右开 [l, r) ，根据题目去判断，有很多变化题型 1 2 3 4 5 6 7 8 9 10 11 12 def binary_search(nums, target): l, r = 0, len(nums) while l &lt; r: m = l + (r - l) // 2 # python不会溢出，
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/search/permutations/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/search/letter-combinations-of-a-phone-number/">[LeetCode] 17. Letter Combinations of a Phone Number</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-08-03" class="post-time">
-        2020-08-03
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
-          
-        </div>
-      <span class="more-meta"> 97 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      17. Letter Combinations of a Phone Number
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  class Solution: def letterCombinations(self, digits: str) -&gt; List[str]: if not digits: return [] dct = {&#39;2&#39;: &#39;abc&#39;, &#39;3&#39;: &#39;def&#39;, &#39;4&#39;: &#39;ghi&#39;, &#39;5&#39;: &#39;jkl&#39;, &#39;6&#39;: &#39;mno&#39;, &#39;7&#39;: &#39;pqrs&#39;, &#39;8&#39;: &#39;tuv&#39;, &#39;9&#39;: &#39;wxyz&#39;} res = [] self.dfs(digits, dct, 0, &#39;&#39;, res) return res def dfs(self, digits, dct, index, path, res): if len(path) == len(digits): res.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/search/letter-combinations-of-a-phone-number/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/sort/largest-number/">[LeetCode] 179. Largest Number</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-08-02" class="post-time">
-        2020-08-02
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/sort/"> Sort </a>
-          
-        </div>
-      <span class="more-meta"> 120 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      179. Largest Number
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25  class Solution: def largestNumber(self, nums: List[int]) -&gt; str: # use quick sort, in-place self.quickSort(nums, 0, len(nums) - 1) return str(int(&#34;&#34;.join(map(str, nums)))) def quickSort(self, nums, l, r): if l &gt;= r: return pos = self.partition(nums, l, r) self.quickSort(nums, l, pos - 1) self.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/sort/largest-number/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/sort/merge-intervals/">[LeetCode] 56. Merge Intervals</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-08-02" class="post-time">
-        2020-08-02
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/sort/"> Sort </a>
-          
-        </div>
-      <span class="more-meta"> 93 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      56. Merge Intervals python 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution: def merge(self, intervals: List[List[int]]) -&gt; List[List[int]]: if not intervals: return [] # sort intervals.sort() res = [] for interval in intervals: # 空 or 迭代的数组起点 &gt; 答案最后一个数组尾巴，就进行插入
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/sort/merge-intervals/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/bst/binary-search-tree-to-greater-sum-tree/">[LeetCode] 1038. Binary Search Tree to Greater Sum Tree</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-08-01" class="post-time">
-        2020-08-01
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/bst/"> BST </a>
-          
-        </div>
-      <span class="more-meta"> 51 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      1038. Binary Search Tree to Greater Sum Tree
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13  class Solution: def bstToGst(self, root: TreeNode) -&gt; TreeNode: self.sum = 0 self.helper(root) return root def helper(self, node): if not node: return self.helper(node.right) node.val += self.sum self.sum = node.val self.helper(node.left)   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/bst/binary-search-tree-to-greater-sum-tree/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/template/binary_search/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -507,8 +355,12 @@ python
 
       
       
+      <li><a href="/">««</a></li>
+      
 
       
+      
+      <li><a href="/page/16/">«</a></li>
       
 
       
@@ -525,10 +377,7 @@ python
 
             
             
-              
-            
 
-          
           
           
 
@@ -536,12 +385,6 @@ python
         
 
         
-        
-          <li class="active">
-            <a href="/">
-              1
-            </a>
-          </li>
         
 
       
@@ -557,10 +400,7 @@ python
 
             
             
-              
-            
 
-          
           
           
 
@@ -568,12 +408,6 @@ python
         
 
         
-        
-          <li class="">
-            <a href="/page/2/">
-              2
-            </a>
-          </li>
         
 
       
@@ -589,10 +423,7 @@ python
 
             
             
-              
-            
 
-          
           
           
 
@@ -600,12 +431,6 @@ python
         
 
         
-        
-          <li class="">
-            <a href="/page/3/">
-              3
-            </a>
-          </li>
         
 
       
@@ -621,10 +446,7 @@ python
 
             
             
-              
-            
 
-          
           
           
 
@@ -632,12 +454,6 @@ python
         
 
         
-        
-          <li class="">
-            <a href="/page/4/">
-              4
-            </a>
-          </li>
         
 
       
@@ -656,7 +472,6 @@ python
               
             
 
-          
           
           
 
@@ -690,7 +505,6 @@ python
 
           
           
-          
 
         
         
@@ -720,7 +534,6 @@ python
               
             
 
-          
           
           
 
@@ -754,7 +567,6 @@ python
 
           
           
-          
 
         
         
@@ -784,7 +596,6 @@ python
               
             
 
-          
           
           
 
@@ -818,7 +629,6 @@ python
 
           
           
-          
 
         
         
@@ -848,7 +658,6 @@ python
               
             
 
-          
           
           
 
@@ -882,7 +691,6 @@ python
 
           
           
-          
 
         
         
@@ -914,7 +722,6 @@ python
 
           
           
-          
 
         
         
@@ -941,15 +748,22 @@ python
 
             
             
+              
+            
 
           
           
-          
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/14/">
+              14
+            </a>
+          </li>
         
 
       
@@ -965,15 +779,22 @@ python
 
             
             
+              
+            
 
           
           
-          
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/15/">
+              15
+            </a>
+          </li>
         
 
       
@@ -989,15 +810,22 @@ python
 
             
             
+              
+            
 
           
           
-          
 
         
         
 
         
+        
+          <li class="">
+            <a href="/page/16/">
+              16
+            </a>
+          </li>
         
 
       
@@ -1013,27 +841,30 @@ python
 
             
             
+              
+            
 
           
           
-          
 
         
         
 
         
         
+          <li class="active">
+            <a href="/page/17/">
+              17
+            </a>
+          </li>
+        
 
       
 
       
       
-      <li><a href="/page/2/">»</a></li>
-      
 
       
-      
-      <li><a href="/page/17/">»»</a></li>
       
 
       </ul>

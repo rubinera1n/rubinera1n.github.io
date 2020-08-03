@@ -62,7 +62,7 @@
 <meta property="og:description" content="XiuFu Guo&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-08-03T12:37:45+08:00" />
+<meta property="og:updated_time" content="2020-08-03T13:30:39+08:00" />
 <meta itemprop="name" content="XiuFu Guo&#39;s Blog">
 <meta itemprop="description" content="XiuFu Guo&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="XiuFu Guo&#39;s Blog"/>
@@ -295,6 +295,82 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/bst/convert-sorted-list-to-binary-search-tree/">[LeetCode] 109. Convert Sorted List to Binary Search Tree</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-01" class="post-time">
+        2020-08-01
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/bst/"> BST </a>
+          
+        </div>
+      <span class="more-meta"> 93 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      109. Convert Sorted List to Binary Search Tree
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def sortedListToBST(self, head: ListNode) -&gt; TreeNode: lst = [] while head: lst.append(head.val) head = head.next return self.helper(lst, 0, len(lst) - 1) def helper(self, lst, start, end): if start &gt; end: return None if start == end: return TreeNode(lst[start]) mid = (start + end) &gt;&gt; 1 root = TreeNode(lst[mid]) root.
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/bst/convert-sorted-list-to-binary-search-tree/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/bst/lowest-common-ancestor-of-a-binary-search-tree/">[LeetCode] 235. Lowest Common Ancestor of a Binary Search Tree</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-31" class="post-time">
+        2020-07-31
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/bst/"> BST </a>
+          
+        </div>
+      <span class="more-meta"> 66 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      235. Lowest Common Ancestor of a Binary Search Tree
+python
+1 2 3 4 5 6 7 8 9 10  class Solution: def lowestCommonAncestor(self, root: &#39;TreeNode&#39;, p: &#39;TreeNode&#39;, q: &#39;TreeNode&#39;) -&gt; &#39;TreeNode&#39;: if not root: return None if (root.val - p.val) * (root.val - q.val) &lt;= 0: return root elif root.val &gt; p.val and root.val &gt; q.val: return self.lowestCommonAncestor(root.left, p, q) else: return self.lowestCommonAncestor(root.right, p, q)   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/bst/lowest-common-ancestor-of-a-binary-search-tree/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/binary_search/search-a-2d-matrix-ii/">[LeetCode] 240. Search a 2D Matrix II</a>
     </h1>
     
@@ -399,82 +475,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/search/word-search/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/binary_search/search-a-2d-matrix/">[LeetCode] 74. Search a 2D Matrix</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-29" class="post-time">
-        2020-07-29
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/binary-search/"> Binary Search </a>
-          
-        </div>
-      <span class="more-meta"> 101 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      74. Search a 2D Matrix
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  class Solution: def searchMatrix(self, matrix: List[List[int]], target: int) -&gt; bool: if not matrix or target is None: return False row, col = len(matrix), len(matrix[0]) low, high = 0, row * col - 1 while low &lt;= high: mid = low + (high - low) // 2 num = matrix[mid // col][mid % col] if num == target: return True elif num &lt; target: low = mid + 1 else: high = mid - 1 return False   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/binary_search/search-a-2d-matrix/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/binary_search/search-insert-position/">[LeetCode] 35. Search Insert Position</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-29" class="post-time">
-        2020-07-29
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/binary-search/"> Binary Search </a>
-          
-        </div>
-      <span class="more-meta"> 58 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      35. Search Insert Position
-python
-1 2 3 4 5 6 7 8 9 10  class Solution: def searchInsert(self, nums: List[int], target: int) -&gt; int: l, r = 0, len(nums) while l &lt; r: mid = l + (r - l) // 2 if nums[mid] &lt; target: l = mid + 1 else: r = mid return l   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/binary_search/search-insert-position/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1008,6 +1008,30 @@ python
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/3/">»</a></li>
@@ -1015,7 +1039,7 @@ python
 
       
       
-      <li><a href="/page/16/">»»</a></li>
+      <li><a href="/page/17/">»»</a></li>
       
 
       </ul>
