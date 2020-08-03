@@ -45,17 +45,6 @@ python
     </item>
     
     <item>
-      <title>[LeetCode] 209. Minimum Size Subarray Sum</title>
-      <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/minimum-size-subarray-sum/</link>
-      <pubDate>Sun, 26 Jul 2020 22:23:58 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/minimum-size-subarray-sum/</guid>
-      <description>209. Minimum Size Subarray Sum
-python
-1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def minSubArrayLen(self, s: int, nums: List[int]) -&amp;gt; int: total = left = right = 0 res = len(nums) + 1 while right &amp;lt; len(nums): total += nums[right] while total &amp;gt;= s: res = min(res, right - left + 1) total -= nums[left] left += 1 right += 1 return res if res &amp;lt;= len(nums) else 0   </description>
-    </item>
-    
-    <item>
       <title>[LeetCode] 167. Two Sum II - Input array is sorted</title>
       <link>https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/two-sum-ii-input-array-is-sorted/</link>
       <pubDate>Sun, 26 Jul 2020 22:22:34 +0800</pubDate>

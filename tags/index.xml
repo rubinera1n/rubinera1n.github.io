@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>Sort &amp; Search</title>
-      <link>https://blog.xiufuguo.com/tags/sort-search/</link>
+      <title>Sort</title>
+      <link>https://blog.xiufuguo.com/tags/sort/</link>
       <pubDate>Sun, 02 Aug 2020 23:58:18 +0800</pubDate>
       
-      <guid>https://blog.xiufuguo.com/tags/sort-search/</guid>
+      <guid>https://blog.xiufuguo.com/tags/sort/</guid>
       <description></description>
     </item>
     
@@ -26,6 +26,24 @@
       <pubDate>Sat, 01 Aug 2020 23:07:01 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/tags/bst/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Binary Search</title>
+      <link>https://blog.xiufuguo.com/tags/binary-search/</link>
+      <pubDate>Fri, 31 Jul 2020 22:58:39 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/tags/binary-search/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search</title>
+      <link>https://blog.xiufuguo.com/tags/search/</link>
+      <pubDate>Thu, 30 Jul 2020 22:55:38 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/tags/search/</guid>
       <description></description>
     </item>
     
@@ -48,11 +66,20 @@
     </item>
     
     <item>
-      <title>Linked List</title>
-      <link>https://blog.xiufuguo.com/tags/linked-list/</link>
+      <title>List</title>
+      <link>https://blog.xiufuguo.com/tags/list/</link>
       <pubDate>Mon, 27 Jul 2020 16:09:00 +0800</pubDate>
       
-      <guid>https://blog.xiufuguo.com/tags/linked-list/</guid>
+      <guid>https://blog.xiufuguo.com/tags/list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sliding Window</title>
+      <link>https://blog.xiufuguo.com/tags/sliding-window/</link>
+      <pubDate>Sun, 26 Jul 2020 22:23:58 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/tags/sliding-window/</guid>
       <description></description>
     </item>
     
@@ -80,6 +107,15 @@
       <pubDate>Mon, 06 Jul 2020 04:07:47 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DP</title>
+      <link>https://blog.xiufuguo.com/tags/dp/</link>
+      <pubDate>Fri, 03 Jul 2020 00:58:28 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/tags/dp/</guid>
       <description></description>
     </item>
     

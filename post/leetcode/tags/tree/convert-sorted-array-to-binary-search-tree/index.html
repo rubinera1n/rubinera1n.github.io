@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/" />
@@ -68,13 +68,13 @@ python
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xiufuguo.com/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/" />
 <meta property="article:published_time" content="2020-07-06T11:58:22+08:00" />
-<meta property="article:modified_time" content="2020-07-06T11:58:22+08:00" />
+<meta property="article:modified_time" content="2020-08-03T11:48:13+08:00" />
 <meta itemprop="name" content="[LeetCode] 108. Convert Sorted Array to Binary Search Tree">
 <meta itemprop="description" content="108. Convert Sorted Array to Binary Search Tree
 python
 1 2 3 4 5 6 7 8 9  class Solution: def sortedArrayToBST(self, nums: List[int]) -&gt; TreeNode: l, r = 0, len(nums) - 1 if l &lt;= r: m = l &#43; (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m&#43;1:]) return root   ">
 <meta itemprop="datePublished" content="2020-07-06T11:58:22&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-06T11:58:22&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-03T11:48:13&#43;08:00" />
 <meta itemprop="wordCount" content="57">
 
 
@@ -374,7 +374,12 @@ python
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2020-07-06
+      2020-08-03
+      
+        <a href="https://github.com/rubinera1n/blogs/commit/95d518e7ccdec8e41c3dbd91867ca819fa09e93c" title="update">
+          (95d518e)
+        </a>
+        
       
     </span>
   </p>
@@ -398,7 +403,7 @@ python
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/leetcode/tags/tree/validate-binary-search-tree/">
+          <a class="prev" href="/post/leetcode/tags/bst/validate-binary-search-tree/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"

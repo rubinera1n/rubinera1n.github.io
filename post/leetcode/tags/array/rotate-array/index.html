@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/array/rotate-array/" />
@@ -68,13 +68,13 @@ python
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xiufuguo.com/post/leetcode/tags/array/rotate-array/" />
 <meta property="article:published_time" content="2020-07-14T11:43:16+08:00" />
-<meta property="article:modified_time" content="2020-07-14T11:43:16+08:00" />
+<meta property="article:modified_time" content="2020-08-03T11:48:13+08:00" />
 <meta itemprop="name" content="[LeetCode] 189. Rotate Array">
 <meta itemprop="description" content="189. Rotate Array
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def rotate(self, nums: List[int], k: int) -&gt; None: &#34;&#34;&#34; Do not return anything, modify nums in-place instead. &#34;&#34;&#34; k = k % len(nums) self.reverse(nums, 0, len(nums) - k - 1) self.reverse(nums, len(nums) - k, len(nums) - 1) self.reverse(nums, 0, len(nums) - 1) def reverse(self, nums, s, e): while s &lt; e: nums[s], nums[e] = nums[e], nums[s] s &#43;= 1 e -= 1   ">
 <meta itemprop="datePublished" content="2020-07-14T11:43:16&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-14T11:43:16&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-03T11:48:13&#43;08:00" />
 <meta itemprop="wordCount" content="83">
 
 
@@ -386,7 +386,12 @@ python
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2020-07-14
+      2020-08-03
+      
+        <a href="https://github.com/rubinera1n/blogs/commit/95d518e7ccdec8e41c3dbd91867ca819fa09e93c" title="update">
+          (95d518e)
+        </a>
+        
       
     </span>
   </p>
@@ -410,7 +415,7 @@ python
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/leetcode/tags/array/combination-sum-iii/">
+          <a class="prev" href="/post/leetcode/tags/search/combination-sum-iii/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"

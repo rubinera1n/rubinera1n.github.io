@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/array/next-permutation/" />
@@ -68,13 +68,13 @@ python
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xiufuguo.com/post/leetcode/tags/array/next-permutation/" />
 <meta property="article:published_time" content="2020-07-09T21:46:31+08:00" />
-<meta property="article:modified_time" content="2020-07-09T21:46:31+08:00" />
+<meta property="article:modified_time" content="2020-08-03T11:48:13+08:00" />
 <meta itemprop="name" content="[LeetCode] 31. Next Permutation">
 <meta itemprop="description" content="31. Next Permutation
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def nextPermutation(self, nums: List[int]) -&gt; None: i = len(nums) - 2 while i &gt;= 0 and nums[i] &gt;= nums[i&#43;1]: i -= 1 if i &lt; 0: # 6 5 4 3 2 1 nums.reverse() return j = len(nums) - 1 while j &gt;= 0 and nums[i] &gt;= nums[j]: j -= 1 nums[i], nums[j] = nums[j], nums[i] l, r = i &#43; 1, len(nums) - 1 while l &lt; r: nums[l], nums[r] = nums[r], nums[l] l &#43;= 1 r -= 1   ">
 <meta itemprop="datePublished" content="2020-07-09T21:46:31&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-09T21:46:31&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-03T11:48:13&#43;08:00" />
 <meta itemprop="wordCount" content="104">
 
 
@@ -392,7 +392,12 @@ python
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2020-07-09
+      2020-08-03
+      
+        <a href="https://github.com/rubinera1n/blogs/commit/95d518e7ccdec8e41c3dbd91867ca819fa09e93c" title="update">
+          (95d518e)
+        </a>
+        
       
     </span>
   </p>

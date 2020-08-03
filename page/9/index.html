@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="XiuFu Guo&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2019-01-05T22:00:00+08:00" />
+<meta property="og:updated_time" content="2020-08-03T12:37:45+08:00" />
 <meta itemprop="name" content="XiuFu Guo&#39;s Blog">
 <meta itemprop="description" content="XiuFu Guo&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="XiuFu Guo&#39;s Blog"/>
@@ -295,7 +295,7 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/linked_list/add-two-numbers/">[LeetCode] 2. Add Two Numbers</a>
+      <a class="post-link" href="/post/leetcode/tags/list/add-two-numbers/">[LeetCode] 2. Add Two Numbers</a>
     </h1>
     
     <div class="post-meta">
@@ -303,7 +303,7 @@
         2020-07-15
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/linked-list/"> Linked List </a>
+          <a href="https://blog.xiufuguo.com/categories/list/"> List </a>
           
         </div>
       <span class="more-meta"> 73 words </span>
@@ -322,7 +322,7 @@ python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def addTwoNumbers(self, l1: ListNode, l2: ListNode) -&gt; ListNode: tail = dummy = ListNode(0) carry = 0 while l1 or l2 or carry: if l1: carry += l1.val l1 = l1.next if l2: carry += l2.val l2 = l2.next tail.next = ListNode(carry % 10) carry //= 10 tail = tail.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/linked_list/add-two-numbers/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/list/add-two-numbers/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -333,7 +333,7 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/array/combination-sum-iii/">[LeetCode] 216. Combination Sum III</a>
+      <a class="post-link" href="/post/leetcode/tags/search/combination-sum-iii/">[LeetCode] 216. Combination Sum III</a>
     </h1>
     
     <div class="post-meta">
@@ -341,7 +341,7 @@ python
         2020-07-14
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
+          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
           
         </div>
       <span class="more-meta"> 87 words </span>
@@ -360,7 +360,7 @@ python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14  class Solution: def combinationSum3(self, k: int, n: int) -&gt; List[List[int]]: res = [] self.dfs(range(1, 10), k, n, 0, [], res) return res def dfs(self, nums, k, n, index, path, res): if k &lt; 0 or n &lt; 0: return if k == 0 and n == 0: res.append(path) return for i in range(index, len(nums)): self.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/array/combination-sum-iii/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/search/combination-sum-iii/" class="read-more-link">Read more</a>
     </div>
     
   </div>

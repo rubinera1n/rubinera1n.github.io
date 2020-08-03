@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/bst/binary-search-tree-to-greater-sum-tree/" />
@@ -68,13 +68,13 @@ python
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xiufuguo.com/post/leetcode/tags/bst/binary-search-tree-to-greater-sum-tree/" />
 <meta property="article:published_time" content="2020-08-01T23:07:01+08:00" />
-<meta property="article:modified_time" content="2020-08-01T23:07:01+08:00" />
+<meta property="article:modified_time" content="2020-08-03T12:37:45+08:00" />
 <meta itemprop="name" content="[LeetCode] 1038. Binary Search Tree to Greater Sum Tree">
 <meta itemprop="description" content="1038. Binary Search Tree to Greater Sum Tree
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13  class Solution: def bstToGst(self, root: TreeNode) -&gt; TreeNode: self.sum = 0 self.helper(root) return root def helper(self, node): if not node: return self.helper(node.right) node.val &#43;= self.sum self.sum = node.val self.helper(node.left)   ">
 <meta itemprop="datePublished" content="2020-08-01T23:07:01&#43;08:00" />
-<meta itemprop="dateModified" content="2020-08-01T23:07:01&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-03T12:37:45&#43;08:00" />
 <meta itemprop="wordCount" content="51">
 
 
@@ -382,7 +382,12 @@ python
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2020-08-01
+      2020-08-03
+      
+        <a href="https://github.com/rubinera1n/blogs/commit/2c465893edd8f9e0ca806524234f861594b177be" title="update">
+          (2c46589)
+        </a>
+        
       
     </span>
   </p>
@@ -406,7 +411,7 @@ python
       
       <nav class="post-nav">
         
-          <a class="prev" href="/post/leetcode/tags/sort_and_search/merge-intervals/">
+          <a class="prev" href="/post/leetcode/tags/sort/merge-intervals/">
             
             <i class="iconfont">
               <svg  class="icon" viewBox="0 0 1024 1024" version="1.1"

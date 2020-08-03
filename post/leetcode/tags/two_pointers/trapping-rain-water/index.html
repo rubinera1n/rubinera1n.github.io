@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/trapping-rain-water/" />
@@ -68,13 +68,13 @@ python
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/trapping-rain-water/" />
 <meta property="article:published_time" content="2020-07-28T00:26:00+08:00" />
-<meta property="article:modified_time" content="2020-07-28T00:26:00+08:00" />
+<meta property="article:modified_time" content="2020-08-03T11:48:13+08:00" />
 <meta itemprop="name" content="[LeetCode] 42. Trapping Rain Water">
 <meta itemprop="description" content="42. Trapping Rain Water
 python
 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  class Solution: def trap(self, height: List[int]) -&gt; int: if not height or len(height) &lt; 3: return 0 res = 0 left, right = 0, len(height) - 1 l_max, r_max = height[left], height[right] while left &lt; right: l_max, r_max = max(height[left], l_max), max(height[right], r_max) if l_max &lt;= r_max: res &#43;= l_max - height[left] left &#43;= 1 else: res &#43;= r_max - height[right] right -= 1 return res   ">
 <meta itemprop="datePublished" content="2020-07-28T00:26:00&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-28T00:26:00&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-03T11:48:13&#43;08:00" />
 <meta itemprop="wordCount" content="87">
 
 
@@ -388,7 +388,12 @@ python
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2020-07-28
+      2020-08-03
+      
+        <a href="https://github.com/rubinera1n/blogs/commit/95d518e7ccdec8e41c3dbd91867ca819fa09e93c" title="update">
+          (95d518e)
+        </a>
+        
       
     </span>
   </p>

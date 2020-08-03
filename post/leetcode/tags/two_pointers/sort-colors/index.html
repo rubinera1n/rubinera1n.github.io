@@ -34,7 +34,7 @@ python
 
 
 
-<meta name="generator" content="Hugo 0.70.0" />
+<meta name="generator" content="Hugo 0.72.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/sort-colors/" />
@@ -68,13 +68,13 @@ python
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://blog.xiufuguo.com/post/leetcode/tags/two_pointers/sort-colors/" />
 <meta property="article:published_time" content="2020-07-25T22:18:54+08:00" />
-<meta property="article:modified_time" content="2020-07-25T22:18:54+08:00" />
+<meta property="article:modified_time" content="2020-08-03T11:48:13+08:00" />
 <meta itemprop="name" content="[LeetCode] 75. Sort Colors">
 <meta itemprop="description" content="75. Sort Colors
 python
 1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def sortColors(self, nums: List[int]) -&gt; None: l, r, zero = 0, len(nums) - 1, 0 while l &lt;= r: if nums[l] == 0: nums[l], nums[zero] = nums[zero], nums[l] l &#43;= 1; zero &#43;= 1 elif nums[l] == 2: nums[l], nums[r] = nums[r], nums[l] r -= 1 else: l &#43;= 1   ">
 <meta itemprop="datePublished" content="2020-07-25T22:18:54&#43;08:00" />
-<meta itemprop="dateModified" content="2020-07-25T22:18:54&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-03T11:48:13&#43;08:00" />
 <meta itemprop="wordCount" content="68">
 
 
@@ -380,7 +380,12 @@ python
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-      2020-07-25
+      2020-08-03
+      
+        <a href="https://github.com/rubinera1n/blogs/commit/95d518e7ccdec8e41c3dbd91867ca819fa09e93c" title="update">
+          (95d518e)
+        </a>
+        
       
     </span>
   </p>
