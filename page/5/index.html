@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.72.0" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="XiuFu Guo&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-08-03T13:30:39+08:00" />
+<meta property="og:updated_time" content="2019-01-05T22:00:00+08:00" />
 <meta itemprop="name" content="XiuFu Guo&#39;s Blog">
 <meta itemprop="description" content="XiuFu Guo&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="XiuFu Guo&#39;s Blog"/>
@@ -295,18 +295,130 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/two_pointers/merge-sorted-array/">[LeetCode] 88. Merge Sorted Array</a>
+      <a class="post-link" href="/post/leetcode/tags/binary_search/search-a-2d-matrix/">[LeetCode] 74. Search a 2D Matrix</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-25" class="post-time">
-        2020-07-25
+      <time datetime="2020-07-29" class="post-time">
+        2020-07-29
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/binary-search/"> Binary Search </a>
+          
+        </div>
+      <span class="more-meta"> 101 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      74. Search a 2D Matrix
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  class Solution: def searchMatrix(self, matrix: List[List[int]], target: int) -&gt; bool: if not matrix or target is None: return False row, col = len(matrix), len(matrix[0]) low, high = 0, row * col - 1 while low &lt;= high: mid = low + (high - low) // 2 num = matrix[mid // col][mid % col] if num == target: return True elif num &lt; target: low = mid + 1 else: high = mid - 1 return False   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/binary_search/search-a-2d-matrix/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/binary_search/search-insert-position/">[LeetCode] 35. Search Insert Position</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-29" class="post-time">
+        2020-07-29
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/binary-search/"> Binary Search </a>
+          
+        </div>
+      <span class="more-meta"> 58 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      35. Search Insert Position
+python
+1 2 3 4 5 6 7 8 9 10  class Solution: def searchInsert(self, nums: List[int], target: int) -&gt; int: l, r = 0, len(nums) while l &lt; r: mid = l + (r - l) // 2 if nums[mid] &lt; target: l = mid + 1 else: r = mid return l   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/binary_search/search-insert-position/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/technology/science_internet/">Science Internet</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-28" class="post-time">
+        2020-07-28
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/technology/"> Technology </a>
+          
+        </div>
+      <span class="more-meta"> 2495 words </span>
+      <span class="more-meta"> 5 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      1. 配置前的准备 域名 VPS (虚拟专用服务器) 1.1 如何申请域名？ 免费：google search apply free domain name 我自己使用阿里付费域名，后面的 HTTPS 也方便，可配置自己博客域名
+    </div>
+    <div class="read-more">
+      <a href="/post/technology/science_internet/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/two_pointers/intersection-of-two-arrays/">[LeetCode] 349. Intersection of Two Arrays</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-28" class="post-time">
+        2020-07-28
       </time>
       <div class="post-category">
           <a href="https://blog.xiufuguo.com/categories/two-pointers/"> Two Pointers </a>
           
         </div>
-      <span class="more-meta"> 96 words </span>
+      <span class="more-meta"> 83 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -317,12 +429,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      88. Merge Sorted Array
+      349. Intersection of Two Arrays
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -&gt; None: i = m - 1 j = n - 1 k = m + n - 1 while i &gt;= 0 and j &gt;= 0: if nums1[i] &gt;= nums2[j]: nums1[k] = nums1[i] i -= 1 else: nums1[k] = nums2[j] j -= 1 k -= 1 while j &gt;= 0: nums1[k] = nums2[j] k -= 1 j -= 1 return   
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def intersection(self, nums1: List[int], nums2: List[int]) -&gt; List[int]: res = [] nums1.sort() nums2.sort() i = j = 0 while (i &lt; len(nums1) and j &lt; len(nums2)): if nums1[i] &gt; nums2[j]: j += 1 elif nums1[i] &lt; nums2[j]: i += 1 else: if not (len(res) and nums1[i] == res[len(res)-1]): res.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/two_pointers/merge-sorted-array/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/two_pointers/intersection-of-two-arrays/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -333,18 +445,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/two_pointers/reverse-string/">[LeetCode] 344. Reverse String</a>
+      <a class="post-link" href="/post/leetcode/tags/two_pointers/trapping-rain-water/">[LeetCode] 42. Trapping Rain Water</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-24" class="post-time">
-        2020-07-24
+      <time datetime="2020-07-28" class="post-time">
+        2020-07-28
       </time>
       <div class="post-category">
           <a href="https://blog.xiufuguo.com/categories/two-pointers/"> Two Pointers </a>
           
         </div>
-      <span class="more-meta"> 42 words </span>
+      <span class="more-meta"> 87 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -355,126 +467,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      344. Reverse String
+      42. Trapping Rain Water
 python
-1 2 3 4 5 6 7  class Solution: def reverseString(self, s: List[str]) -&gt; None: l, r = 0, len(s) - 1 while l &lt; r: s[l], s[r] = s[r], s[l] l += 1; r -= 1 return   
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  class Solution: def trap(self, height: List[int]) -&gt; int: if not height or len(height) &lt; 3: return 0 res = 0 left, right = 0, len(height) - 1 l_max, r_max = height[left], height[right] while left &lt; right: l_max, r_max = max(height[left], l_max), max(height[right], r_max) if l_max &lt;= r_max: res += l_max - height[left] left += 1 else: res += r_max - height[right] right -= 1 return res   
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/two_pointers/reverse-string/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/two_pointers/implement-strstr/">[LeetCode] 28. Implement strStr()</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-24" class="post-time">
-        2020-07-24
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/two-pointers/"> Two Pointers </a>
-          
-        </div>
-      <span class="more-meta"> 46 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      28. Implement strStr()
-python
-1 2 3 4 5 6 7 8  class Solution: def strStr(self, haystack: str, needle: str) -&gt; int: L, n = len(needle), len(haystack) for start in range(n - L + 1): if haystack[start: start + L] == needle: return start return -1   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/two_pointers/implement-strstr/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/array/remove-duplicates-from-sorted-array/">[LeetCode] 26. Remove Duplicates from Sorted Array</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-24" class="post-time">
-        2020-07-24
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
-          
-        </div>
-      <span class="more-meta"> 45 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      26. Remove Duplicates from Sorted Array
-python
-1 2 3 4 5 6 7 8  class Solution: def removeDuplicates(self, nums: List[int]) -&gt; int: s = 0 for i in range(1, len(nums)): if nums[s] != nums[i]: s += 1 nums[s] = nums[i] return s + 1   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/array/remove-duplicates-from-sorted-array/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/array/remove-element/">[LeetCode] 27. Remove Element</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-24" class="post-time">
-        2020-07-24
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
-          
-        </div>
-      <span class="more-meta"> 48 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      27. Remove Element
-python
-1 2 3 4 5 6 7 8 9 10  class Solution: def removeElement(self, nums: List[int], val: int) -&gt; int: if not len(nums): return 0 count = 0 for i in range(len(nums)): if nums[i] != val: nums[count] = nums[i] count += 1 return count   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/array/remove-element/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/two_pointers/trapping-rain-water/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1032,6 +1030,54 @@ python
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/6/">»</a></li>
@@ -1039,7 +1085,7 @@ python
 
       
       
-      <li><a href="/page/17/">»»</a></li>
+      <li><a href="/page/19/">»»</a></li>
       
 
       </ul>

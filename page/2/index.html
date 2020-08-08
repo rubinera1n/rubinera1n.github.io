@@ -31,7 +31,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.72.0" />
+<meta name="generator" content="Hugo 0.70.0" />
 
 
 <link rel="canonical" href="https://blog.xiufuguo.com/" />
@@ -62,7 +62,7 @@
 <meta property="og:description" content="XiuFu Guo&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-08-03T13:30:39+08:00" />
+<meta property="og:updated_time" content="2019-01-05T22:00:00+08:00" />
 <meta itemprop="name" content="XiuFu Guo&#39;s Blog">
 <meta itemprop="description" content="XiuFu Guo&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="XiuFu Guo&#39;s Blog"/>
@@ -295,18 +295,18 @@
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/bst/convert-sorted-list-to-binary-search-tree/">[LeetCode] 109. Convert Sorted List to Binary Search Tree</a>
+      <a class="post-link" href="/post/leetcode/tags/dp/minimum-path-sum/">[LeetCode] 64. Minimum Path Sum</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-08-01" class="post-time">
-        2020-08-01
+      <time datetime="2020-08-06" class="post-time">
+        2020-08-06
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/bst/"> BST </a>
+          <a href="https://blog.xiufuguo.com/categories/dp/"> DP </a>
           
         </div>
-      <span class="more-meta"> 93 words </span>
+      <span class="more-meta"> 90 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -317,12 +317,12 @@
   <div class="post-content">
     
     <div class="post-summary">
-      109. Convert Sorted List to Binary Search Tree
+      64. Minimum Path Sum
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def sortedListToBST(self, head: ListNode) -&gt; TreeNode: lst = [] while head: lst.append(head.val) head = head.next return self.helper(lst, 0, len(lst) - 1) def helper(self, lst, start, end): if start &gt; end: return None if start == end: return TreeNode(lst[start]) mid = (start + end) &gt;&gt; 1 root = TreeNode(lst[mid]) root.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def minPathSum(self, grid: List[List[int]]) -&gt; int: if not grid: return 0 row, col = len(grid), len(grid[0]) dp = [[0 for _ in range(col)] for _ in range(row)] dp[0][0] = grid[0][0] for i in range(1, row): dp[i][0] = dp[i-1][0] + grid[i][0] for i in range(1, col): dp[0][i] = dp[0][i-1] + grid[0][i] for i in range(1, row): for j in range(1, col): dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j] return dp[-1][-1]   
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/bst/convert-sorted-list-to-binary-search-tree/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/dp/minimum-path-sum/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -333,18 +333,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/bst/lowest-common-ancestor-of-a-binary-search-tree/">[LeetCode] 235. Lowest Common Ancestor of a Binary Search Tree</a>
+      <a class="post-link" href="/post/leetcode/tags/dp/maximum-subarray/">[LeetCode] 53. Maximum Subarray</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-31" class="post-time">
-        2020-07-31
+      <time datetime="2020-08-05" class="post-time">
+        2020-08-05
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/bst/"> BST </a>
+          <a href="https://blog.xiufuguo.com/categories/dp/"> DP </a>
           
         </div>
-      <span class="more-meta"> 66 words </span>
+      <span class="more-meta"> 75 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -355,12 +355,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      235. Lowest Common Ancestor of a Binary Search Tree
+      53. Maximum Subarray
 python
-1 2 3 4 5 6 7 8 9 10  class Solution: def lowestCommonAncestor(self, root: &#39;TreeNode&#39;, p: &#39;TreeNode&#39;, q: &#39;TreeNode&#39;) -&gt; &#39;TreeNode&#39;: if not root: return None if (root.val - p.val) * (root.val - q.val) &lt;= 0: return root elif root.val &gt; p.val and root.val &gt; q.val: return self.lowestCommonAncestor(root.left, p, q) else: return self.lowestCommonAncestor(root.right, p, q)   
+1 2 3 4 5 6 7 8 9 10  class Solution: def maxSubArray(self, nums: List[int]) -&gt; int: # nums: [-2, 1, -3, 4, -1, 2, 1, -5, 4] # dp: [-2, 1, -2, 4, 3, 5, 6, 1, 5] dp = [0 for _ in range(len(nums))] res = dp[0] = nums[0] for i in range(1, len(nums)): dp[i] = max(nums[i], dp[i - 1] + nums[i]) res = max(dp[i], res) return res   
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/bst/lowest-common-ancestor-of-a-binary-search-tree/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/dp/maximum-subarray/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -371,18 +371,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/binary_search/search-a-2d-matrix-ii/">[LeetCode] 240. Search a 2D Matrix II</a>
+      <a class="post-link" href="/post/leetcode/tags/dp/climbing-stairs/">[LeetCode] 70. Climbing Stairs</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-31" class="post-time">
-        2020-07-31
+      <time datetime="2020-08-05" class="post-time">
+        2020-08-05
       </time>
       <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/binary-search/"> Binary Search </a>
+          <a href="https://blog.xiufuguo.com/categories/dp/"> DP </a>
           
         </div>
-      <span class="more-meta"> 76 words </span>
+      <span class="more-meta"> 46 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -393,12 +393,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      240. Search a 2D Matrix II
+      70. Climbing Stairs
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  class Solution: def searchMatrix(self, matrix, target): if not matrix or not target: return False rows, cols = len(matrix), len(matrix[0]) row, col = rows - 1, 0 while row &gt;= 0 and col &lt;= cols - 1: if matrix[row][col] == target: return True elif matrix[row][col] &gt; target: row -= 1 else: col += 1 return False   
+1 2 3 4 5 6 7 8 9  class Solution: def climbStairs(self, n: int) -&gt; int: if n == 1: return 1 one, two = 1, 2 for i in range(2, n): one, two = two, one + two return two   
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/binary_search/search-a-2d-matrix-ii/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/dp/climbing-stairs/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -409,18 +409,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/search/word-search-ii/">[LeetCode] 212. Word Search II</a>
+      <a class="post-link" href="/post/leetcode/tags/search/01-matrix/">[LeetCode] 542. 01 Matrix</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-30" class="post-time">
-        2020-07-30
+      <time datetime="2020-08-04" class="post-time">
+        2020-08-04
       </time>
       <div class="post-category">
           <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
           
         </div>
-      <span class="more-meta"> 216 words </span>
+      <span class="more-meta"> 247 words </span>
       <span class="more-meta"> 2 min read </span>
       
       
@@ -431,12 +431,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      212. Word Search II
+      542. 01 Matrix
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51  class TrieNode(): def __init__(self): self.children = collections.defaultdict(TrieNode) self.isWord = False class Trie(): def __init__(self): self.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42  class Solution: def updateMatrix(self, matrix: List[List[int]]) -&gt; List[List[int]]: # BFS helper def bfs(node): from collections import deque q = deque() i, j = node q.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/search/word-search-ii/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/search/01-matrix/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -447,18 +447,18 @@ python
   <header class="post-header">
     <h1 class="post-title">
       
-      <a class="post-link" href="/post/leetcode/tags/search/word-search/">[LeetCode] 79. Word Search</a>
+      <a class="post-link" href="/post/leetcode/tags/search/combinations/">[LeetCode] 77. Combinations</a>
     </h1>
     
     <div class="post-meta">
-      <time datetime="2020-07-30" class="post-time">
-        2020-07-30
+      <time datetime="2020-08-04" class="post-time">
+        2020-08-04
       </time>
       <div class="post-category">
           <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
           
         </div>
-      <span class="more-meta"> 136 words </span>
+      <span class="more-meta"> 70 words </span>
       <span class="more-meta"> 1 min read </span>
       
       
@@ -469,12 +469,12 @@ python
   <div class="post-content">
     
     <div class="post-summary">
-      79. Word Search
+      77. Combinations
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23  class Solution: def exist(self, board: List[List[str]], word: str) -&gt; bool: if not board: return False for i in range(len(board)): for j in range(len(board[0])): if self.dfs(board, i, j, word): return True return False def dfs(self, board, i, j, word): if len(word) == 0: return True if i &lt; 0 or i &gt;= len(board) or j &lt; 0 or j &gt;= len(board[0]) or word[0] !
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def combine(self, n: int, k: int) -&gt; List[List[int]]: res = [] self.dfs(range(1, n + 1), k, 0, [], res) return res def dfs(self, nums, k, idx, path, res): if k == 0: res.append(path[:]) return for i in range(idx, len(nums)): path.append(nums[i]) self.dfs(nums, k - 1, i + 1, path, res) path.
     </div>
     <div class="read-more">
-      <a href="/post/leetcode/tags/search/word-search/" class="read-more-link">Read more</a>
+      <a href="/post/leetcode/tags/search/combinations/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1032,6 +1032,54 @@ python
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/3/">»</a></li>
@@ -1039,7 +1087,7 @@ python
 
       
       
-      <li><a href="/page/17/">»»</a></li>
+      <li><a href="/page/19/">»»</a></li>
       
 
       </ul>
