@@ -295,6 +295,80 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/sort/merge-intervals/">[LeetCode] 56. Merge Intervals</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-02" class="post-time">
+        2020-08-02
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/sort/"> Sort </a>
+          
+        </div>
+      <span class="more-meta"> 93 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      56. Merge Intervals python 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution: def merge(self, intervals: List[List[int]]) -&gt; List[List[int]]: if not intervals: return [] # sort intervals.sort() res = [] for interval in intervals: # 空 or 迭代的数组起点 &gt; 答案最后一个数组尾巴，就进行插入
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/sort/merge-intervals/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/bst/binary-search-tree-to-greater-sum-tree/">[LeetCode] 1038. Binary Search Tree to Greater Sum Tree</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-01" class="post-time">
+        2020-08-01
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/bst/"> BST </a>
+          
+        </div>
+      <span class="more-meta"> 51 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      1038. Binary Search Tree to Greater Sum Tree
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13  class Solution: def bstToGst(self, root: TreeNode) -&gt; TreeNode: self.sum = 0 self.helper(root) return root def helper(self, node): if not node: return self.helper(node.right) node.val += self.sum self.sum = node.val self.helper(node.left)   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/bst/binary-search-tree-to-greater-sum-tree/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/bst/convert-sorted-list-to-binary-search-tree/">[LeetCode] 109. Convert Sorted List to Binary Search Tree</a>
     </h1>
     
@@ -399,82 +473,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/binary_search/search-a-2d-matrix-ii/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/search/word-search-ii/">[LeetCode] 212. Word Search II</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-30" class="post-time">
-        2020-07-30
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
-          
-        </div>
-      <span class="more-meta"> 216 words </span>
-      <span class="more-meta"> 2 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      212. Word Search II
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51  class TrieNode(): def __init__(self): self.children = collections.defaultdict(TrieNode) self.isWord = False class Trie(): def __init__(self): self.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/search/word-search-ii/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/search/word-search/">[LeetCode] 79. Word Search</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-30" class="post-time">
-        2020-07-30
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
-          
-        </div>
-      <span class="more-meta"> 136 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      79. Word Search
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23  class Solution: def exist(self, board: List[List[str]], word: str) -&gt; bool: if not board: return False for i in range(len(board)): for j in range(len(board[0])): if self.dfs(board, i, j, word): return True return False def dfs(self, board, i, j, word): if len(word) == 0: return True if i &lt; 0 or i &gt;= len(board) or j &lt; 0 or j &gt;= len(board[0]) or word[0] !
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/search/word-search/" class="read-more-link">Read more</a>
     </div>
     
   </div>

@@ -295,6 +295,82 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/tree/construct-binary-tree-from-preorder-and-inorder-traversal/">[LeetCode] 105. Construct Binary Tree from Preorder and Inorder Traversal</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-05" class="post-time">
+        2020-07-05
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/tree/"> Tree </a>
+          
+        </div>
+      <span class="more-meta"> 207 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      105. Construct Binary Tree from Preorder and Inorder Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  class Solution: def buildTree(self, preorder: List[int], inorder: List[int]) -&gt; TreeNode: if not preorder or not inorder: return None return self.helper(preorder, 0, len(preorder) - 1, inorder, 0, len(inorder) - 1) def helper(self, preorder, p_left, p_right, inorder, i_left, i_right): if p_left &gt; p_right: return None if p_left == p_right: return TreeNode(preorder[p_left]) idx = inorder.
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/tree/construct-binary-tree-from-preorder-and-inorder-traversal/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/tree/maximum-depth-of-binary-tree/">[LeetCode] 104. Maximum Depth of Binary Tree</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-04" class="post-time">
+        2020-07-04
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/tree/"> Tree </a>
+          
+        </div>
+      <span class="more-meta"> 30 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      104. Maximum Depth of Binary Tree
+python
+1 2 3 4 5  class Solution: def maxDepth(self, root: TreeNode) -&gt; int: if not root: return 0 return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/tree/maximum-depth-of-binary-tree/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/tree/binary-tree-level-order-traversal-ii/">[LeetCode] 107. Binary Tree Level Order Traversal II</a>
     </h1>
     
@@ -399,83 +475,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/dp/unique-binary-search-trees-ii/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/tree/binary-tree-level-order-traversal/">[LeetCode] 102. Binary Tree Level Order Traversal</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-02" class="post-time">
-        2020-07-02
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/tree/"> Tree </a>
-          
-        </div>
-      <span class="more-meta"> 194 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      102. Binary Tree Level Order Traversal
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30  class Solution: &#34;&#34;&#34; # DFS def levelOrder(self, root: TreeNode) -&gt; List[List[int]]: res = [] self.dfs(root, 0, res) return res def dfs(self, root, level, res): if not root: return if len(res) &lt;= level: res.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/tree/binary-tree-level-order-traversal/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/tree/binary-tree-inorder-traversal/">[LeetCode] 94. Binary Tree Inorder Traversal</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-02" class="post-time">
-        2020-07-02
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/tree/"> Tree </a>
-          
-        </div>
-      <span class="more-meta"> 97 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      94. Binary Tree Inorder Traversal
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13  class Solution: def inorderTraversal(self, root: TreeNode) -&gt; List[int]: res = [] self.helper(root, res) return res def helper(self, root, res): if not root: return self.helper(root.left, res) res.append(root.val) self.helper(root.right, res)   go
-1 2 3 4 5 6 7 8 9 10 11 12 13 14  func inorderTraversal(root *TreeNode) []int { res := []int{} dfs(root, &amp;res) return res } func dfs(node *TreeNode, res *[]int) { if node == nil { return } dfs(node.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/tree/binary-tree-inorder-traversal/" class="read-more-link">Read more</a>
     </div>
     
   </div>

@@ -295,6 +295,82 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/search/01-matrix/">[LeetCode] 542. 01 Matrix</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-04" class="post-time">
+        2020-08-04
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
+          
+        </div>
+      <span class="more-meta"> 247 words </span>
+      <span class="more-meta"> 2 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      542. 01 Matrix
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42  class Solution: def updateMatrix(self, matrix: List[List[int]]) -&gt; List[List[int]]: # BFS helper def bfs(node): from collections import deque q = deque() i, j = node q.
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/search/01-matrix/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/search/combinations/">[LeetCode] 77. Combinations</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-04" class="post-time">
+        2020-08-04
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
+          
+        </div>
+      <span class="more-meta"> 70 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      77. Combinations
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def combine(self, n: int, k: int) -&gt; List[List[int]]: res = [] self.dfs(range(1, n + 1), k, 0, [], res) return res def dfs(self, nums, k, idx, path, res): if k == 0: res.append(path[:]) return for i in range(idx, len(nums)): path.append(nums[i]) self.dfs(nums, k - 1, i + 1, path, res) path.
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/search/combinations/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/search/permutations/">[LeetCode] 46. Permutations</a>
     </h1>
     
@@ -399,80 +475,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/sort/largest-number/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/sort/merge-intervals/">[LeetCode] 56. Merge Intervals</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-08-02" class="post-time">
-        2020-08-02
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/sort/"> Sort </a>
-          
-        </div>
-      <span class="more-meta"> 93 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      56. Merge Intervals python 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 class Solution: def merge(self, intervals: List[List[int]]) -&gt; List[List[int]]: if not intervals: return [] # sort intervals.sort() res = [] for interval in intervals: # 空 or 迭代的数组起点 &gt; 答案最后一个数组尾巴，就进行插入
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/sort/merge-intervals/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/bst/binary-search-tree-to-greater-sum-tree/">[LeetCode] 1038. Binary Search Tree to Greater Sum Tree</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-08-01" class="post-time">
-        2020-08-01
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/bst/"> BST </a>
-          
-        </div>
-      <span class="more-meta"> 51 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      1038. Binary Search Tree to Greater Sum Tree
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13  class Solution: def bstToGst(self, root: TreeNode) -&gt; TreeNode: self.sum = 0 self.helper(root) return root def helper(self, node): if not node: return self.helper(node.right) node.val += self.sum self.sum = node.val self.helper(node.left)   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/bst/binary-search-tree-to-greater-sum-tree/" class="read-more-link">Read more</a>
     </div>
     
   </div>

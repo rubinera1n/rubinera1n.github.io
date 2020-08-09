@@ -295,6 +295,82 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/search/combination-sum-iii/">[LeetCode] 216. Combination Sum III</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-14" class="post-time">
+        2020-07-14
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
+          
+        </div>
+      <span class="more-meta"> 87 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      216. Combination Sum III
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14  class Solution: def combinationSum3(self, k: int, n: int) -&gt; List[List[int]]: res = [] self.dfs(range(1, 10), k, n, 0, [], res) return res def dfs(self, nums, k, n, index, path, res): if k &lt; 0 or n &lt; 0: return if k == 0 and n == 0: res.append(path) return for i in range(index, len(nums)): self.
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/search/combination-sum-iii/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/array/rotate-array/">[LeetCode] 189. Rotate Array</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-14" class="post-time">
+        2020-07-14
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
+          
+        </div>
+      <span class="more-meta"> 83 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      189. Rotate Array
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def rotate(self, nums: List[int], k: int) -&gt; None: &#34;&#34;&#34; Do not return anything, modify nums in-place instead. &#34;&#34;&#34; k = k % len(nums) self.reverse(nums, 0, len(nums) - k - 1) self.reverse(nums, len(nums) - k, len(nums) - 1) self.reverse(nums, 0, len(nums) - 1) def reverse(self, nums, s, e): while s &lt; e: nums[s], nums[e] = nums[e], nums[s] s += 1 e -= 1   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/array/rotate-array/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/array/find-all-numbers-disappeared-in-an-array/">[LeetCode] 448. Find All Numbers Disappeared in an Array</a>
     </h1>
     
@@ -399,82 +475,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/binary_search/find-first-and-last-position-of-element-in-sorted-array/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/binary_search/search-in-rotated-sorted-array/">[LeetCode] 33. Search in Rotated Sorted Array</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-12" class="post-time">
-        2020-07-12
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/binary-search/"> Binary Search </a>
-          
-        </div>
-      <span class="more-meta"> 105 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      33. Search in Rotated Sorted Array
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: def search(self, nums: List[int], target: int) -&gt; int: l, r = 0, len(nums) - 1 while l &lt;= r: mid = l + (r - l) // 2 if nums[mid] == target: return mid elif nums[l] &lt;= nums[mid]: if nums[l] &lt;= target &lt; nums[mid]: r = mid - 1 else: l = mid + 1 elif nums[mid] &lt;= nums[r]: if nums[mid] &lt; target &lt;= nums[r]: l = mid + 1 else: r = mid - 1 return -1   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/binary_search/search-in-rotated-sorted-array/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/search/combination-sum-ii/">[LeetCode] 40. Combination Sum II</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-11" class="post-time">
-        2020-07-11
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
-          
-        </div>
-      <span class="more-meta"> 87 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      40. Combination Sum II
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  class Solution: def combinationSum2(self, candidates: List[int], target: int) -&gt; List[List[int]]: res = [] candidates.sort() self.dfs(candidates, target, 0, [], res) return res def dfs(self, lst, target, index, path, res): if target &lt; 0: return if target == 0: res.append(path) return res for i in range(index, len(lst)): if i &gt; index and lst[i] == lst[i-1]: continue self.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/search/combination-sum-ii/" class="read-more-link">Read more</a>
     </div>
     
   </div>

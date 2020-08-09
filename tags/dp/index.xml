@@ -6,10 +6,30 @@
     <description>Recent content in DP on XiuFu Guo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 08 Aug 2020 01:21:27 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 09 Aug 2020 17:35:29 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/tags/dp/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[LeetCode] 300. Longest Increasing Subsequence</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/dp/longest-increasing-subsequence/</link>
+      <pubDate>Sun, 09 Aug 2020 17:35:29 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/dp/longest-increasing-subsequence/</guid>
+      <description>300. Longest Increasing Subsequence python 1 2 3 4 5 6 7 8 9 10 11 12 # Time: O(n^2), Space: O(n) class Solution: def lengthOfLIS(self, nums: List[int]) -&amp;gt; int: if not nums: return 0 dp = [1] * len(nums) for i in range(len(nums)): for j in range(i): # 如果要求非严格递增，将此行 &amp;#39;&amp;lt;&amp;#39; 改为 &amp;#39;&amp;lt;=&amp;#39; 即可。 if</description>
+    </item>
+    
+    <item>
+      <title>[LeetCode] 279. Perfect Squares</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/dp/perfect-squares/</link>
+      <pubDate>Sun, 09 Aug 2020 17:33:23 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/dp/perfect-squares/</guid>
+      <description>279. Perfect Squares
+python
+1 2 3 4 5 6 7 8  # Time: O(n * n ^ 0.5), Space: O(n) class Solution: def numSquares(self, n: int) -&amp;gt; int: dp = [i for i in range(n + 1)] for i in range(2, n + 1): for j in range(1, int(i ** 0.5) + 1): dp[i] = min(dp[i], dp[i - j * j] + 1) return dp[-1]   </description>
+    </item>
     
     <item>
       <title>[LeetCode] 198. House Robber</title>
@@ -19,7 +39,7 @@
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/dp/house-robber/</guid>
       <description>198. House Robber
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: # Time: O(n), Space: O(1) def rob(self, nums: List[int]) -&amp;gt; int: if not nums: return 0 size = len(nums) if size == 1: return nums[0] first, second = nums[0], max(nums[0], nums[1]) for i in range(2, size): first, second = second, max(first + nums[i], second) return second   </description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  # Time: O(n), Space: O(1) class Solution: def rob(self, nums: List[int]) -&amp;gt; int: if not nums: return 0 size = len(nums) if size == 1: return nums[0] first, second = nums[0], max(nums[0], nums[1]) for i in range(2, size): first, second = second, max(first + nums[i], second) return second   </description>
     </item>
     
     <item>
@@ -30,7 +50,7 @@ python
       <guid>https://blog.xiufuguo.com/post/leetcode/tags/dp/house-robber-ii/</guid>
       <description>213. House Robber II
 python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  class Solution: # Time: O(n), Space: O(1) def rob(self, nums: List[int]) -&amp;gt; int: if not nums: return 0 if len(nums) == 1: return nums[0] return max(self.helper(nums[:-1]), self.helper(nums[1:])) def helper(self, nums): if not nums: return 0 if len(nums) == 1: return nums[0] a, b = nums[0], max(nums[:2]) for i in range(2, len(nums)): a, b = b, max(b, a + nums[i]) return b   </description>
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  # Time: O(n), Space: O(1) class Solution: def rob(self, nums: List[int]) -&amp;gt; int: if not nums: return 0 if len(nums) == 1: return nums[0] return max(self.helper(nums[:-1]), self.helper(nums[1:])) def helper(self, nums): if not nums: return 0 if len(nums) == 1: return nums[0] a, b = nums[0], max(nums[:2]) for i in range(2, len(nums)): a, b = b, max(b, a + nums[i]) return b   </description>
     </item>
     
     <item>

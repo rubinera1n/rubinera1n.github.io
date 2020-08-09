@@ -295,6 +295,82 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/bst/validate-binary-search-tree/">[LeetCode] 98. Validate Binary Search Tree</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-07" class="post-time">
+        2020-07-07
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/bst/"> BST </a>
+          
+        </div>
+      <span class="more-meta"> 56 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      98. Validate Binary Search Tree
+python
+1 2 3 4 5 6 7 8 9 10  class Solution: def isValidBST(self, root: TreeNode) -&gt; bool: return self.helper(root, float(&#39;-inf&#39;), float(&#39;inf&#39;)) def helper(self, root, lower, upper): if not root: return True return root.val &gt; lower and root.val &lt; upper \ and self.helper(root.left, lower, root.val) \ and self.helper(root.right, root.val, upper)   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/bst/validate-binary-search-tree/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/">[LeetCode] 108. Convert Sorted Array to Binary Search Tree</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-06" class="post-time">
+        2020-07-06
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/tree/"> Tree </a>
+          
+        </div>
+      <span class="more-meta"> 57 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      108. Convert Sorted Array to Binary Search Tree
+python
+1 2 3 4 5 6 7 8 9  class Solution: def sortedArrayToBST(self, nums: List[int]) -&gt; TreeNode: l, r = 0, len(nums) - 1 if l &lt;= r: m = l + (r - l) // 2 root = TreeNode(nums[m]) root.left = self.sortedArrayToBST(nums[:m]) root.right = self.sortedArrayToBST(nums[m+1:]) return root   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/tree/convert-sorted-array-to-binary-search-tree/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/tree/binary-tree-zigzag-level-order-traversal/">[LeetCode] 103. Binary Tree Zigzag Level Order Traversal</a>
     </h1>
     
@@ -397,82 +473,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/tree/construct-binary-tree-from-inorder-and-postorder-traversal/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/tree/construct-binary-tree-from-preorder-and-inorder-traversal/">[LeetCode] 105. Construct Binary Tree from Preorder and Inorder Traversal</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-05" class="post-time">
-        2020-07-05
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/tree/"> Tree </a>
-          
-        </div>
-      <span class="more-meta"> 207 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      105. Construct Binary Tree from Preorder and Inorder Traversal
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  class Solution: def buildTree(self, preorder: List[int], inorder: List[int]) -&gt; TreeNode: if not preorder or not inorder: return None return self.helper(preorder, 0, len(preorder) - 1, inorder, 0, len(inorder) - 1) def helper(self, preorder, p_left, p_right, inorder, i_left, i_right): if p_left &gt; p_right: return None if p_left == p_right: return TreeNode(preorder[p_left]) idx = inorder.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/tree/construct-binary-tree-from-preorder-and-inorder-traversal/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/tree/maximum-depth-of-binary-tree/">[LeetCode] 104. Maximum Depth of Binary Tree</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-04" class="post-time">
-        2020-07-04
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/tree/"> Tree </a>
-          
-        </div>
-      <span class="more-meta"> 30 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      104. Maximum Depth of Binary Tree
-python
-1 2 3 4 5  class Solution: def maxDepth(self, root: TreeNode) -&gt; int: if not root: return 0 return max(self.maxDepth(root.left), self.maxDepth(root.right)) + 1   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/tree/maximum-depth-of-binary-tree/" class="read-more-link">Read more</a>
     </div>
     
   </div>
