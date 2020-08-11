@@ -295,6 +295,158 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/dp/perfect-squares/">[LeetCode] 279. Perfect Squares</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-09" class="post-time">
+        2020-08-09
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/dp/"> DP </a>
+          
+        </div>
+      <span class="more-meta"> 66 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      279. Perfect Squares
+python
+1 2 3 4 5 6 7 8  # Time: O(n * n ^ 0.5), Space: O(n) class Solution: def numSquares(self, n: int) -&gt; int: dp = [i for i in range(n + 1)] for i in range(2, n + 1): for j in range(1, int(i ** 0.5) + 1): dp[i] = min(dp[i], dp[i - j * j] + 1) return dp[-1]   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/dp/perfect-squares/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/dp/house-robber/">[LeetCode] 198. House Robber</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-08" class="post-time">
+        2020-08-08
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/dp/"> DP </a>
+          
+        </div>
+      <span class="more-meta"> 67 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      198. House Robber
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  # Time: O(n), Space: O(1) class Solution: def rob(self, nums: List[int]) -&gt; int: if not nums: return 0 size = len(nums) if size == 1: return nums[0] first, second = nums[0], max(nums[0], nums[1]) for i in range(2, size): first, second = second, max(first + nums[i], second) return second   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/dp/house-robber/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/dp/house-robber-ii/">[LeetCode] 213. House Robber II</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-08" class="post-time">
+        2020-08-08
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/dp/"> DP </a>
+          
+        </div>
+      <span class="more-meta"> 84 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      213. House Robber II
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18  # Time: O(n), Space: O(1) class Solution: def rob(self, nums: List[int]) -&gt; int: if not nums: return 0 if len(nums) == 1: return nums[0] return max(self.helper(nums[:-1]), self.helper(nums[1:])) def helper(self, nums): if not nums: return 0 if len(nums) == 1: return nums[0] a, b = nums[0], max(nums[:2]) for i in range(2, len(nums)): a, b = b, max(b, a + nums[i]) return b   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/dp/house-robber-ii/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/dp/triangle/">[LeetCode] 120. Triangle</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-07" class="post-time">
+        2020-08-07
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/dp/"> DP </a>
+          
+        </div>
+      <span class="more-meta"> 48 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      120. Triangle
+python
+1 2 3 4 5 6 7 8 9  class Solution: def minimumTotal(self, triangle: List[List[int]]) -&gt; int: if not triangle: return 0 res = triangle[-1] for i in range(len(triangle) - 2, -1, -1): for j in range(len(triangle[i])): res[j] = min(res[j], res[j+1]) + triangle[i][j] return res[0]   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/dp/triangle/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/dp/best-time-to-buy-and-sell-stock/">[LeetCode] 121. Best Time to Buy and Sell Stock</a>
     </h1>
     
@@ -323,158 +475,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/dp/best-time-to-buy-and-sell-stock/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/dp/unique-paths/">[LeetCode] 62. Unique Paths</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-08-06" class="post-time">
-        2020-08-06
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/dp/"> DP </a>
-          
-        </div>
-      <span class="more-meta"> 63 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      62. Unique Paths
-python
-1 2 3 4 5 6 7 8 9  class Solution: def uniquePaths(self, m: int, n: int) -&gt; int: if not m or not n: return 0 dp = [[1 for _ in range(m)] for _ in range(n)] for row in range(1, n): for col in range(1, m): dp[row][col] = dp[row - 1][col] + dp[row][col - 1] return dp[-1][-1]   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/dp/unique-paths/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/dp/minimum-path-sum/">[LeetCode] 64. Minimum Path Sum</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-08-06" class="post-time">
-        2020-08-06
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/dp/"> DP </a>
-          
-        </div>
-      <span class="more-meta"> 90 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      64. Minimum Path Sum
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def minPathSum(self, grid: List[List[int]]) -&gt; int: if not grid: return 0 row, col = len(grid), len(grid[0]) dp = [[0 for _ in range(col)] for _ in range(row)] dp[0][0] = grid[0][0] for i in range(1, row): dp[i][0] = dp[i-1][0] + grid[i][0] for i in range(1, col): dp[0][i] = dp[0][i-1] + grid[0][i] for i in range(1, row): for j in range(1, col): dp[i][j] = min(dp[i-1][j], dp[i][j-1]) + grid[i][j] return dp[-1][-1]   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/dp/minimum-path-sum/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/dp/maximum-subarray/">[LeetCode] 53. Maximum Subarray</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-08-05" class="post-time">
-        2020-08-05
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/dp/"> DP </a>
-          
-        </div>
-      <span class="more-meta"> 75 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      53. Maximum Subarray
-python
-1 2 3 4 5 6 7 8 9 10  class Solution: def maxSubArray(self, nums: List[int]) -&gt; int: # nums: [-2, 1, -3, 4, -1, 2, 1, -5, 4] # dp: [-2, 1, -2, 4, 3, 5, 6, 1, 5] dp = [0 for _ in range(len(nums))] res = dp[0] = nums[0] for i in range(1, len(nums)): dp[i] = max(nums[i], dp[i - 1] + nums[i]) res = max(dp[i], res) return res   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/dp/maximum-subarray/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/dp/climbing-stairs/">[LeetCode] 70. Climbing Stairs</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-08-05" class="post-time">
-        2020-08-05
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/dp/"> DP </a>
-          
-        </div>
-      <span class="more-meta"> 46 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      70. Climbing Stairs
-python
-1 2 3 4 5 6 7 8 9  class Solution: def climbStairs(self, n: int) -&gt; int: if n == 1: return 1 one, two = 1, 2 for i in range(2, n): one, two = two, one + two return two   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/dp/climbing-stairs/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1080,6 +1080,30 @@ python
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/3/">»</a></li>
@@ -1087,7 +1111,7 @@ python
 
       
       
-      <li><a href="/page/19/">»»</a></li>
+      <li><a href="/page/20/">»»</a></li>
       
 
       </ul>

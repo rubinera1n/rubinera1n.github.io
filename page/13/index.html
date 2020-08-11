@@ -295,6 +295,158 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/array/rotate-array/">[LeetCode] 189. Rotate Array</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-14" class="post-time">
+        2020-07-14
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
+          
+        </div>
+      <span class="more-meta"> 83 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      189. Rotate Array
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def rotate(self, nums: List[int], k: int) -&gt; None: &#34;&#34;&#34; Do not return anything, modify nums in-place instead. &#34;&#34;&#34; k = k % len(nums) self.reverse(nums, 0, len(nums) - k - 1) self.reverse(nums, len(nums) - k, len(nums) - 1) self.reverse(nums, 0, len(nums) - 1) def reverse(self, nums, s, e): while s &lt; e: nums[s], nums[e] = nums[e], nums[s] s += 1 e -= 1   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/array/rotate-array/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/array/find-all-numbers-disappeared-in-an-array/">[LeetCode] 448. Find All Numbers Disappeared in an Array</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-13" class="post-time">
+        2020-07-13
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
+          
+        </div>
+      <span class="more-meta"> 39 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      448. Find All Numbers Disappeared in an Array
+python
+1 2 3 4 5  class Solution: def findDisappearedNumbers(self, nums: List[int]) -&gt; List[int]: a = set([i for i in range(1, len(nums) + 1)]) b = set(nums) return list(a - b)   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/array/find-all-numbers-disappeared-in-an-array/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/array/find-all-duplicates-in-an-array/">[LeetCode] 442. Find All Duplicates in an Array</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-13" class="post-time">
+        2020-07-13
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
+          
+        </div>
+      <span class="more-meta"> 30 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      442. Find All Duplicates in an Array
+python
+1 2 3  class Solution: def findDuplicates(self, nums: List[int]) -&gt; List[int]: return [key for key, value in collections.Counter(nums).items() if value == 2]   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/array/find-all-duplicates-in-an-array/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/binary_search/find-first-and-last-position-of-element-in-sorted-array/">[LeetCode] 34. Find First and Last Position of Element in Sorted Array</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-12" class="post-time">
+        2020-07-12
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/binary-search/"> Binary Search </a>
+          
+        </div>
+      <span class="more-meta"> 132 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      34. Find First and Last Position of Element in Sorted Array
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22  class Solution: def searchRange(self, nums: List[int], target: int) -&gt; List[int]: if not nums: return [-1, -1] l, r = 0, len(nums) while l &lt; r: mid = l + (r - l) // 2 if nums[mid] &gt;= target: r = mid else: l = mid + 1 # tmp start = l l, r = 0, len(nums) while l &lt; r: mid = l + (r - l) // 2 if nums[mid] &gt; target: r = mid else: l = mid + 1 end = l return [-1, -1] if start == end else [start, end - 1]   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/binary_search/find-first-and-last-position-of-element-in-sorted-array/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/binary_search/search-in-rotated-sorted-array/">[LeetCode] 33. Search in Rotated Sorted Array</a>
     </h1>
     
@@ -323,158 +475,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/binary_search/search-in-rotated-sorted-array/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/search/combination-sum-ii/">[LeetCode] 40. Combination Sum II</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-11" class="post-time">
-        2020-07-11
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
-          
-        </div>
-      <span class="more-meta"> 87 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      40. Combination Sum II
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17  class Solution: def combinationSum2(self, candidates: List[int], target: int) -&gt; List[List[int]]: res = [] candidates.sort() self.dfs(candidates, target, 0, [], res) return res def dfs(self, lst, target, index, path, res): if target &lt; 0: return if target == 0: res.append(path) return res for i in range(index, len(lst)): if i &gt; index and lst[i] == lst[i-1]: continue self.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/search/combination-sum-ii/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/search/combination-sum/">[LeetCode] 39. Combination Sum</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-11" class="post-time">
-        2020-07-11
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
-          
-        </div>
-      <span class="more-meta"> 72 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      39. Combination Sum
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def combinationSum(self, candidates: List[int], target: int) -&gt; List[List[int]]: res = [] candidates.sort() self.dfs(candidates, target, 0, [], res) return res def dfs(self, nums, target, idx, path, res): if target &lt; 0: return if target == 0: res.append(path) return for i in range(idx, len(nums)): self.dfs(nums, target - nums[i], i, path + [nums[i]], res)   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/search/combination-sum/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/array/pascals-triangle/">[LeetCode] 118. Pascal&#39;s Triangle</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-10" class="post-time">
-        2020-07-10
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
-          
-        </div>
-      <span class="more-meta"> 49 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      118. Pascal&rsquo;s Triangle
-python
-1 2 3 4 5 6 7 8 9 10 11  class Solution: def generate(self, numRows: int) -&gt; List[List[int]]: res = [] for i in range(numRows): res.append([]) for j in range(i + 1): if j in (0, i): res[i].append(1) else: res[i].append(res[i-1][j-1] + res[i-1][j]) return res   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/array/pascals-triangle/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/array/plus-one/">[LeetCode] 66. Plus One</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-10" class="post-time">
-        2020-07-10
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/array/"> Array </a>
-          
-        </div>
-      <span class="more-meta"> 24 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      66. Plus One
-python
-1 2 3  class Solution: def plusOne(self, digits: List[int]) -&gt; List[int]: return [int(a) for a in (str(int(&#39;&#39;.join(map(str, digits))) + 1))]   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/array/plus-one/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -530,9 +530,7 @@ python
           
 
             
-            
 
-          
           
 
         
@@ -553,9 +551,7 @@ python
           
 
             
-            
 
-          
           
 
         
@@ -576,9 +572,7 @@ python
           
 
             
-            
 
-          
           
 
         
@@ -599,9 +593,7 @@ python
           
 
             
-            
 
-          
           
 
         
@@ -622,9 +614,7 @@ python
           
 
             
-            
 
-          
           
 
         
@@ -645,9 +635,7 @@ python
           
 
             
-            
 
-          
           
 
         
@@ -667,12 +655,10 @@ python
           
           
 
-            
             
               
             
 
-          
           
 
         
@@ -699,11 +685,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -730,11 +714,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -761,11 +743,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -792,11 +772,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -823,11 +801,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -854,11 +830,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -885,11 +859,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -916,11 +888,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -947,11 +917,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -978,11 +946,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1009,11 +975,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1040,11 +1004,9 @@ python
           
 
             
-            
               
             
 
-          
           
 
         
@@ -1061,6 +1023,27 @@ python
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/14/">»</a></li>
@@ -1068,7 +1051,7 @@ python
 
       
       
-      <li><a href="/page/19/">»»</a></li>
+      <li><a href="/page/20/">»»</a></li>
       
 
       </ul>

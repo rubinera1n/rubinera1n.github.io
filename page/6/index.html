@@ -295,6 +295,156 @@
   <header class="post-header">
     <h1 class="post-title">
       
+      <a class="post-link" href="/post/leetcode/tags/search/word-search/">[LeetCode] 79. Word Search</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-30" class="post-time">
+        2020-07-30
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/search/"> Search </a>
+          
+        </div>
+      <span class="more-meta"> 136 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      79. Word Search
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23  class Solution: def exist(self, board: List[List[str]], word: str) -&gt; bool: if not board: return False for i in range(len(board)): for j in range(len(board[0])): if self.dfs(board, i, j, word): return True return False def dfs(self, board, i, j, word): if len(word) == 0: return True if i &lt; 0 or i &gt;= len(board) or j &lt; 0 or j &gt;= len(board[0]) or word[0] !
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/search/word-search/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/binary_search/search-a-2d-matrix/">[LeetCode] 74. Search a 2D Matrix</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-29" class="post-time">
+        2020-07-29
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/binary-search/"> Binary Search </a>
+          
+        </div>
+      <span class="more-meta"> 101 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      74. Search a 2D Matrix
+python
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19  class Solution: def searchMatrix(self, matrix: List[List[int]], target: int) -&gt; bool: if not matrix or target is None: return False row, col = len(matrix), len(matrix[0]) low, high = 0, row * col - 1 while low &lt;= high: mid = low + (high - low) // 2 num = matrix[mid // col][mid % col] if num == target: return True elif num &lt; target: low = mid + 1 else: high = mid - 1 return False   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/binary_search/search-a-2d-matrix/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/binary_search/search-insert-position/">[LeetCode] 35. Search Insert Position</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-29" class="post-time">
+        2020-07-29
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/binary-search/"> Binary Search </a>
+          
+        </div>
+      <span class="more-meta"> 58 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      35. Search Insert Position
+python
+1 2 3 4 5 6 7 8 9 10  class Solution: def searchInsert(self, nums: List[int], target: int) -&gt; int: l, r = 0, len(nums) while l &lt; r: mid = l + (r - l) // 2 if nums[mid] &lt; target: l = mid + 1 else: r = mid return l   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/binary_search/search-insert-position/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/technology/science_internet/">Science Internet</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-07-28" class="post-time">
+        2020-07-28
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/technology/"> Technology </a>
+          
+        </div>
+      <span class="more-meta"> 2495 words </span>
+      <span class="more-meta"> 5 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      1. 配置前的准备 域名 VPS (虚拟专用服务器) 1.1 如何申请域名？ 免费：google search apply free domain name 我自己使用阿里付费域名，后面的 HTTPS 也方便，可配置自己博客域名
+    </div>
+    <div class="read-more">
+      <a href="/post/technology/science_internet/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
       <a class="post-link" href="/post/leetcode/tags/two_pointers/intersection-of-two-arrays/">[LeetCode] 349. Intersection of Two Arrays</a>
     </h1>
     
@@ -323,158 +473,6 @@ python
     </div>
     <div class="read-more">
       <a href="/post/leetcode/tags/two_pointers/intersection-of-two-arrays/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/two_pointers/trapping-rain-water/">[LeetCode] 42. Trapping Rain Water</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-28" class="post-time">
-        2020-07-28
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/two-pointers/"> Two Pointers </a>
-          
-        </div>
-      <span class="more-meta"> 87 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      42. Trapping Rain Water
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16  class Solution: def trap(self, height: List[int]) -&gt; int: if not height or len(height) &lt; 3: return 0 res = 0 left, right = 0, len(height) - 1 l_max, r_max = height[left], height[right] while left &lt; right: l_max, r_max = max(height[left], l_max), max(height[right], r_max) if l_max &lt;= r_max: res += l_max - height[left] left += 1 else: res += r_max - height[right] right -= 1 return res   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/two_pointers/trapping-rain-water/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/two_pointers/find-the-duplicate-number/">[LeetCode] 287. Find the Duplicate Number</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-27" class="post-time">
-        2020-07-27
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/two-pointers/"> Two Pointers </a>
-          
-        </div>
-      <span class="more-meta"> 64 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      287. Find the Duplicate Number
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class Solution: def findDuplicate(self, nums: List[int]) -&gt; int: slow = fast = tail = 0 while True: slow = nums[slow] fast = nums[nums[fast]] if slow == fast: break while True: slow = nums[slow] tail = nums[tail] if slow == tail: break return slow   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/two_pointers/find-the-duplicate-number/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/list/palindrome-linked-list/">[LeetCode] 234. Palindrome Linked List</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-27" class="post-time">
-        2020-07-27
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/list/"> List </a>
-          
-        </div>
-      <span class="more-meta"> 113 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      234. Palindrome Linked List
-python
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32  class Solution: def isPalindrome(self, head: ListNode) -&gt; bool: if not head: return True fast = slow = head while fast.next and fast.next.next: fast = fast.next.next slow = slow.next p = head q = self.
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/list/palindrome-linked-list/" class="read-more-link">Read more</a>
-    </div>
-    
-  </div>
-</article>
-
-  
-    <article class="post bg-white">
-  <header class="post-header">
-    <h1 class="post-title">
-      
-      <a class="post-link" href="/post/leetcode/tags/sliding_window/minimum-size-subarray-sum/">[LeetCode] 209. Minimum Size Subarray Sum</a>
-    </h1>
-    
-    <div class="post-meta">
-      <time datetime="2020-07-26" class="post-time">
-        2020-07-26
-      </time>
-      <div class="post-category">
-          <a href="https://blog.xiufuguo.com/categories/sliding-window/"> Sliding Window </a>
-          
-        </div>
-      <span class="more-meta"> 76 words </span>
-      <span class="more-meta"> 1 min read </span>
-      
-      
-      
-    </div>
-  </header>
-  
-  <div class="post-content">
-    
-    <div class="post-summary">
-      209. Minimum Size Subarray Sum
-python
-1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def minSubArrayLen(self, s: int, nums: List[int]) -&gt; int: total = left = right = 0 res = len(nums) + 1 while right &lt; len(nums): total += nums[right] while total &gt;= s: res = min(res, right - left + 1) total -= nums[left] left += 1 right += 1 return res if res &lt;= len(nums) else 0   
-    </div>
-    <div class="read-more">
-      <a href="/post/leetcode/tags/sliding_window/minimum-size-subarray-sum/" class="read-more-link">Read more</a>
     </div>
     
   </div>
@@ -1080,6 +1078,30 @@ python
 
       
 
+        
+
+        
+        
+
+          
+          
+          
+
+            
+            
+
+          
+          
+          
+
+        
+        
+
+        
+        
+
+      
+
       
       
       <li><a href="/page/7/">»</a></li>
@@ -1087,7 +1109,7 @@ python
 
       
       
-      <li><a href="/page/19/">»»</a></li>
+      <li><a href="/page/20/">»»</a></li>
       
 
       </ul>
