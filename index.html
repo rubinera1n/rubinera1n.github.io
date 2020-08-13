@@ -62,7 +62,7 @@
 <meta property="og:description" content="XiuFu Guo&#39;s Blog" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://blog.xiufuguo.com/" />
-<meta property="og:updated_time" content="2020-08-03T01:11:15+08:00" />
+<meta property="og:updated_time" content="2020-08-13T22:27:21+08:00" />
 <meta itemprop="name" content="XiuFu Guo&#39;s Blog">
 <meta itemprop="description" content="XiuFu Guo&#39;s Blog"><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="XiuFu Guo&#39;s Blog"/>
@@ -290,6 +290,44 @@
     
   
   
+  
+    <article class="post bg-white">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+      <a class="post-link" href="/post/leetcode/tags/tree/binary-tree-postorder-traversal/">[LeetCode] 145. Binary Tree Postorder Traversal</a>
+    </h1>
+    
+    <div class="post-meta">
+      <time datetime="2020-08-12" class="post-time">
+        2020-08-12
+      </time>
+      <div class="post-category">
+          <a href="https://blog.xiufuguo.com/categories/tree/"> Tree </a>
+          
+        </div>
+      <span class="more-meta"> 46 words </span>
+      <span class="more-meta"> 1 min read </span>
+      
+      
+      
+    </div>
+  </header>
+  
+  <div class="post-content">
+    
+    <div class="post-summary">
+      145. Binary Tree Postorder Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def postorderTraversal(self, root: TreeNode) -&gt; List[int]: res = [] self.dfs(root, res) return res def dfs(self, root, res): if not root: return self.dfs(root.left, res) self.dfs(root.right, res) res.append(root.val)   
+    </div>
+    <div class="read-more">
+      <a href="/post/leetcode/tags/tree/binary-tree-postorder-traversal/" class="read-more-link">Read more</a>
+    </div>
+    
+  </div>
+</article>
+
   
     <article class="post bg-white">
   <header class="post-header">

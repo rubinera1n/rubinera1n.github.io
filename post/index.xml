@@ -6,10 +6,21 @@
     <description>Recent content in Posts on XiuFu Guo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 28 Jul 2020 14:01:03 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 12 Aug 2020 22:25:19 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>[LeetCode] 145. Binary Tree Postorder Traversal</title>
+      <link>https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-postorder-traversal/</link>
+      <pubDate>Wed, 12 Aug 2020 22:25:19 +0800</pubDate>
+      
+      <guid>https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-postorder-traversal/</guid>
+      <description>145. Binary Tree Postorder Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def postorderTraversal(self, root: TreeNode) -&amp;gt; List[int]: res = [] self.dfs(root, res) return res def dfs(self, root, res): if not root: return self.dfs(root.left, res) self.dfs(root.right, res) res.append(root.val)   </description>
+    </item>
     
     <item>
       <title>Science Internet</title>

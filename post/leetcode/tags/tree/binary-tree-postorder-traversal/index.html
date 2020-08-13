@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Tags - XiuFu Guo&#39;s Blog</title>
+  <title>[LeetCode] 145. Binary Tree Postorder Traversal - XiuFu Guo&#39;s Blog</title>
   
 
 <meta name="renderer" content="webkit" />
@@ -23,7 +23,10 @@
 <meta name="mobile-web-app-capable" content="yes">
 
 <meta name="author" content="XiuFu Guo" />
-  <meta name="description" content="XiuFu Guo&#39;s Blog" />
+  <meta name="description" content="145. Binary Tree Postorder Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def postorderTraversal(self, root: TreeNode) -&amp;gt; List[int]: res = [] self.dfs(root, res) return res def dfs(self, root, res): if not root: return self.dfs(root.left, res) self.dfs(root.right, res) res.append(root.val)   " />
+
   <meta name="keywords" content="Hugo, blog, XiuFu Guo" />
 
 
@@ -34,8 +37,8 @@
 <meta name="generator" content="Hugo 0.72.0" />
 
 
-<link rel="canonical" href="https://blog.xiufuguo.com/tags/" />
-<link href="/tags/index.xml" rel="alternate" type="application/rss+xml" title="XiuFu Guo&#39;s Blog" />
+<link rel="canonical" href="https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-postorder-traversal/" />
+
 
 
 
@@ -58,15 +61,29 @@
 
 
 
-<meta property="og:title" content="Tags" />
-<meta property="og:description" content="XiuFu Guo&#39;s Blog" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://blog.xiufuguo.com/tags/" />
-<meta property="og:updated_time" content="2020-08-13T22:27:21+08:00" />
-<meta itemprop="name" content="Tags">
-<meta itemprop="description" content="XiuFu Guo&#39;s Blog"><meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Tags"/>
-<meta name="twitter:description" content="XiuFu Guo&#39;s Blog"/>
+<meta property="og:title" content="[LeetCode] 145. Binary Tree Postorder Traversal" />
+<meta property="og:description" content="145. Binary Tree Postorder Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def postorderTraversal(self, root: TreeNode) -&gt; List[int]: res = [] self.dfs(root, res) return res def dfs(self, root, res): if not root: return self.dfs(root.left, res) self.dfs(root.right, res) res.append(root.val)   " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://blog.xiufuguo.com/post/leetcode/tags/tree/binary-tree-postorder-traversal/" />
+<meta property="article:published_time" content="2020-08-12T22:25:19+08:00" />
+<meta property="article:modified_time" content="2020-08-13T22:27:21+08:00" />
+<meta itemprop="name" content="[LeetCode] 145. Binary Tree Postorder Traversal">
+<meta itemprop="description" content="145. Binary Tree Postorder Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def postorderTraversal(self, root: TreeNode) -&gt; List[int]: res = [] self.dfs(root, res) return res def dfs(self, root, res): if not root: return self.dfs(root.left, res) self.dfs(root.right, res) res.append(root.val)   ">
+<meta itemprop="datePublished" content="2020-08-12T22:25:19&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-13T22:27:21&#43;08:00" />
+<meta itemprop="wordCount" content="46">
+
+
+
+<meta itemprop="keywords" content="Tree," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="[LeetCode] 145. Binary Tree Postorder Traversal"/>
+<meta name="twitter:description" content="145. Binary Tree Postorder Traversal
+python
+1 2 3 4 5 6 7 8 9 10 11 12  class Solution: def postorderTraversal(self, root: TreeNode) -&gt; List[int]: res = [] self.dfs(root, res) return res def dfs(self, root, res): if not root: return self.dfs(root.left, res) self.dfs(root.right, res) res.append(root.val)   "/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -236,7 +253,7 @@
 
       </li>
     
-        <li class="menu-item active">
+        <li class="menu-item">
         
           
           
@@ -283,7 +300,133 @@
     <main id="main" class="main bg-llight">
       <div class="content-wrapper">
         <div id="content" class="content container">
+          <article class="post bg-white">
+    
+    <header class="post-header">
+      <h1 class="post-title">[LeetCode] 145. Binary Tree Postorder Traversal</h1>
+      
+      <div class="post-meta">
+        <time datetime="2020-08-12" class="post-time">
+          2020-08-12
+        </time>
+        <div class="post-category">
+            <a href="https://blog.xiufuguo.com/categories/tree/"> Tree </a>
+            
+          </div>
+        <span class="more-meta"> 46 words </span>
+          <span class="more-meta"> 1 min read </span>
+
+        
+        
+
+        
+        
+      </div>
+    </header>
+
+    
+    
+<div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Table of Contents</h2>
+  <div class="post-toc-content">
+    <nav id="TableOfContents"></nav>
+  </div>
+</div>
+
+    
+    <div class="post-content">
+      <p><a href="https://leetcode.com/problems/binary-tree-postorder-traversal/">145. Binary Tree Postorder Traversal</a></p>
+<p>python</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="k">class</span> <span class="nc">Solution</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">postorderTraversal</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">:</span> <span class="n">TreeNode</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">res</span>
+
+    <span class="k">def</span> <span class="nf">dfs</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">root</span><span class="p">,</span> <span class="n">res</span><span class="p">):</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">root</span><span class="p">:</span>
+            <span class="k">return</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">left</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dfs</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">right</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>
+        <span class="n">res</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">root</span><span class="o">.</span><span class="n">val</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    
+    
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">XiuFu Guo</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2020-08-13
+      
+        <a href="https://github.com/rubinera1n/blogs/commit/cf780744ce2c117bb9a776b08f0b7fdeb99b47c4" title="update">
+          (cf78074)
+        </a>
+        
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+    
+    
+
+    <footer class="post-footer">
+      <div class="post-tags">
+          <a href="https://blog.xiufuguo.com/tags/tree/">Tree</a>
           
+        </div>
+
+      
+      <nav class="post-nav">
+        
+        
+          <a class="next" href="/post/technology/science_internet/">
+            <span class="next-text nav-default">Science Internet</span>
+            <span class="prev-text nav-mobile">Next</span>
+            
+            <i class="iconfont">
+              <svg class="icon" viewBox="0 0 1024 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="18" height="18">
+  <path d="M332.091514 74.487481l-75.369571 89.491197c-10.963703 12.998035-10.285251 32.864502 1.499144 44.378743l286.278095 300.375162L266.565125 819.058374c-11.338233 12.190647-11.035334 32.285311 0.638543 44.850487l80.46666 86.564541c11.680017 12.583596 30.356378 12.893658 41.662889 0.716314l377.434212-421.426145c11.332093-12.183484 11.041474-32.266891-0.657986-44.844348l-80.46666-86.564541c-1.772366-1.910513-3.706415-3.533476-5.750981-4.877077L373.270379 71.774697C361.493148 60.273758 343.054193 61.470003 332.091514 74.487481z"></path>
+</svg>
+
+            </i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+
   
   
   
@@ -291,59 +434,31 @@
 
   
   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <div class="tag-cloud" style="padding: 5px 15px">
-      <div class="tag-cloud-title">
-        3 Tags In Total
-      </div>
-      <div class="tag-cloud-tags">
-      
-        
-        
-        
-        
-        
-        
-        
-        <a href="https://blog.xiufuguo.com/tags/golang/"
-          style="font-size:1rem">golang</a>
-        
-      
-        
-        
-        
-        
-        
-        
-        
-        <a href="https://blog.xiufuguo.com/tags/technology/"
-          style="font-size:1rem">technology</a>
-        
-      
-        
-        
-        
-        
-        
-        
-        
-        <a href="https://blog.xiufuguo.com/tags/tree/"
-          style="font-size:1rem">tree</a>
-        
-      
-      </div>
+
+  
+
+  
+  
+    <div class="post bg-white">
+      <script src="https://utteranc.es/client.js"
+            repo= "rubinera1n/comments"
+            issue-term="pathname"
+            theme="github-light"
+            crossorigin="anonymous"
+            async>
+      </script>
     </div>
   
+
   
 
+  
+
+  
+
+    
+
+  
 
         </div>
       </div>
