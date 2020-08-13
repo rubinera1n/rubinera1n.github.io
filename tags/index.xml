@@ -6,55 +6,10 @@
     <description>Recent content in Tags on XiuFu Guo&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 11 Aug 2020 23:54:51 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 28 Jul 2020 14:01:03 +0800</lastBuildDate>
     
 	<atom:link href="https://blog.xiufuguo.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>DP</title>
-      <link>https://blog.xiufuguo.com/tags/dp/</link>
-      <pubDate>Tue, 11 Aug 2020 23:54:51 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/tags/dp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Search</title>
-      <link>https://blog.xiufuguo.com/tags/search/</link>
-      <pubDate>Tue, 04 Aug 2020 01:04:00 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/tags/search/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sort</title>
-      <link>https://blog.xiufuguo.com/tags/sort/</link>
-      <pubDate>Sun, 02 Aug 2020 23:58:18 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/tags/sort/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>BST</title>
-      <link>https://blog.xiufuguo.com/tags/bst/</link>
-      <pubDate>Sat, 01 Aug 2020 23:07:01 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/tags/bst/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Binary Search</title>
-      <link>https://blog.xiufuguo.com/tags/binary-search/</link>
-      <pubDate>Fri, 31 Jul 2020 22:58:39 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/tags/binary-search/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>Technology</title>
@@ -66,65 +21,11 @@
     </item>
     
     <item>
-      <title>Two Pointers</title>
-      <link>https://blog.xiufuguo.com/tags/two-pointers/</link>
-      <pubDate>Tue, 28 Jul 2020 00:28:18 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/tags/two-pointers/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>List</title>
-      <link>https://blog.xiufuguo.com/tags/list/</link>
-      <pubDate>Mon, 27 Jul 2020 16:09:00 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/tags/list/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Sliding Window</title>
-      <link>https://blog.xiufuguo.com/tags/sliding-window/</link>
-      <pubDate>Sun, 26 Jul 2020 22:23:58 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/tags/sliding-window/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Array</title>
-      <link>https://blog.xiufuguo.com/tags/array/</link>
-      <pubDate>Fri, 24 Jul 2020 22:14:29 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/tags/array/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tree</title>
-      <link>https://blog.xiufuguo.com/tags/tree/</link>
-      <pubDate>Tue, 07 Jul 2020 14:37:34 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/tags/tree/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>golang</title>
       <link>https://blog.xiufuguo.com/tags/golang/</link>
       <pubDate>Mon, 06 Jul 2020 04:07:47 +0800</pubDate>
       
       <guid>https://blog.xiufuguo.com/tags/golang/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Template</title>
-      <link>https://blog.xiufuguo.com/tags/template/</link>
-      <pubDate>Tue, 19 May 2020 01:53:36 +0800</pubDate>
-      
-      <guid>https://blog.xiufuguo.com/tags/template/</guid>
       <description></description>
     </item>
     
